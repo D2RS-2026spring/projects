@@ -35,7 +35,7 @@ Gao C-H et al. The initial inoculation ratio regulates bacterial coculture inter
 
 * 作业必须 [使用 ISSUE 在 projects 仓库中](https://github.com/D2RS-2026spring/projects/issues/new) 进行过注册
 * 作业以一个 GitHub 仓库的形式提交到 `D2RS-2026spring` 组织中（**根据 ISSUE 中登记的仓库地址进行提交确认**）
-* 作业必须符合具有可重复性（请确保在小组成员的不同电脑上能够复现）
+* 作业必须符合具有可重复性（请确保在小组成员的不同电脑上能够复现，这样在老师或助教电脑上应该也能复现）
 * 小组每个成员必须在仓库中有提交的记录
 * 作业内容不仅需要包括代码和输出，还应该有对结果及研究内容的解读
 * 作业篇幅不要求（建议围绕一个主结果展开），但必须覆盖“数据预处理（数据源） - 数据分析及可视化 - 研究报告”的完整流程
