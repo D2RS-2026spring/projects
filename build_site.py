@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 """Build the D2RS project showcase website from GitHub issues."""
-import json, re, csv, subprocess, html as E
+import json, re, csv, subprocess, html as E, os
+from pathlib import Path
 from datetime import datetime, timezone, timedelta
+
+SCRIPT_DIR = Path(__file__).resolve().parent
 
 CST = timezone(timedelta(hours=8))
 UPDATE_TIME = datetime.now(CST).strftime('%Y-%m-%d %H:%M CST')
@@ -10,20 +13,18 @@ UPDATE_TIME = datetime.now(CST).strftime('%Y-%m-%d %H:%M CST')
 # 1. Load data
 # ══════════════════════════════════════════════════════════════════════════════
 students = {}
-with open('/Users/gaoch/GitHub/D2RS-2026spring/members/data/students/student-list.csv',
-          encoding='utf-8-sig') as f:
+with open(SCRIPT_DIR / 'data' / 'student-list.csv', encoding='utf-8-sig') as f:
     for row in csv.DictReader(f):
         students[row['学号']] = row['姓名']
 
-with open('/tmp/student_github_map.json') as f:
+with open(SCRIPT_DIR / 'data' / 'student_github_map.json') as f:
     id_to_github = json.load(f)
 github_to_id = {v: k for k, v in id_to_github.items()}
 
 result = subprocess.run(
     ['gh', 'issue', 'list', '--repo', 'D2RS-2026spring/projects',
      '--state', 'all', '--limit', '200', '--json', 'number,body,title,author'],
-    capture_output=True, text=True,
-    cwd='/Users/gaoch/GitHub/D2RS-2026spring/projects')
+    capture_output=True, text=True)
 issues = json.loads(result.stdout)
 
 # ══════════════════════════════════════════════════════════════════════════════
@@ -420,9 +421,16 @@ for p in unique:
     </div>'''
 
 # ══════════════════════════════════════════════════════════════════════════════
-# 9. Not-submitted table
+# 9. Not-submitted table (computed from student list vs issues)
 # ══════════════════════════════════════════════════════════════════════════════
-not_sub = json.load(open('/tmp/not_submitted_final.json'))
+all_names = set()
+for p in unique:
+    for m in p['members']:
+        all_names.add(m['name'])
+
+not_sub = {sid: name for sid, name in students.items()
+           if name not in all_names}
+
 ns_rows = ''
 for sid in sorted(not_sub):
     name = E.escape(not_sub[sid])
@@ -431,15 +439,7 @@ for sid in sorted(not_sub):
     ns_rows += f'<tr><td>{sid}</td><td>{name}</td><td>{gh_cell}</td></tr>\n'
 
 # ══════════════════════════════════════════════════════════════════════════════
-# 10. Stats
-# ══════════════════════════════════════════════════════════════════════════════
-all_names = set()
-for p in unique:
-    for m in p['members']:
-        all_names.add(m['name'])
-
-# ══════════════════════════════════════════════════════════════════════════════
-# 11. Shared CSS, nav, footer (non-f-strings — no brace escaping needed)
+# 10. Shared CSS, nav, footer (non-f-strings — no brace escaping needed)
 # ══════════════════════════════════════════════════════════════════════════════
 CSS = r'''@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
 :root{--pri:#1a5276;--pri-l:#2980b9;--acc:#27ae60;--gold:#f39c12;--bg:#f8f9fa;--card:#fff;--txt:#2c3e50;--txt2:#636e72;--bdr:#e0e6ed;--shd:0 2px 12px rgba(0,0,0,.08);--r:12px}
@@ -552,7 +552,7 @@ def wrap(title, body_inner):
 </html>'''
 
 # ══════════════════════════════════════════════════════════════════════════════
-# 12. Page 1: Main showcase (index.html)
+# 11. Page 1: Main showcase (index.html)
 # ══════════════════════════════════════════════════════════════════════════════
 stats_html = f'''
 <div class="stats">
@@ -609,7 +609,7 @@ document.getElementById('fb').addEventListener('click',e=>{{
 </script>'''
 
 # ══════════════════════════════════════════════════════════════════════════════
-# 13. Page 2: Not-submitted students (not_submitted.html)
+# 12. Page 2: Not-submitted students (not_submitted.html)
 # ══════════════════════════════════════════════════════════════════════════════
 ns_body = f'''
 <section class="hero" style="padding:40px 24px 32px">
@@ -629,7 +629,7 @@ ns_body = f'''
 </div>'''
 
 # ══════════════════════════════════════════════════════════════════════════════
-# 14. Page 3: Submitted projects (submitted.html)
+# 13. Page 3: Submitted projects (submitted.html)
 # ══════════════════════════════════════════════════════════════════════════════
 sub_rows = ''
 for p in submitted:
@@ -656,7 +656,7 @@ submitted_body = f'''
 </div>'''
 
 # ══════════════════════════════════════════════════════════════════════════════
-# 15. Page 4: Pending projects (pending.html)
+# 14. Page 4: Pending projects (pending.html)
 # ══════════════════════════════════════════════════════════════════════════════
 nr_rows = ''
 for p in no_repo:
@@ -701,9 +701,9 @@ pending_body = f'''
 </div>'''
 
 # ══════════════════════════════════════════════════════════════════════════════
-# 16. Write files
+# 15. Write files
 # ══════════════════════════════════════════════════════════════════════════════
-BASE = '/Users/gaoch/GitHub/D2RS-2026spring/projects'
+BASE = str(SCRIPT_DIR)
 
 with open(f'{BASE}/index.html', 'w') as f:
     f.write(wrap('D2RS 2026 春季 — 结课作品展', index_body))
