@@ -12,13 +12,16 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Auth git for private submodules
-        run: git config --global url."https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/".insteadOf "https://github.com/"
-
       - uses: actions/checkout@v4
         with:
-          submodules: recursive
           token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Init submodules
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config --global url."https://x-access-token:${GH_TOKEN}@github.com/".insteadOf "https://github.com/"
+          git submodule update --init --recursive 2>&1 || echo "Some submodules failed (may be private), continuing..."
 
       - name: Set up Python
         uses: actions/setup-python@v5
