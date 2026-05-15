@@ -23,7 +23,7 @@ github_to_id = {v: k for k, v in id_to_github.items()}
 
 result = subprocess.run(
     ['gh', 'issue', 'list', '--repo', 'D2RS-2026spring/projects',
-     '--state', 'all', '--limit', '200', '--json', 'number,body,title,author'],
+     '--state', 'open', '--limit', '200', '--json', 'number,body,title,author'],
     capture_output=True, text=True)
 issues = json.loads(result.stdout)
 
