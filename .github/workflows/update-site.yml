@@ -2,7 +2,6 @@ name: Update Project Showcase
 
 on:
   schedule:
-    # Daily at 03:00 CST (19:00 UTC previous day)
     - cron: '0 19 * * *'
   workflow_dispatch:
 
@@ -14,6 +13,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -25,10 +27,15 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python3 build_site.py
 
+      - name: Build showcase
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 build_showcase.py
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: .
-          include_files: index.html;submitted.html;pending.html;not_submitted.html
+          include_files: index.html;submitted.html;pending.html;not_submitted.html;site/showcase/**
           keep_files: true
