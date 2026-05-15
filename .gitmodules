@@ -1,0 +1,81 @@
+[submodule "showcase/neanderthal-ecosystem-productivity"]
+	path = showcase/neanderthal-ecosystem-productivity
+	url = https://github.com/D2RS-2026spring/neanderthal-ecosystem-productivity.git
+[submodule "showcase/Hydroponic-Soybean-Replication"]
+	path = showcase/Hydroponic-Soybean-Replication
+	url = https://github.com/D2RS-2026spring/Hydroponic-Soybean-Replication.git
+[submodule "showcase/proj"]
+	path = showcase/proj
+	url = https://github.com/D2RS-2026spring/proj.git
+[submodule "showcase/project68"]
+	path = showcase/project68
+	url = https://github.com/D2RS-2026spring/project68.git
+[submodule "showcase/Global-patterns-of-16S-rRNA-diversity-at-a-depth-of-millions-of-sequences-per-sample"]
+	path = showcase/Global-patterns-of-16S-rRNA-diversity-at-a-depth-of-millions-of-sequences-per-sample
+	url = https://github.com/D2RS-2026spring/Global-patterns-of-16S-rRNA-diversity-at-a-depth-of-millions-of-sequences-per-sample.git
+[submodule "showcase/citrus-nutrient-analysis-project"]
+	path = showcase/citrus-nutrient-analysis-project
+	url = https://github.com/D2RS-2026spring/citrus-nutrient-analysis-project.git
+[submodule "showcase/gamma-swc-reproduction"]
+	path = showcase/gamma-swc-reproduction
+	url = https://github.com/D2RS-2026spring/gamma-swc-reproduction.git
+[submodule "showcase/SynCom_Assembly_Analysis"]
+	path = showcase/SynCom_Assembly_Analysis
+	url = https://github.com/D2RS-2026spring/SynCom_Assembly_Analysis.git
+[submodule "showcase/gfss-lunwenfuxian-project"]
+	path = showcase/gfss-lunwenfuxian-project
+	url = https://github.com/D2RS-2026spring/gfss-lunwenfuxian-project.git
+[submodule "showcase/soil-soc-repro"]
+	path = showcase/soil-soc-repro
+	url = https://github.com/D2RS-2026spring/soil-soc-repro.git
+[submodule "showcase/rice-nitrogen-project"]
+	path = showcase/rice-nitrogen-project
+	url = https://github.com/D2RS-2026spring/rice-nitrogen-project.git
+[submodule "showcase/DATA"]
+	path = showcase/DATA
+	url = https://github.com/D2RS-2026spring/DATA.git
+[submodule "showcase/compost_wheat_reproduce"]
+	path = showcase/compost_wheat_reproduce
+	url = https://github.com/D2RS-2026spring/compost_wheat_reproduce.git
+[submodule "showcase/CO2-enhanced-water-use-efficiency"]
+	path = showcase/CO2-enhanced-water-use-efficiency
+	url = https://github.com/D2RS-2026spring/CO2-enhanced-water-use-efficiency.git
+[submodule "showcase/nematode-toxicology-team"]
+	path = showcase/nematode-toxicology-team
+	url = https://github.com/D2RS-2026spring/nematode-toxicology-team.git
+[submodule "showcase/RiceSEG-Reproduction"]
+	path = showcase/RiceSEG-Reproduction
+	url = https://github.com/D2RS-2026spring/RiceSEG-Reproduction.git
+[submodule "showcase/cropland-nitrogen-reproduction"]
+	path = showcase/cropland-nitrogen-reproduction
+	url = https://github.com/D2RS-2026spring/cropland-nitrogen-reproduction.git
+[submodule "showcase/ammonia-fertilizer-production-team-project"]
+	path = showcase/ammonia-fertilizer-production-team-project
+	url = https://github.com/D2RS-2026spring/ammonia-fertilizer-production-team-project.git
+[submodule "showcase/Crop-Recommendation-System-Using-Machine-Learning"]
+	path = showcase/Crop-Recommendation-System-Using-Machine-Learning
+	url = https://github.com/D2RS-2026spring/Crop-Recommendation-System-Using-Machine-Learning.git
+[submodule "showcase/cross-scale-ecology-team-project"]
+	path = showcase/cross-scale-ecology-team-project
+	url = https://github.com/D2RS-2026spring/cross-scale-ecology-team-project.git
+[submodule "showcase/litter-decomposition-hfa"]
+	path = showcase/litter-decomposition-hfa
+	url = https://github.com/D2RS-2026spring/litter-decomposition-hfa.git
+[submodule "showcase/data_review_project"]
+	path = showcase/data_review_project
+	url = https://github.com/D2RS-2026spring/data_review_project.git
+[submodule "showcase/iris-reproducible-project"]
+	path = showcase/iris-reproducible-project
+	url = https://github.com/D2RS-2026spring/iris-reproducible-project.git
+[submodule "showcase/rsts-encoder"]
+	path = showcase/rsts-encoder
+	url = https://github.com/D2RS-2026spring/rsts-encoder.git
+[submodule "showcase/Extraction---of---Algal---Extracellular---Polymeric---Substances."]
+	path = showcase/Extraction---of---Algal---Extracellular---Polymeric---Substances.
+	url = https://github.com/D2RS-2026spring/Extraction---of---Algal---Extracellular---Polymeric---Substances..git
+[submodule "showcase/soil-cadmium-immobilized-bacteria"]
+	path = showcase/soil-cadmium-immobilized-bacteria
+	url = https://github.com/D2RS-2026spring/soil-cadmium-immobilized-bacteria.git
+[submodule "showcase/Shifting-dominant-periods-in-extreme-climate-impacts-under-global-warming"]
+	path = showcase/Shifting-dominant-periods-in-extreme-climate-impacts-under-global-warming
+	url = https://github.com/D2RS-2026spring/Shifting-dominant-periods-in-extreme-climate-impacts-under-global-warming.git
