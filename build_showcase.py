@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Build the D2RS showcase: copy project outputs to site/showcase/."""
+"""Build the D2RS showcase: copy project outputs to public/showcase/."""
 import json, os, shutil
 from pathlib import Path
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 SHOWCASE_DIR = SCRIPT_DIR / 'showcase'
-SITE_DIR = SCRIPT_DIR / 'site' / 'showcase'
+SITE_DIR = SCRIPT_DIR / 'public' / 'showcase'
 
 IMG_EXTS = {'.png', '.jpg', '.jpeg', '.gif', '.svg', '.webp'}
 

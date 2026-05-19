@@ -722,20 +722,21 @@ pending_body = f'''
 </div>'''
 
 # ══════════════════════════════════════════════════════════════════════════════
-# 15. Write files
+# 15. Write files to public/ directory (avoids .gitignore conflicts in CI)
 # ══════════════════════════════════════════════════════════════════════════════
-BASE = str(SCRIPT_DIR)
+BASE = SCRIPT_DIR / 'public'
+BASE.mkdir(exist_ok=True)
 
-with open(f'{BASE}/index.html', 'w') as f:
+with open(BASE / 'index.html', 'w') as f:
     f.write(wrap('D2RS 2026 春季 — 结课作品展', index_body))
 
-with open(f'{BASE}/not_submitted.html', 'w') as f:
+with open(BASE / 'not_submitted.html', 'w') as f:
     f.write(wrap('D2RS 2026 — 未提交名单', ns_body))
 
-with open(f'{BASE}/submitted.html', 'w') as f:
+with open(BASE / 'submitted.html', 'w') as f:
     f.write(wrap('D2RS 2026 — 已提交项目', submitted_body))
 
-with open(f'{BASE}/pending.html', 'w') as f:
+with open(BASE / 'pending.html', 'w') as f:
     f.write(wrap('D2RS 2026 — 待提交项目', pending_body))
 
 cats = {}
