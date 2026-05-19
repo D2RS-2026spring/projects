@@ -22,15 +22,9 @@
 [submodule "showcase/SynCom_Assembly_Analysis"]
 	path = showcase/SynCom_Assembly_Analysis
 	url = https://github.com/D2RS-2026spring/SynCom_Assembly_Analysis.git
-[submodule "showcase/gfss-lunwenfuxian-project"]
-	path = showcase/gfss-lunwenfuxian-project
-	url = https://github.com/D2RS-2026spring/gfss-lunwenfuxian-project.git
 [submodule "showcase/soil-soc-repro"]
 	path = showcase/soil-soc-repro
 	url = https://github.com/D2RS-2026spring/soil-soc-repro.git
-[submodule "showcase/rice-nitrogen-project"]
-	path = showcase/rice-nitrogen-project
-	url = https://github.com/D2RS-2026spring/rice-nitrogen-project.git
 [submodule "showcase/DATA"]
 	path = showcase/DATA
 	url = https://github.com/D2RS-2026spring/DATA.git
