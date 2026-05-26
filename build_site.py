@@ -39,12 +39,24 @@ result = subprocess.run(
     capture_output=True, text=True)
 issues = json.loads(result.stdout)
 
+# Fetch comments for each issue so we can detect repo links posted in replies
+for issue in issues:
+    num = issue['number']
+    result_c = subprocess.run(
+        ['gh', 'api', f'repos/D2RS-2026spring/issues/{num}/comments',
+         '--paginate', '--jq', '.[].body'],
+        capture_output=True, text=True)
+    comments = result_c.stdout or ''
+    issue['_comments'] = comments
+
 # ══════════════════════════════════════════════════════════════════════════════
 # 2. Parse issues → extract members (with leader), repo, DOI
 # ══════════════════════════════════════════════════════════════════════════════
 parsed = []
 for issue in issues:
     body = issue.get('body', '') or ''
+    comments = issue.get('_comments', '') or ''
+    full_text = body + '\n' + comments
     num = issue['number']
     title = issue.get('title', '').strip()
     author_login = issue['author']['login']
@@ -53,13 +65,13 @@ for issue in issues:
     leader_sid = github_to_id.get(author_login)
     # Fallback 1: author not in mapping — try @mention in body
     if not leader_sid:
-        for m in re.findall(r'@([a-zA-Z0-9][\w.-]*)', body):
+        for m in re.findall(r'@([a-zA-Z0-9][\w.-]*)', full_text):
             if m.lower() == author_login.lower() and m in github_to_id:
                 leader_sid = github_to_id[m]
                 break
     # Fallback 2: find author's student ID from the line containing their login
     if not leader_sid:
-        for line in body.split('\n'):
+        for line in full_text.split('\n'):
             if author_login in line:
                 for sid in re.findall(r'\d{13}', line):
                     if sid in students:
@@ -69,8 +81,8 @@ for issue in issues:
                 break
 
     # Collect all member student IDs
-    ids = {sid for sid in re.findall(r'\d{13}', body) if sid in students}
-    for m in re.findall(r'@([a-zA-Z0-9][\w.-]*)', body):
+    ids = {sid for sid in re.findall(r'\d{13}', full_text) if sid in students}
+    for m in re.findall(r'@([a-zA-Z0-9][\w.-]*)', full_text):
         if m in github_to_id:
             ids.add(github_to_id[m])
     if leader_sid:
@@ -96,14 +108,14 @@ for issue in issues:
             members.append({'sid': sid, 'name': students[sid],
                             'gh': gh, 'leader': False})
 
-    # Repo URL — skip image/file attachments
-    repos = [r for r in re.findall(r'github\.com/([a-zA-Z0-9_.-]+/[a-zA-Z0-9_.-]+)', body)
+    # Repo URL — skip image/file attachments; search body + comments
+    repos = [r for r in re.findall(r'github\.com/([a-zA-Z0-9_.-]+/[a-zA-Z0-9_.-]+)', full_text)
              if not r.startswith('user-attachments')]
     repo = repos[0].removesuffix('.git') if repos else None
 
     # DOI — allowlist approach: only [a-zA-Z0-9/\-_.:] are valid DOI chars
-    raw = re.findall(r'10\.\d{4,}/[a-zA-Z0-9/\-_.:]+', body)
-    from_org = re.findall(r'doi\.org/(10\.\d{4,}/[a-zA-Z0-9/\-_.:]+)', body)
+    raw = re.findall(r'10\.\d{4,}/[a-zA-Z0-9/\-_.:]+', full_text)
+    from_org = re.findall(r'doi\.org/(10\.\d{4,}/[a-zA-Z0-9/\-_.:]+)', full_text)
     candidates = from_org + [d for d in raw if d not in from_org]
     DOI_FIX = {65: '10.48550/arXiv.2412.10448'}
     doi = DOI_FIX.get(num)
@@ -113,7 +125,7 @@ for issue in issues:
                 doi = c
                 break
 
-    # Journal / paper hint from body
+    # Journal / paper hint from body + comments
     journal = ''
     jmatch = re.search(
         r'(?:发表于|published in|Journal[:\s]+|期刊[:\s]*|iMeta|Nature|Science|PNAS|'
@@ -125,13 +137,13 @@ for issue in issues:
         r'Remote Sensing|ISPRS|Water Resources Research|'
         r'Ecological Monographs|New Phytologist|Ecology|'
         r'Microbiome|iMeta)',
-        body, re.I)
+        full_text, re.I)
     if jmatch:
         journal = jmatch.group(0)
 
     parsed.append(dict(num=num, title=title, author=author_login,
                        members=members, repo=repo, doi=doi, journal=journal,
-                       body=body))
+                       body=body, full_text=full_text))
 
 # ══════════════════════════════════════════════════════════════════════════════
 # 3. Deduplicate by member-set
@@ -143,7 +155,7 @@ for p in parsed:
         seen[key] = p
     else:
         old = seen[key]
-        if len(p['body']) > len(old['body']):
+        if len(p['full_text']) > len(old['full_text']):
             seen[key] = p
 
 unique = sorted(seen.values(), key=lambda x: -x['num'])
