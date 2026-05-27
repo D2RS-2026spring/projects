@@ -31,6 +31,7 @@ with open(SCRIPT_DIR / 'data' / 'student-list.csv', encoding='utf-8-sig') as f:
 
 with open(SCRIPT_DIR / 'data' / 'student_github_map.json') as f:
     id_to_github = json.load(f)
+github_to_id = {v: k for k, v in id_to_github.items()}
 
 # Load pre-extracted issue data (from extract_data.py)
 with open(SCRIPT_DIR / 'data' / 'issue_data.json', encoding='utf-8') as f:

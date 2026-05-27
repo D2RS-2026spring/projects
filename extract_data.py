@@ -133,10 +133,11 @@ for i, issue in enumerate(issues):
     for attempt in range(3):
         try:
             resp = client.chat.completions.create(
-                model="deepseek-v4-pro",
+                model="deepseek-v4-flash",
                 messages=[{"role": "user", "content": prompt}],
                 response_format={"type": "json_object"},
-                temperature=0.1)
+                temperature=0.1,
+                extra_body={"thinking": {"type": "disabled"}})
             raw = resp.choices[0].message.content
             data = json.loads(raw)
             break
