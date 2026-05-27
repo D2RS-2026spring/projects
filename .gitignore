@@ -1,2 +1,5 @@
 # Generated build report
 showcase-build-report.json
+
+# Build output (CI generates and deploys to gh-pages directly)
+public/
