@@ -1,0 +1,3817 @@
+[
+  {
+    "number": 141,
+    "title": "多组学宿主-微生物互作论文复现",
+    "author": "wovej",
+    "repo": "D2RS-2026spring/microbiome-homework-23",
+    "members": [
+      {
+        "name": "武伟杰",
+        "sid": "2025303110048",
+        "gh": "wovej",
+        "leader": true
+      }
+    ],
+    "doi": "",
+    "journal": "",
+    "description": "复现多组学揭示宿主-微生物互作驱动根系发育与氮获取的论文",
+    "_hash": "a72483abd62e5f1d32b085f006ae905d"
+  },
+  {
+    "number": 140,
+    "title": "基于功能视角的中国三峡库区经济林恢复对土壤物理质量影响评估结果复现",
+    "author": "xyj666357",
+    "repo": "https://github.com/zlznevergu/zlzlunwenfuxian",
+    "members": [
+      {
+        "name": "曾令振",
+        "sid": "2025303110063",
+        "gh": "zlznevergu",
+        "leader": true
+      },
+      {
+        "name": "刘家洛",
+        "sid": "2025303120073",
+        "gh": "ly9495",
+        "leader": false
+      },
+      {
+        "name": "陈炳宇",
+        "sid": "2025303110144",
+        "gh": "chenbingyu-HZAU",
+        "leader": false
+      },
+      {
+        "name": "熊煜佳",
+        "sid": "2025303120126",
+        "gh": "xyj666357",
+        "leader": false
+      }
+    ],
+    "doi": "10.1016/j.catena.2025.109758",
+    "journal": "CATENA",
+    "description": "复现经济林恢复对三峡库区土壤物理质量影响评估论文的核心图表",
+    "_hash": "a57e4714d468d594389f4bf25f699ad9"
+  },
+  {
+    "number": 139,
+    "title": "单细胞转录组数据分析流程",
+    "author": "huanyu8",
+    "repo": "https://github.com/huanyu8/-.git",
+    "members": [
+      {
+        "name": "邹林",
+        "sid": "2025303110139",
+        "gh": "huanyu8",
+        "leader": true
+      },
+      {
+        "name": "林观清",
+        "sid": "2025303120114",
+        "gh": "LGQ559492",
+        "leader": false
+      },
+      {
+        "name": "郑永琪",
+        "sid": "2025303120147",
+        "gh": "zcguksjv65",
+        "leader": false
+      },
+      {
+        "name": "李迁",
+        "sid": "2025303120110",
+        "gh": "li20010229-eng",
+        "leader": false
+      },
+      {
+        "name": "黄子凯",
+        "sid": "2025303110141",
+        "gh": "hirasauayui",
+        "leader": false
+      }
+    ],
+    "doi": "",
+    "journal": "Nature",
+    "description": "复现单细胞转录组数据分析流程，包括Seurat预处理、Harmony批次矫正、UMAP聚类、细胞注释、DoubletFinder双细胞检测、差异表达分析和火山图可视化。",
+    "_hash": "42727dde59dfdeb3f6ad31c8ae08d3fe"
+  },
+  {
+    "number": 138,
+    "title": "PyLUSAT 文献复现分析报告",
+    "author": "justleap-amdd",
+    "repo": "D2RS-2026spring/PyLUSAT-",
+    "members": [
+      {
+        "name": "杨丽萍",
+        "sid": "2025303110007",
+        "gh": "justleap-amdd",
+        "leader": true
+      },
+      {
+        "name": "李春雪",
+        "sid": "2025303120171",
+        "gh": "lcx920",
+        "leader": false
+      },
+      {
+        "name": "董娟",
+        "sid": "2025303120140",
+        "gh": "dj4296",
+        "leader": false
+      },
+      {
+        "name": "买柯馨",
+        "sid": "2025303120066",
+        "gh": "Maikexin",
+        "leader": false
+      }
+    ],
+    "doi": "10.1016/j.envsoft.2022.105357",
+    "journal": "Environmental Modelling and Software",
+    "description": "复现PyLUSAT工具库的土地利用适宜性分析核心图表",
+    "_hash": "379a59bc9f0abc62c0e52abde8c8cd5c"
+  },
+  {
+    "number": 137,
+    "title": "大豆土壤微生物群繁殖",
+    "author": "Liuxinrui926",
+    "repo": "D2RS-2026spring/liuxinrui-jiekezuoye",
+    "members": [
+      {
+        "name": "刘心蕊",
+        "sid": "2025303120074",
+        "gh": "Liuxinrui926",
+        "leader": true
+      },
+      {
+        "name": "于冉",
+        "sid": "2025303120067",
+        "gh": "YR-yyy",
+        "leader": false
+      },
+      {
+        "name": "聂雅杉",
+        "sid": "2025303120137",
+        "gh": "nie-3",
+        "leader": false
+      }
+    ],
+    "doi": "10.1038/s41467-024-45925-5",
+    "journal": "Nature Communications",
+    "description": "复现大豆根际微生物组论文的Fig.2和Fig.3",
+    "_hash": "ceb90ee58fd546cbf8e1ddc2c77fb95d"
+  },
+  {
+    "number": 136,
+    "title": "梅森伯罗岛水质20年时空变化趋势分析",
+    "author": "18135600866",
+    "repo": "",
+    "members": [
+      {
+        "name": "刘芸慧",
+        "sid": "2025303120009",
+        "gh": "18135600866",
+        "leader": true
+      },
+      {
+        "name": "肖新怡",
+        "sid": "2025303120045",
+        "gh": "Tziyu125",
+        "leader": false
+      },
+      {
+        "name": "周炎",
+        "sid": "2025303120013",
+        "gh": "Firezyyy",
+        "leader": false
+      }
+    ],
+    "doi": "10.1016/j.ecss.2024.108937",
+    "journal": "Estuarine, Coastal and Shelf Science",
+    "description": "复现北卡罗来纳州Masonboro岛河口水质20年变化分析论文",
+    "_hash": "89f8b09299cf6fda1c5ffda9f85882ed"
+  },
+  {
+    "number": 135,
+    "title": "关于 早期多重微量营养素缺乏导致小鼠肠道菌群和固有抗生素抗性基因的多物种变化 数据的复现",
+    "author": "Lzy-NICE",
+    "repo": "D2RS-2026spring/HAPPYy",
+    "members": [
+      {
+        "name": "刘卓益",
+        "sid": "2025303110003",
+        "gh": "Lzy-NICE",
+        "leader": true
+      },
+      {
+        "name": "李俊杰",
+        "sid": "2025303120105",
+        "gh": "lijj2k",
+        "leader": false
+      },
+      {
+        "name": "朱烁龙",
+        "sid": "2025303120103",
+        "gh": "DragonBron23",
+        "leader": false
+      },
+      {
+        "name": "高心灵",
+        "sid": "2025303120157",
+        "gh": "gaoxinling",
+        "leader": false
+      },
+      {
+        "name": "章靖",
+        "sid": "2025303110106",
+        "gh": "zh–ang–jing",
+        "leader": false
+      }
+    ],
+    "doi": "10.1038/s41564-023-01519-3",
+    "journal": "Nature Microbiology",
+    "description": "复现论文Figure 1中关于小鼠肠道微生物组和抗生素抗性基因的分析",
+    "_hash": "84738b45d989980948ba5629cbf4f895"
+  },
+  {
+    "number": 134,
+    "title": "复现植物基生物炭对 Cd(II)、Pb(II)、Zn(II) 的吸附等温线分析",
+    "author": "Fu-cole",
+    "repo": "D2RS-2026spring/MBHMA",
+    "members": [
+      {
+        "name": "冯王福临",
+        "sid": "2025303120072",
+        "gh": "Fu-cole",
+        "leader": false
+      },
+      {
+        "name": "康静文",
+        "sid": "2025303120094",
+        "gh": "KANGJINGWEN0803",
+        "leader": false
+      },
+      {
+        "name": "徐世宁",
+        "sid": "2025303110059",
+        "gh": "Xushining1220",
+        "leader": false
+      },
+      {
+        "name": "曹雨欣",
+        "sid": "2025303110062",
+        "gh": "cyx-coco",
+        "leader": false
+      },
+      {
+        "name": "韩昊阳",
+        "sid": "2025303110082",
+        "gh": "Hackysaw",
+        "leader": false
+      }
+    ],
+    "doi": "10.1016/j.heliyon.2020.e05388",
+    "journal": "Heliyon",
+    "description": "复现植物基生物炭对重金属吸附等温线分析",
+    "_hash": "b1e3508995fc507e36eb2ce6bfa9969e"
+  },
+  {
+    "number": 133,
+    "title": "基于随机森林的无人机生物物理参数估算工具",
+    "author": "very6jia1",
+    "repo": "https://github.com/very6jia1/RandomForestFapar-projrct",
+    "members": [
+      {
+        "name": "刘嘉怡",
+        "sid": "2025303110119",
+        "gh": "very6jia1",
+        "leader": true
+      },
+      {
+        "name": "向美珍",
+        "sid": "2025303110121",
+        "gh": "XMZ183",
+        "leader": false
+      },
+      {
+        "name": "包成才",
+        "sid": "2025303120078",
+        "gh": "Bao-cell",
+        "leader": false
+      }
+    ],
+    "doi": "",
+    "journal": "",
+    "description": "基于随机森林的无人机生物物理参数估算工具",
+    "_hash": "73ca01b2f91b48e58c8336a08799d384"
+  },
+  {
+    "number": 132,
+    "title": "基于《Transcriptional regulation of nitrogen-associated metabolism and growt》文章部分图复现",
+    "author": "Bijiayu-yyds",
+    "repo": "https://github.com/Bijiayu-yyds/article-recover",
+    "members": [
+      {
+        "name": "王家傲",
+        "sid": "2025303120130",
+        "gh": "okbk130",
+        "leader": false
+      },
+      {
+        "name": "窦佳艺",
+        "sid": "2025303110105",
+        "gh": "doujiayi-2025",
+        "leader": false
+      },
+      {
+        "name": "周奕楠",
+        "sid": "2025303120083",
+        "gh": "pidan431",
+        "leader": false
+      },
+      {
+        "name": "陈宇豪",
+        "sid": "2025303110108",
+        "gh": "chenyuhaobio",
+        "leader": false
+      },
+      {
+        "name": "毕嘉榆",
+        "sid": "2025303110101",
+        "gh": "Bijiayu-yyds",
+        "leader": true
+      }
+    ],
+    "doi": "",
+    "journal": "",
+    "description": "复现论文《Transcriptional regulation of nitrogen-associated metabolism and growth》的核心图表分析",
+    "_hash": "7350d81ae269204cccceea5c4df2904a"
+  },
+  {
+    "number": 131,
+    "title": "利用机器学习预测重金属在土壤上的吸附能力及全球土壤吸附能力分布图",
+    "author": "Zhang-JunH",
+    "repo": "D2RS-2026spring/Project-reproduction-131",
+    "members": [
+      {
+        "name": "张骏辉",
+        "sid": "2025303110016",
+        "gh": "Zhang-JunH",
+        "leader": true
+      },
+      {
+        "name": "苗芳源",
+        "sid": "2025303110021",
+        "gh": "FangYuan-Miao",
+        "leader": false
+      },
+      {
+        "name": "胡金忆",
+        "sid": "2025303110020",
+        "gh": "taro-2026",
+        "leader": false
+      },
+      {
+        "name": "李艳峰",
+        "sid": "2025303110142",
+        "gh": "liyanfeng123",
+        "leader": false
+      }
+    ],
+    "doi": "10.1021/acs.est.1c02479",
+    "journal": "Environmental Science & Technology",
+    "description": "基于机器学习模型预测土壤重金属吸附量，完成环境搭建、模型运行与可复现性验证",
+    "_hash": "28723110a0ccc241fdc37e3b90cd77df"
+  },
+  {
+    "number": 130,
+    "title": "Estimating lime requirements fortropical soils: Model comparison and development",
+    "author": "Jneey-add",
+    "repo": "https://github.com/Jneey-add/reproduce-paper-Jenny",
+    "members": [
+      {
+        "name": "屈文龙",
+        "sid": "2025303120090",
+        "gh": "Ahatm",
+        "leader": true
+      },
+      {
+        "name": "涂雨涵",
+        "sid": "2025303120122",
+        "gh": "Tuyuhan",
+        "leader": false
+      },
+      {
+        "name": "韦佳妮",
+        "sid": "2025303120152",
+        "gh": "Jneey-add",
+        "leader": false
+      },
+      {
+        "name": "阿布都拉·艾则孜",
+        "sid": "2025303120149",
+        "gh": "Abudula-Aizezi",
+        "leader": false
+      },
+      {
+        "name": "侯坤均",
+        "sid": "2025303120071",
+        "gh": "houkunjun",
+        "leader": false
+      }
+    ],
+    "doi": "10.1016/j.geoderma.2023.116421",
+    "journal": "Geoderma",
+    "description": "复现热带酸性土壤石灰需要量计算公式的R语言实现",
+    "_hash": "4fe249eda5022105952d6850324c76bc"
+  },
+  {
+    "number": 129,
+    "title": "[可重复性评估] nZVI与有机质界面互作论文评估",
+    "author": "zhixuan-zhang767",
+    "repo": "D2RS-2026spring/nzvi-organic-matter-analysis",
+    "members": [
+      {
+        "name": "张芷璇",
+        "sid": "2025303120096",
+        "gh": "zhixuan-zhang767",
+        "leader": true
+      }
+    ],
+    "doi": "",
+    "journal": "Separation and Purification Technology",
+    "description": "复现纳米零价铁与溶解性有机质界面互作对重金属固定影响的论文",
+    "_hash": "af38b1ea341789990154677f6871b6f8"
+  },
+  {
+    "number": 128,
+    "title": "伊比利亚半岛尼安德特人消失研究复现报告",
+    "author": "shuyan-yang326",
+    "repo": "D2RS-2026spring/neanderthal-ecosystem-productivity",
+    "members": [
+      {
+        "name": "杨舒妍",
+        "sid": "2025303110036",
+        "gh": "shuyan-yang326",
+        "leader": true
+      },
+      {
+        "name": "陈美林",
+        "sid": "2025303110140",
+        "gh": "meilin090",
+        "leader": false
+      },
+      {
+        "name": "王嘉仪",
+        "sid": "2025303120039",
+        "gh": "Jyyy12138",
+        "leader": false
+      },
+      {
+        "name": "郜锦华",
+        "sid": "2025303120052",
+        "gh": "Gao-Jinhua",
+        "leader": false
+      },
+      {
+        "name": "秦思怡",
+        "sid": "2025303110047",
+        "gh": "Qin1310",
+        "leader": false
+      }
+    ],
+    "doi": "10.1038/s41559-022-01861-5",
+    "journal": "Nature Ecology & Evolution",
+    "description": "复现伊比利亚半岛尼安德特人消失与生态系统生产力关系的论文图表",
+    "_hash": "4aff497bb3c686a7232f32ad167d511d"
+  },
+  {
+    "number": 127,
+    "title": "识别人像照片的性别年龄",
+    "author": "Gladsxzhou",
+    "repo": "D2RS-2026spring/Gender-and-age-detection-using-deep-learning",
+    "members": [
+      {
+        "name": "肖周乐",
+        "sid": "2025303120176",
+        "gh": "Gladsxzhou",
+        "leader": true
+      },
+      {
+        "name": "黄张赛",
+        "sid": "2025303120183",
+        "gh": "hzs12",
+        "leader": false
+      }
+    ],
+    "doi": "",
+    "journal": "",
+    "description": "基于OpenCV预训练模型进行人脸、性别、年龄检测",
+    "_hash": "376a75d4f5190eaaa79270d53242b25a"
+  },
+  {
+    "number": 125,
+    "title": "极端气候中主导周期的转移在全球变暖下的影响——文章复现",
+    "author": "winn-coder",
+    "repo": "D2RS-2026spring/Shifting-dominant-periods-in-extreme-climate-impacts-under-global-warming",
+    "members": [
+      {
+        "name": "周仕格",
+        "sid": "2025303120165",
+        "gh": "zhoushige666-crypto",
+        "leader": true
+      },
+      {
+        "name": "陈霜",
+        "sid": "2025303120181",
+        "gh": "winn-coder",
+        "leader": false
+      },
+      {
+        "name": "欧方芳",
+        "sid": "2025303110138",
+        "gh": "oufangfang1209",
+        "leader": false
+      },
+      {
+        "name": "卢佳怡",
+        "sid": "2025303110135",
+        "gh": "LLLJY-ljy",
+        "leader": false
+      },
+      {
+        "name": "朱欣雨",
+        "sid": "2025303110137",
+        "gh": "xinyuzhu-lang",
+        "leader": false
+      }
+    ],
+    "doi": "10.1038/s41467-025-65600-7",
+    "journal": "Nature Communications",
+    "description": "复现全球变暖下极端气候事件主导周期转移的核心结论与图表",
+    "_hash": "d2bb5a60faca3ee567e762fe669681fc"
+  },
+  {
+    "number": 124,
+    "title": "LL-Nature Communications 2024 论文复现结果",
+    "author": "yolo0-0",
+    "repo": "https://github.com/yolo0-0/microbial-interactions-main",
+    "members": [
+      {
+        "name": "刘浩东",
+        "sid": "2025303120076",
+        "gh": "yolo0-0",
+        "leader": true
+      },
+      {
+        "name": "栾业辉",
+        "sid": "2025303121001",
+        "gh": "lyh-2025",
+        "leader": false
+      }
+    ],
+    "doi": "10.1038/s41467-024-48521-9",
+    "journal": "Nature Communications",
+    "description": "复现微生物群落合作生长与多稳态的论文核心图表",
+    "_hash": "bd4771fbc0dede8cc5228e7c5dd59847"
+  },
+  {
+    "number": 123,
+    "title": "大种子的智慧：种子大小本身即是一种防御策略",
+    "author": "MFWWW",
+    "repo": "D2RS-2026spring/project68",
+    "members": [
+      {
+        "name": "林芸芸",
+        "sid": "2025303110008",
+        "gh": "Linyunyun123",
+        "leader": true
+      },
+      {
+        "name": "秦红阳",
+        "sid": "2025303110011",
+        "gh": "Qhaiyu777",
+        "leader": false
+      },
+      {
+        "name": "黄雅斯",
+        "sid": "2025303110015",
+        "gh": "MFWWW",
+        "leader": false
+      },
+      {
+        "name": "吴平",
+        "sid": "2025303110005",
+        "gh": "abcdefg123803",
+        "leader": false
+      },
+      {
+        "name": "田佳玉",
+        "sid": "2025303110010",
+        "gh": "tianjiayu-6",
+        "leader": false
+      }
+    ],
+    "doi": "10.1111/1365-2745.14480",
+    "journal": "Journal of Ecology",
+    "description": "复现壳斗科种子大小作为防御策略的论文核心图表分析",
+    "_hash": "ff8594477de5cffabae7454868e7ee40"
+  },
+  {
+    "number": 122,
+    "title": "Global patterns of 16S rRNA diversity at a depth of millions of sequences per sample",
+    "author": "cgcgtfy",
+    "repo": "D2RS-2026spring/Global-patterns-of-16S-rRNA-diversity-at-a-depth-of-millions-of-sequences-per-sample",
+    "members": [
+      {
+        "name": "张逸帆",
+        "sid": "2025303120024",
+        "gh": "cgcgtfy",
+        "leader": true
+      }
+    ],
+    "doi": "10.1073/pnas.1000080107",
+    "journal": "PNAS",
+    "description": "复现环境微生物群落多样性与组成差异的论文核心结论",
+    "_hash": "f465a718d330b9771b1ab2015389d41e"
+  },
+  {
+    "number": 121,
+    "title": "基于Reproduce-the-Resource-Utilization-of-Agricultural-Waste 可重复数据分析",
+    "author": "Janney-huang",
+    "repo": "https://github.com/d2rs-2026spring/Reproduce-the-Resource-Utilization-of-Agricultural-Waste",
+    "members": [
+      {
+        "name": "黄娇",
+        "sid": "2025303120065",
+        "gh": "Janney-huang",
+        "leader": false
+      },
+      {
+        "name": "江兰钐",
+        "sid": "2025303110046",
+        "gh": "JiangYee393",
+        "leader": false
+      },
+      {
+        "name": "杨涵玉",
+        "sid": "2025303110034",
+        "gh": "hanyu-Yang",
+        "leader": false
+      },
+      {
+        "name": "曹瑶",
+        "sid": "2025303110030",
+        "gh": "caoyao-03",
+        "leader": false
+      },
+      {
+        "name": "王兴瑶",
+        "sid": "2025303120038",
+        "gh": "Olivia-yao710",
+        "leader": false
+      }
+    ],
+    "doi": "",
+    "journal": "",
+    "description": "复现农业废弃物资源化利用研究的实验流程与数据分析",
+    "_hash": "c48f655ef76634e88a1b30064e1a0eb7"
+  },
+  {
+    "number": 120,
+    "title": "柑橘养分利用课题情况复现",
+    "author": "wangxuan24",
+    "repo": "D2RS-2026spring/citrus-nutrient-analysis-project",
+    "members": [
+      {
+        "name": "王硕",
+        "sid": "2025303120132",
+        "gh": "wangxuan24",
+        "leader": true
+      },
+      {
+        "name": "孙宜宜",
+        "sid": "2025303120086",
+        "gh": "Jiesun-star",
+        "leader": false
+      },
+      {
+        "name": "李致远",
+        "sid": "2025303120109",
+        "gh": "zhiyuanli-beep",
+        "leader": false
+      },
+      {
+        "name": "杨冰婉",
+        "sid": "2025303110099",
+        "gh": "BINGWANYANG",
+        "leader": false
+      }
+    ],
+    "doi": "",
+    "journal": "",
+    "description": "用StudioR复现柑橘养分利用课题组网站首页、研究方向、科研成果、联系我们页面",
+    "_hash": "027dea021a9bef34daaedd77ccf1851b"
+  },
+  {
+    "number": 119,
+    "title": "基于随机森林模型的土壤pH预测方法的可重复性评估",
+    "author": "20WPL",
+    "repo": "https://github.com/20WPL/Homework-2026",
+    "members": [
+      {
+        "name": "吴沛林",
+        "sid": "2025303110052",
+        "gh": "20WPL",
+        "leader": true
+      },
+      {
+        "name": "吴蕾",
+        "sid": "2025303120081",
+        "gh": "2025WL",
+        "leader": false
+      }
+    ],
+    "doi": "",
+    "journal": "",
+    "description": "复现基于随机森林模型的土壤pH预测方法",
+    "_hash": "fb5364bfcfe1561a4d0138f521303d4e"
+  },
+  {
+    "number": 118,
+    "title": "柑橘养分利用课题情况复现",
+    "author": "Jiesun-star",
+    "repo": "D2RS-2026spring/citrus-nutrient-analysis-project",
+    "members": [
+      {
+        "name": "王硕",
+        "sid": "2025303120132",
+        "gh": "wangxuan24",
+        "leader": true
+      },
+      {
+        "name": "孙宜宜",
+        "sid": "2025303120086",
+        "gh": "Jiesun-star",
+        "leader": false
+      },
+      {
+        "name": "李致远",
+        "sid": "2025303120109",
+        "gh": "zhiyuanli-beep",
+        "leader": false
+      },
+      {
+        "name": "杨冰婉",
+        "sid": "2025303110099",
+        "gh": "BINGWANYANG",
+        "leader": false
+      }
+    ],
+    "doi": "",
+    "journal": "",
+    "description": "用StudioR复现柑橘养分利用课题组网站首页、研究方向、科研成果、联系我们页面",
+    "_hash": "3635b187cbaedd3206c4825786bd22a5"
+  },
+  {
+    "number": 117,
+    "title": "三国甲烷排放时空分析与未来30年预测",
+    "author": "6622339",
+    "repo": "https://github.com/6622339/662",
+    "members": [
+      {
+        "name": "李淑慧",
+        "sid": "2025303110033",
+        "gh": "6622339",
+        "leader": true
+      },
+      {
+        "name": "余瑞",
+        "sid": "2025303120005",
+        "gh": "yuyuyu93764",
+        "leader": false
+      },
+      {
+        "name": "覃紫慧",
+        "sid": "2025303120142",
+        "gh": "cuut123",
+        "leader": false
+      }
+    ],
+    "doi": "",
+    "journal": "",
+    "description": "基于EDGAR和世界银行数据，分析三国甲烷排放趋势并预测未来30年排放",
+    "_hash": "4798461eabd413d8bbe78b3f5c929dcf"
+  },
+  {
+    "number": 116,
+    "title": "大种子的智慧：种子大小本身即是一种防御策略",
+    "author": "abcdefg123803",
+    "repo": "D2RS-2026spring/my-quarto-website1",
+    "members": [
+      {
+        "name": "田佳玉",
+        "sid": "2025303110010",
+        "gh": "tianjiayu-6",
+        "leader": true
+      },
+      {
+        "name": "林芸芸",
+        "sid": "2025303110008",
+        "gh": "Linyunyun123",
+        "leader": false
+      },
+      {
+        "name": "吴平",
+        "sid": "2025303110005",
+        "gh": "abcdefg123803",
+        "leader": false
+      },
+      {
+        "name": "秦红阳",
+        "sid": "2025303110011",
+        "gh": "Qhaiyu777",
+        "leader": false
+      },
+      {
+        "name": "黄雅斯",
+        "sid": "2025303110015",
+        "gh": "MFWWW",
+        "leader": false
+      }
+    ],
+    "doi": "10.6084/m9.figshare.25721142",
+    "journal": "",
+    "description": "复现壳斗科植物种子防御策略论文的直方图和PCA分析",
+    "_hash": "057c9c960ab3cb3680d26ea9e011a12b"
+  },
+  {
+    "number": 115,
+    "title": "水质数据科学与机器学习探索小组",
+    "author": "welljie12138",
+    "repo": "https://github.com/welljie12138/Water-Potability-Prediction",
+    "members": [
+      {
+        "name": "万雨捷",
+        "sid": "2025303120001",
+        "gh": "welljie12138",
+        "leader": true
+      },
+      {
+        "name": "邓宇晴",
+        "sid": "2025303110043",
+        "gh": "den-160",
+        "leader": false
+      },
+      {
+        "name": "李亚森",
+        "sid": "2025303120029",
+        "gh": "ARSEN-4321",
+        "leader": false
+      },
+      {
+        "name": "唐成翰",
+        "sid": "2025303110045",
+        "gh": "Downey888",
+        "leader": false
+      }
+    ],
+    "doi": "",
+    "journal": "",
+    "description": "复现并优化基于9项水质理化指标预测饮用水可饮用性的机器学习全流程",
+    "_hash": "1e712b2830786715f03cb656d368cd9d"
+  },
+  {
+    "number": 114,
+    "title": "复现论文：一种新型单一营养素水培溶液中的大豆营养",
+    "author": "SHUZHIQI",
+    "repo": "D2RS-2026spring/Hydroponic-Soybean-Replication",
+    "members": [
+      {
+        "name": "齐书志",
+        "sid": "2025303110113",
+        "gh": "SHUZHIQI",
+        "leader": true
+      },
+      {
+        "name": "李龙溪",
+        "sid": "2025303110098",
+        "gh": "longxi112",
+        "leader": false
+      },
+      {
+        "name": "张苧丹",
+        "sid": "2025303120098",
+        "gh": "ningdanzhang",
+        "leader": false
+      },
+      {
+        "name": "杜永琪",
+        "sid": "2025303120112",
+        "gh": "DUYongqi0116",
+        "leader": false
+      }
+    ],
+    "doi": "10.3390/agronomy11030523",
+    "journal": "Agronomy",
+    "description": "复现大豆水培论文的数据生成、R Markdown分析报告及可复现环境",
+    "_hash": "1a883567cd0281d33c61fdeb494c982e"
+  },
+  {
+    "number": 112,
+    "title": "细菌共培养代谢分析复现",
+    "author": "gudashuai6",
+    "repo": "https://github.com/gudashuai6/projects",
+    "members": [
+      {
+        "name": "古振峰",
+        "sid": "2025303120080",
+        "gh": "gudashuai6",
+        "leader": true
+      }
+    ],
+    "doi": "",
+    "journal": "",
+    "description": "第四次可重复性项目作业，复现柱状图分析",
+    "_hash": "7ee685efaea1cf34f4b2678dacafbd9c"
+  },
+  {
+    "number": 111,
+    "title": "BioChem_OrganicMaterials_WangHZ",
+    "author": "HulThe-shuai",
+    "repo": "D2RS-2026spring/BioChem_OrganicMaterials_WangHZ",
+    "members": [
+      {
+        "name": "王浩哲",
+        "sid": "2025303120042",
+        "gh": "HulThe-shuai",
+        "leader": true
+      }
+    ],
+    "doi": "",
+    "journal": "",
+    "description": "模拟有机小分子在受体蛋白上的结合能力，分析分子性质与生物活性的相关性",
+    "_hash": "cb19a9e2f185ef13946428ce7a2cef67"
+  },
+  {
+    "number": 109,
+    "title": "【可重复性研究】-Reduced phosphorus bioavailability in rice paddies intensified by elevated CO2-driven warming",
+    "author": "jijiahui02",
+    "repo": "D2RS-2026spring/proj",
+    "members": [
+      {
+        "name": "季佳辉",
+        "sid": "2025303110093",
+        "gh": "jijiahui02",
+        "leader": true
+      },
+      {
+        "name": "游彬",
+        "sid": "2025303120123",
+        "gh": "yb9966",
+        "leader": false
+      },
+      {
+        "name": "梁冬玲",
+        "sid": "2025303120115",
+        "gh": "dlliang2026",
+        "leader": false
+      },
+      {
+        "name": "顾湘",
+        "sid": "2025303120154",
+        "gh": "GuXiang0730",
+        "leader": false
+      }
+    ],
+    "doi": "10.1038/s41561-026-01917-2",
+    "journal": "Nature Geoscience",
+    "description": "复现CO2增温降低稻田磷有效性的论文分析",
+    "_hash": "cf91aa44a62eeb8f79871f4140e149c8"
+  },
+  {
+    "number": 108,
+    "title": "伽马能谱法估算农田土壤含水量复现",
+    "author": "yuting-Mu",
+    "repo": "D2RS-2026spring/gamma-swc-reproduction",
+    "members": [
+      {
+        "name": "沐禹廷",
+        "sid": "2025303120121",
+        "gh": "yuting-Mu",
+        "leader": true
+      },
+      {
+        "name": "李清源",
+        "sid": "2025303120108",
+        "gh": "LQY123-Sketch",
+        "leader": false
+      },
+      {
+        "name": "张一鸣",
+        "sid": "2025303120095",
+        "gh": "Zhang-ym-ing",
+        "leader": false
+      },
+      {
+        "name": "韦荣耀",
+        "sid": "2025303120153",
+        "gh": "xiaozz-zl",
+        "leader": false
+      },
+      {
+        "name": "张荣耀",
+        "sid": "2025303120099",
+        "gh": "ZHGlory",
+        "leader": false
+      }
+    ],
+    "doi": "10.3390/s24165234",
+    "journal": "Sensors",
+    "description": "复现伽马射线光谱法估算土壤含水量的论文核心图表",
+    "_hash": "6327c7bc68c8c9e752c4dae0a010988e"
+  },
+  {
+    "number": 107,
+    "title": "node2vec算法复现研究报告",
+    "author": "CANGSU-mei",
+    "repo": "D2RS-2026spring/Node2Vec-SynCom-Reproduction-main.git",
+    "members": [
+      {
+        "name": "刘小梅",
+        "sid": "2025303110120",
+        "gh": "CANGSU-mei",
+        "leader": true
+      }
+    ],
+    "doi": "10.1145/2939672.2939754",
+    "journal": "Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining",
+    "description": "复现node2vec算法，面向合成菌群知识图谱的表征学习",
+    "_hash": "0f2a9c1de05e620e7691162fdb59b20e"
+  },
+  {
+    "number": 106,
+    "title": "大种子的智慧：种子大小本身即是一种防御策略",
+    "author": "Linyunyun123",
+    "repo": "",
+    "members": [
+      {
+        "name": "田佳玉",
+        "sid": "2025303110010",
+        "gh": "tianjiayu-6",
+        "leader": true
+      },
+      {
+        "name": "林芸芸",
+        "sid": "2025303110008",
+        "gh": "Linyunyun123",
+        "leader": false
+      },
+      {
+        "name": "吴平",
+        "sid": "2025303110005",
+        "gh": "abcdefg123803",
+        "leader": false
+      },
+      {
+        "name": "秦红阳",
+        "sid": "2025303110011",
+        "gh": "Qhaiyu777",
+        "leader": false
+      },
+      {
+        "name": "黄雅斯",
+        "sid": "2025303110015",
+        "gh": "MFWWW",
+        "leader": false
+      }
+    ],
+    "doi": "10.1111/1365-2745.14480",
+    "journal": "Journal of Ecology",
+    "description": "复现壳斗科种子防御策略论文的直方图和PCA分析",
+    "_hash": "e29051e6a03edd117a0bc58614a40cf4"
+  },
+  {
+    "number": 105,
+    "title": "柑橘养分利用课题情况复现",
+    "author": "zhiyuanli-beep",
+    "repo": "D2RS-2026spring/citrus-nutrient-analysis-project",
+    "members": [
+      {
+        "name": "王硕",
+        "sid": "2025303120132",
+        "gh": "wangxuan24",
+        "leader": true
+      },
+      {
+        "name": "孙宜宜",
+        "sid": "2025303120086",
+        "gh": "Jiesun-star",
+        "leader": false
+      },
+      {
+        "name": "李致远",
+        "sid": "2025303120109",
+        "gh": "zhiyuanli-beep",
+        "leader": false
+      },
+      {
+        "name": "杨冰婉",
+        "sid": "2025303110099",
+        "gh": "BINGWANYANG",
+        "leader": false
+      }
+    ],
+    "doi": "",
+    "journal": "",
+    "description": "用StudioR复现柑橘养分利用课题组网站首页、研究方向、科研成果、联系我们页面",
+    "_hash": "f0d2281c3183214c2015e5e1f665227f"
+  },
+  {
+    "number": 104,
+    "title": "柑橘养分利用课题情况复现",
+    "author": "BINGWANYANG",
+    "repo": "D2RS-2026spring/citrus-nutrient-analysis-project",
+    "members": [
+      {
+        "name": "王硕",
+        "sid": "2025303120132",
+        "gh": "wangxuan24",
+        "leader": true
+      },
+      {
+        "name": "孙宜宜",
+        "sid": "2025303120086",
+        "gh": "Jiesun-star",
+        "leader": false
+      },
+      {
+        "name": "李致远",
+        "sid": "2025303120109",
+        "gh": "zhiyuanli-beep",
+        "leader": false
+      },
+      {
+        "name": "杨冰婉",
+        "sid": "2025303110099",
+        "gh": "BINGWANYANG",
+        "leader": false
+      }
+    ],
+    "doi": "",
+    "journal": "",
+    "description": "用StudioR复现柑橘养分利用课题组网站首页、研究方向、科研成果、联系我们页面",
+    "_hash": "2cb042577141800edfb11ef1db25a521"
+  },
+  {
+    "number": 103,
+    "title": "中国土壤数据集复现项目",
+    "author": "20260305",
+    "repo": "https://github.com/niuideal/-",
+    "members": [
+      {
+        "name": "牛理想",
+        "sid": "2025303120127",
+        "gh": "niuideal",
+        "leader": true
+      },
+      {
+        "name": "李如梦",
+        "sid": "2025303120106",
+        "gh": "lirumeng-mary",
+        "leader": false
+      },
+      {
+        "name": "刘珺",
+        "sid": "2025303110090",
+        "gh": "yooyoo2",
+        "leader": false
+      },
+      {
+        "name": "徐嘉璐",
+        "sid": "2025303120101",
+        "gh": "20260305",
+        "leader": false
+      },
+      {
+        "name": "李雪",
+        "sid": "2025303110097",
+        "gh": "xueli9g",
+        "leader": false
+      }
+    ],
+    "doi": "10.11888/terre.tpdc.301235",
+    "journal": "",
+    "description": "复现中国土壤属性数据集CSDLv2中SOC与TN的空间分布及相互关系",
+    "_hash": "552ecd193ea7de6d2128568c48efce29"
+  },
+  {
+    "number": 102,
+    "title": "基于《Bacterial social interactions in synthetic Bacillus consortia enhance plant growth》论文项目部分复现",
+    "author": "xiaozz-zl",
+    "repo": "D2RS-2026spring/SynCom_Assembly_Analysis",
+    "members": [
+      {
+        "name": "韦荣耀",
+        "sid": "2025303120153",
+        "gh": "xiaozz-zl",
+        "leader": false
+      },
+      {
+        "name": "赵甜甜",
+        "sid": "2025303120144",
+        "gh": "yaya2026",
+        "leader": false
+      },
+      {
+        "name": "马微",
+        "sid": "2025303120060",
+        "gh": "weiwe0829-creator",
+        "leader": false
+      },
+      {
+        "name": "张一鸣",
+        "sid": "2025303120095",
+        "gh": "Zhang-ym-ing-cell",
+        "leader": false
+      }
+    ],
+    "doi": "",
+    "journal": "iMeta",
+    "description": "复现合成芽孢杆菌菌群社会互作促进植物生长的研究",
+    "_hash": "4f3649f1879f11d4e1d07ae7d7dfa716"
+  },
+  {
+    "number": 101,
+    "title": "基于《Deterministic colonization arises early during the transition of soil bacteria to the phyllosphere and is shaped by plant-microbe interactions》部分数据图复现",
+    "author": "geyuqing3-stack",
+    "repo": "D2RS-2026spring/gfss-lunwenfuxian-project",
+    "members": [
+      {
+        "name": "葛方苏",
+        "sid": "2025303120139",
+        "gh": "geyuqing3-stack",
+        "leader": true
+      },
+      {
+        "name": "张荣耀",
+        "sid": "2025303120099",
+        "gh": "ZHGlory",
+        "leader": false
+      },
+      {
+        "name": "张振阳",
+        "sid": "2025303110057",
+        "gh": "ZZY-423",
+        "leader": false
+      }
+    ],
+    "doi": "10.1186/s40168-025-02090-1",
+    "journal": "Microbiome",
+    "description": "复现论文Figure 4微生物富集结果",
+    "_hash": "ace5caecf8ca6c76504c631fcaa698de"
+  },
+  {
+    "number": 100,
+    "title": "可重复性作业--静电耦合和水桥在生物分子于水-黏土界面吸附层级中的作用",
+    "author": "ChenZhuo-hz",
+    "repo": "https://github.com/ChenZhuo-hz/paper-reproduction-md",
+    "members": [
+      {
+        "name": "龚慧岩",
+        "sid": "2025303110086",
+        "gh": "ghy065178-blip",
+        "leader": true
+      },
+      {
+        "name": "杨家豪",
+        "sid": "2025303110069",
+        "gh": "Yangjiahao1234",
+        "leader": false
+      },
+      {
+        "name": "陈卓",
+        "sid": "2025303110079",
+        "gh": "ChenZhuo-hz",
+        "leader": false
+      },
+      {
+        "name": "刘鑫雅",
+        "sid": "2025303120077",
+        "gh": "Liuxinya0801",
+        "leader": false
+      },
+      {
+        "name": "徐世博",
+        "sid": "2025303120100",
+        "gh": "111222333xxxx",
+        "leader": false
+      },
+      {
+        "name": "江祥鸿",
+        "sid": "2025303110102",
+        "gh": "1122333666jjj",
+        "leader": false
+      }
+    ],
+    "doi": "10.1073/pnas.2316569121",
+    "journal": "PNAS",
+    "description": "复现静电耦合和水桥在生物分子于水-黏土界面吸附层级中的作用",
+    "_hash": "0cda9c46dd81dcd9e57ecd328b919f23"
+  },
+  {
+    "number": 99,
+    "title": "Molecular trade-offs in soil organic carbon composition at continental scale论文数据复现",
+    "author": "Jiang-yu-yang",
+    "repo": "D2RS-2026spring/soil-soc-repro",
+    "members": [
+      {
+        "name": "姜宇洋",
+        "sid": "2025303110054",
+        "gh": "Jiang-yu-yang",
+        "leader": true
+      },
+      {
+        "name": "岳诗文",
+        "sid": "2025303110056",
+        "gh": "Shiwen-Yue",
+        "leader": false
+      },
+      {
+        "name": "吕智彤",
+        "sid": "2025303110051",
+        "gh": "LZT56",
+        "leader": false
+      }
+    ],
+    "doi": "10.6073/pasta/2284825ecb8460f056ae5b0e7d355cc8",
+    "journal": "",
+    "description": "复现论文Molecular trade-offs in soil organic carbon composition at continental scale的数据处理与可视化",
+    "_hash": "243a6e2bfc7718f38d21573addf6cca4"
+  },
+  {
+    "number": 98,
+    "title": "基于功能视角的中国三峡库区经济林恢复对土壤物理质量影响评估结果复现",
+    "author": "ly9495",
+    "repo": "https://github.com/ly9495/xiangmufuxian.git",
+    "members": [
+      {
+        "name": "曾令振",
+        "sid": "2025303110063",
+        "gh": "zlznevergu",
+        "leader": true
+      },
+      {
+        "name": "刘家洛",
+        "sid": "2025303120073",
+        "gh": "ly9495",
+        "leader": false
+      },
+      {
+        "name": "陈炳宇",
+        "sid": "2025303110144",
+        "gh": "chenbingyu-HZAU",
+        "leader": false
+      }
+    ],
+    "doi": "10.1016/j.catena.2025.109758",
+    "journal": "CATENA",
+    "description": "复现经济林恢复对三峡库区土壤物理质量影响评估论文的核心图表",
+    "_hash": "ede322cadbb7f90f9fcf78331074a225"
+  },
+  {
+    "number": 97,
+    "title": "不同施氮量对水稻生长及产量影响可重复性研究",
+    "author": "q234-coder",
+    "repo": "D2RS-2026spring/rice-nitrogen-project",
+    "members": [
+      {
+        "name": "陈思阳",
+        "sid": "2025303110110",
+        "gh": "q234-coder",
+        "leader": true
+      }
+    ],
+    "doi": "",
+    "journal": "",
+    "description": "复现不同施氮量对水稻生长及产量影响的统计分析全流程",
+    "_hash": "f1af5d588b7781d4ff45d30b39269b5e"
+  },
+  {
+    "number": 96,
+    "title": "基于功能视角的中国三峡库区经济林恢复对土壤物理质量影响评估结果复现",
+    "author": "chenbingyu-HZAU",
+    "repo": "https://github.com/zlznevergu/zlzgroup-lunwenfuxian-project",
+    "members": [
+      {
+        "name": "曾令振",
+        "sid": "2025303110063",
+        "gh": "zlznevergu",
+        "leader": true
+      },
+      {
+        "name": "刘家洛",
+        "sid": "2025303120073",
+        "gh": "ly9495",
+        "leader": false
+      },
+      {
+        "name": "陈炳宇",
+        "sid": "2025303110144",
+        "gh": "chenbingyu-HZAU",
+        "leader": false
+      },
+      {
+        "name": "熊煜佳",
+        "sid": "2025303120126",
+        "gh": "xyj666357",
+        "leader": false
+      }
+    ],
+    "doi": "10.1016/j.catena.2025.109758",
+    "journal": "CATENA",
+    "description": "复现经济林恢复对三峡库区土壤物理质量影响评估论文的核心图表",
+    "_hash": "e4a2f952ed3ed5eb4ba04c4ec71717b5"
+  },
+  {
+    "number": 95,
+    "title": "灌溉农业的全球能源使用与碳排放文章数据复现",
+    "author": "Britney-128",
+    "repo": "https://github.com/Britney-128/Energy-Use-in-Irrigated-Agriculture.git",
+    "members": [
+      {
+        "name": "李曼娜",
+        "sid": "202530310096",
+        "gh": "Britney-128",
+        "leader": true
+      },
+      {
+        "name": "孔儒远",
+        "sid": "202530310092",
+        "gh": "Kongruyuan",
+        "leader": false
+      },
+      {
+        "name": "汤启斌",
+        "sid": "2025303120119",
+        "gh": "laopyoutiao",
+        "leader": false
+      },
+      {
+        "name": "罗钰颖",
+        "sid": "2025303110107",
+        "gh": "lll4123",
+        "leader": false
+      }
+    ],
+    "doi": "10.1038/s41467-024-47383-5",
+    "journal": "Nature Communications",
+    "description": "复现灌溉农业全球能源使用和碳排放论文的核心图表分析",
+    "_hash": "f31c39bf6b7be8ecd755d2811ce8dc37"
+  },
+  {
+    "number": 93,
+    "title": "# 基于《不同硫肥对大豆生长及产量影响》的可重复性研究",
+    "author": "q234-coder",
+    "repo": "https://github.com/q234-coder/repro-r-project",
+    "members": [
+      {
+        "name": "陈思阳",
+        "sid": "2025303110110",
+        "gh": "q234-coder",
+        "leader": true
+      }
+    ],
+    "doi": "",
+    "journal": "",
+    "description": "复现不同硫肥对大豆生长及产量影响的分析",
+    "_hash": "d49b6f6064c9f6162f280ee9f95223a8"
+  },
+  {
+    "number": 92,
+    "title": "可重复性实验-【藻类胞外聚合物提取实验复现】",
+    "author": "Mei0416",
+    "repo": "",
+    "members": [
+      {
+        "name": "梅若男",
+        "sid": "2025303110037",
+        "gh": "Mei0416",
+        "leader": true
+      },
+      {
+        "name": "龙嘉仪",
+        "sid": "2025303110044",
+        "gh": "Ljy-cell429",
+        "leader": false
+      },
+      {
+        "name": "向巧灵",
+        "sid": "2025303120011",
+        "gh": "qiaoling-X",
+        "leader": false
+      },
+      {
+        "name": "江俣",
+        "sid": "2025303110038",
+        "gh": "yu-jiangjinag",
+        "leader": false
+      }
+    ],
+    "doi": "",
+    "journal": "",
+    "description": "复现藻类胞外聚合物提取实验",
+    "_hash": "1bb64f1976a9a7e042d61539ead7a28a"
+  },
+  {
+    "number": 90,
+    "title": "作废",
+    "author": "Mengyuxin224",
+    "repo": "D2RS-2026spring/Synthetic-Microbiome-Reproduction",
+    "members": [
+      {
+        "name": "方立堃",
+        "sid": "2025303110094",
+        "gh": "xihongshi2021",
+        "leader": true
+      },
+      {
+        "name": "丁庆庆",
+        "sid": "2025303110087",
+        "gh": "xiangcaigongzhu999",
+        "leader": false
+      },
+      {
+        "name": "孟雨欣",
+        "sid": "2025303120088",
+        "gh": "Mengyuxin224",
+        "leader": false
+      }
+    ],
+    "doi": "10.1038/nature21417",
+    "journal": "Nature",
+    "description": "复现植物根系合成菌群与缺磷胁迫互作机制的核心图表分析",
+    "_hash": "ec24558e1857e1eaeaa9678c587aa989"
+  },
+  {
+    "number": 89,
+    "title": "Root microbiota drive direct integration of phosphate stress and immunity论文复现",
+    "author": "xihongshi2021",
+    "repo": "D2RS-2026spring/Synthetic-Microbiome-Reproduction",
+    "members": [
+      {
+        "name": "方立堃",
+        "sid": "2025303110094",
+        "gh": "xihongshi2021",
+        "leader": true
+      },
+      {
+        "name": "丁庆庆",
+        "sid": "2025303110087",
+        "gh": "xiangcaigongzhu999",
+        "leader": false
+      },
+      {
+        "name": "孟雨欣",
+        "sid": "2025303120088",
+        "gh": "Mengyuxin224",
+        "leader": false
+      }
+    ],
+    "doi": "10.1038/nature21417",
+    "journal": "Nature",
+    "description": "复现植物根系合成菌群与缺磷胁迫互作机制的论文分析流程",
+    "_hash": "f00b70899f904d4b7364793b415fda9c"
+  },
+  {
+    "number": 88,
+    "title": "Designing RNA sequencing experiments: A practical guide to reproducible gene expression analysis 论文复现",
+    "author": "JIAOjiao0504",
+    "repo": "",
+    "members": [
+      {
+        "name": "焦静雨",
+        "sid": "2025303120125",
+        "gh": "JIAOjiao0504",
+        "leader": true
+      },
+      {
+        "name": "孙铭仪",
+        "sid": "2025303120087",
+        "gh": "Mingyi-SUN",
+        "leader": false
+      },
+      {
+        "name": "余虹",
+        "sid": "2025303120070",
+        "gh": "hongyu929",
+        "leader": false
+      }
+    ],
+    "doi": "10.1016/j.csbj.2025.12.015",
+    "journal": "Comput Struct Biotechnol J",
+    "description": "复现RNA-seq可重复性分析指南论文",
+    "_hash": "06f0d2dab06362724e39c79ecae8da83"
+  },
+  {
+    "number": 85,
+    "title": "Designing RNA sequencing experiments: A practical guide to reproducible gene expression analysis的复现",
+    "author": "hongyu929",
+    "repo": "D2RS-2026spring/RNA-seq-Reproduction",
+    "members": [
+      {
+        "name": "焦静雨",
+        "sid": "2025303120125",
+        "gh": "JIAOjiao0504",
+        "leader": true
+      },
+      {
+        "name": "孙铭仪",
+        "sid": "2025303120087",
+        "gh": "Mingyi-SUN",
+        "leader": false
+      },
+      {
+        "name": "余虹",
+        "sid": "2025303120070",
+        "gh": "hongyu929",
+        "leader": false
+      }
+    ],
+    "doi": "10.1016/j.csbj.2025.12.015",
+    "journal": "Comput Struct Biotechnol J",
+    "description": "复现RNA-seq可重复性分析指南，覆盖实验设计到差异分析全流程",
+    "_hash": "20d02f6f4822c5095e27053e7f917ecd"
+  },
+  {
+    "number": 84,
+    "title": "土地利用变化对德国有机碳储量的百年遗留影响的可重复性研究",
+    "author": "KeV1n03",
+    "repo": "",
+    "members": [
+      {
+        "name": "胡凯文",
+        "sid": "2025303110074",
+        "gh": "KeV1n03",
+        "leader": true
+      },
+      {
+        "name": "周健平",
+        "sid": "2025303110053",
+        "gh": "zzzzz0928",
+        "leader": false
+      }
+    ],
+    "doi": "10.1111/gcb.17444",
+    "journal": "Global Change Biology",
+    "description": "复现德国农业土壤有机碳库百年土地利用变化遗留效应的论文结果",
+    "_hash": "71fd13d29f3431664a97d93e44e3d9c6"
+  },
+  {
+    "number": 83,
+    "title": "Combined effect of molybdenum and nitrogen fertilization on nitrogen metabolism and amino acid content in tobacco leaves的复现",
+    "author": "yanggang-0304",
+    "repo": "https://github.com/yanggang-0304/Data-R",
+    "members": [
+      {
+        "name": "杨刚",
+        "sid": "2025303120113",
+        "gh": "yanggang-0304",
+        "leader": true
+      },
+      {
+        "name": "余琪",
+        "sid": "2025303120069",
+        "gh": "yuqi-1209",
+        "leader": false
+      }
+    ],
+    "doi": "",
+    "journal": "",
+    "description": "复现课题组赵优优的钼论文柱状图分析",
+    "_hash": "302fefdb4e214f0b3226a1ce1c6b07e5"
+  },
+  {
+    "number": 82,
+    "title": "个人作业 2025303110057",
+    "author": "ZZY-423",
+    "repo": "https://github.com/ZZY-423/PNAS-2018-reproducibility-assignment",
+    "members": [
+      {
+        "name": "张振阳",
+        "sid": "2025303110057",
+        "gh": "ZZY-423",
+        "leader": true
+      }
+    ],
+    "doi": "10.1073/pnas.1808274115",
+    "journal": "PNAS",
+    "description": "复现土壤干燥促进细菌细胞间接触与接合转移的核心结论",
+    "_hash": "7fe8f50a8a21a1f69d85a4c1dfa53246"
+  },
+  {
+    "number": 81,
+    "title": "Mango-Mamba 芒果叶病害轻量级检测模型结果复现",
+    "author": "hzau-wujing",
+    "repo": "https://github.com/hzau-wujing/Reproduction-of-Mango-Mamba-Project",
+    "members": [
+      {
+        "name": "吴靖",
+        "sid": "2025305120260",
+        "gh": "hzau-wujing",
+        "leader": true
+      }
+    ],
+    "doi": "10.1016/j.compeleceng.2026.111033",
+    "journal": "Computers and Electrical Engineering",
+    "description": "复现Mango-Mamba芒果叶病害轻量级检测模型",
+    "_hash": "20e95fde01ba68525ddf8b93393395cb"
+  },
+  {
+    "number": 80,
+    "title": "基于人脸识别的项目",
+    "author": "lll-liwen",
+    "repo": "https://github.com/lll-liwen/python-face-recognition",
+    "members": [
+      {
+        "name": "吕博文",
+        "sid": "2025303120164",
+        "gh": "lll-liwen",
+        "leader": true
+      },
+      {
+        "name": "石婉婷",
+        "sid": "2025303110126",
+        "gh": "shiwanting0204",
+        "leader": false
+      },
+      {
+        "name": "韩可欣",
+        "sid": "2025303110133",
+        "gh": "Hankexinn",
+        "leader": false
+      }
+    ],
+    "doi": "",
+    "journal": "",
+    "description": "基于OpenCV LBPH算法的人脸识别系统复现",
+    "_hash": "9167e28d7dd9fb7c766d37b61ff80e2e"
+  },
+  {
+    "number": 77,
+    "title": "基于《Precipitation rather than temperature primarily drives global termite effects on litter decomposition》部分数据图复现",
+    "author": "Yunhhhsheng",
+    "repo": "https://github.com/Yunhhhsheng/-.git",
+    "members": [
+      {
+        "name": "李昀昇",
+        "sid": "2025303110068",
+        "gh": "Yunhhhsheng",
+        "leader": true
+      }
+    ],
+    "doi": "",
+    "journal": "Catena",
+    "description": "复现Wang等(2024)中图3、图4的荟萃分析结果",
+    "_hash": "c931be90c28e45ce7d6e9b76b5dcd070"
+  },
+  {
+    "number": 75,
+    "title": "基于《Effective treatment of Cu2+-containing acid mine drainage with  acidic-cupric resistant electroactive biofilms》的可重复性研究",
+    "author": "Andy-95277259",
+    "repo": "D2RS-2026spring/DATA",
+    "members": [
+      {
+        "name": "王迪月",
+        "sid": "2025303110009",
+        "gh": "Andy-95277259",
+        "leader": true
+      }
+    ],
+    "doi": "10.1016/j.jenvman.2025.125875",
+    "journal": "Journal of Environmental Management",
+    "description": "复现含铜酸性矿山废水处理论文的核心图表分析",
+    "_hash": "9370b15045e961dc50ac7e6f2f48c386"
+  },
+  {
+    "number": 74,
+    "title": "[个人作业] 复现评估：A reproducible R workflow to preserve variable and value labels",
+    "author": "star0421",
+    "repo": "",
+    "members": [
+      {
+        "name": "霍晶晶",
+        "sid": "2025303110132",
+        "gh": "star0421",
+        "leader": true
+      }
+    ],
+    "doi": "",
+    "journal": "",
+    "description": "复现R语言工作流，保留变量和值标签",
+    "_hash": "99318efd4a253d7da897e5a96d5a7bd4"
+  },
+  {
+    "number": 72,
+    "title": "可重复性研究",
+    "author": "Zhang-ym-ing",
+    "repo": "",
+    "members": [
+      {
+        "name": "沐禹廷",
+        "sid": "2025303120121",
+        "gh": "yuting-Mu",
+        "leader": true
+      },
+      {
+        "name": "张一鸣",
+        "sid": "2025303120095",
+        "gh": "Zhang-ym-ing",
+        "leader": false
+      },
+      {
+        "name": "韦荣耀",
+        "sid": "2025303120153",
+        "gh": "xiaozz-zl",
+        "leader": false
+      },
+      {
+        "name": "张荣耀",
+        "sid": "2025303120099",
+        "gh": "ZHGlory",
+        "leader": false
+      }
+    ],
+    "doi": "10.3390/s24072223",
+    "journal": "Sensors",
+    "description": "复现论文Field Testing of Gamma-Spectroscopy Method for Soil Water Content Estimation in an Agricultural Field的核心图表分析",
+    "_hash": "9b082f10d00706df99dcf6e4cb693e2e"
+  },
+  {
+    "number": 71,
+    "title": "细菌丰富度增强土壤有机质的热稳定性：分子多样性与热力学稳定性之间的长期权衡 论文可复现性评估",
+    "author": "zj0022",
+    "repo": "https://github.com/zj0022/my-repro-project",
+    "members": [
+      {
+        "name": "张晋",
+        "sid": "2025303120022",
+        "gh": "zj0022",
+        "leader": true
+      },
+      {
+        "name": "唐艳",
+        "sid": "2025303120015",
+        "gh": "Iris-ty193",
+        "leader": false
+      },
+      {
+        "name": "徐蔚宝",
+        "sid": "2025303120027",
+        "gh": "19839671980",
+        "leader": false
+      },
+      {
+        "name": "吴铭洲",
+        "sid": "2025303110025",
+        "gh": "wumingzhou1216",
+        "leader": false
+      },
+      {
+        "name": "师祎锴",
+        "sid": "2025303120018",
+        "gh": "shiyikai666",
+        "leader": false
+      }
+    ],
+    "doi": "10.1038/s43016-025-01253-5",
+    "journal": "Communications Earth & Environment",
+    "description": "复现细菌丰富度增强土壤有机质热稳定性的论文分析",
+    "_hash": "3f87f38b748a4c15bec1558467fffecd"
+  },
+  {
+    "number": 70,
+    "title": "全球能源消耗与碳排放情况——源自灌溉农业数据复现",
+    "author": "Britney-128",
+    "repo": "https://github.com/Britney-128/D2RS--zy.git",
+    "members": [
+      {
+        "name": "李曼娜",
+        "sid": "2025303110096",
+        "gh": "Britney-128",
+        "leader": true
+      },
+      {
+        "name": "孔儒远",
+        "sid": "2025303110092",
+        "gh": "Kongruyuan",
+        "leader": false
+      },
+      {
+        "name": "罗钰颖",
+        "sid": "2025303110107",
+        "gh": "lll4123",
+        "leader": false
+      },
+      {
+        "name": "汤启斌",
+        "sid": "2025303120119",
+        "gh": "laopyoutiao",
+        "leader": false
+      }
+    ],
+    "doi": "10.1038/s41467-024-47383-5",
+    "journal": "Nature Communications",
+    "description": "复现灌溉农业全球能源使用与碳排放论文的图表",
+    "_hash": "14b3d2af2f0e829841cc55eacfd2a122"
+  },
+  {
+    "number": 68,
+    "title": "大种子的智慧：种子大小本身即是一种防御策略",
+    "author": "tianjiayu-6",
+    "repo": "https://github.com/D2RS-2026spring/my-quarto-website1",
+    "members": [
+      {
+        "name": "田佳玉",
+        "sid": "2025303110010",
+        "gh": "tianjiayu-6",
+        "leader": true
+      },
+      {
+        "name": "林芸芸",
+        "sid": "2025303110008",
+        "gh": "Linyunyun123",
+        "leader": false
+      },
+      {
+        "name": "吴平",
+        "sid": "2025303110005",
+        "gh": "abcdefg123803",
+        "leader": false
+      },
+      {
+        "name": "秦红阳",
+        "sid": "2025303110011",
+        "gh": "Qhaiyu777",
+        "leader": false
+      },
+      {
+        "name": "黄雅斯",
+        "sid": "2025303110015",
+        "gh": "MFWWW",
+        "leader": false
+      }
+    ],
+    "doi": "10.1111/1365-2745.14480",
+    "journal": "Journal of Ecology",
+    "description": "复现壳斗科种子大小作为防御策略的论文核心图表分析",
+    "_hash": "386157c678b0b1f1d490d47e8eda977b"
+  },
+  {
+    "number": 67,
+    "title": "可重复性研究作业",
+    "author": "30-niu",
+    "repo": "https://github.com/30-niu/github.io",
+    "members": [
+      {
+        "name": "牛静霞",
+        "sid": "2025303120128",
+        "gh": "30-niu",
+        "leader": true
+      }
+    ],
+    "doi": "10.1038/s41467-019-12948-2",
+    "journal": "Nature Communications",
+    "description": "复现全球草地土壤净氮矿化论文的核心图表分析",
+    "_hash": "31b054d31d21904c74903555ec107ff9"
+  },
+  {
+    "number": 66,
+    "title": "基于Sustaining vulnerable agroecosystems with compost: Lasting benefits to soil health and carbon storage in semiarid winter wheat (Triticum aestivum, L.)文献的部分数据图复现",
+    "author": "cvvcI",
+    "repo": "D2RS-2026spring/compost_wheat_reproduce",
+    "members": [
+      {
+        "name": "程伟东",
+        "sid": "2025303120043",
+        "gh": "cvvcI",
+        "leader": false
+      },
+      {
+        "name": "魏伊洁",
+        "sid": "2025303120064",
+        "gh": "YI-1005",
+        "leader": false
+      },
+      {
+        "name": "焦文静",
+        "sid": "2025303110019",
+        "gh": "JWenJing",
+        "leader": false
+      },
+      {
+        "name": "王晨阳",
+        "sid": "2025303110073",
+        "gh": "Wangchenyang321",
+        "leader": false
+      },
+      {
+        "name": "王胜",
+        "sid": "2025303120135",
+        "gh": "KINGWINM",
+        "leader": false
+      }
+    ],
+    "doi": "",
+    "journal": "Applied Soil Ecology",
+    "description": "复现堆肥对半干旱冬小麦土壤健康和碳储存影响的论文图表",
+    "_hash": "a343425a2c0425a03cdc91361c829e32"
+  },
+  {
+    "number": 65,
+    "title": "Unlocking Visual Secrets: Inverting Features with Diffusion Priors for Image Reconstruction",
+    "author": "AetaosRauKeres",
+    "repo": "",
+    "members": [],
+    "doi": "",
+    "journal": "",
+    "description": "图像特征提取与重建用于作物表型信息保留程度评估",
+    "_hash": "76cd58267a4b56ef9608a438feea00d5"
+  },
+  {
+    "number": 64,
+    "title": "基与nrt的可重复性研究试验",
+    "author": "hirasauayui",
+    "repo": "",
+    "members": [
+      {
+        "name": "黄子凯",
+        "sid": "2025303110141",
+        "gh": "hirasauayui",
+        "leader": true
+      },
+      {
+        "name": "邹林",
+        "sid": "2025303110139",
+        "gh": "huanyu8",
+        "leader": false
+      },
+      {
+        "name": "林观清",
+        "sid": "2025303120114",
+        "gh": "LGQ559492",
+        "leader": false
+      },
+      {
+        "name": "郑永琪",
+        "sid": "2025303120147",
+        "gh": "zcguksjv65",
+        "leader": false
+      },
+      {
+        "name": "李迁",
+        "sid": "2025303120110",
+        "gh": "li20010229-eng",
+        "leader": false
+      }
+    ],
+    "doi": "10.21105/joss.06815",
+    "journal": "Journal of Open Source Software",
+    "description": "复现nrt工具包，用于卫星图像时间序列的在线监测",
+    "_hash": "ed14e9b9ea4ae0ec554fa3f4bc3c33d7"
+  },
+  {
+    "number": 61,
+    "title": "土壤属性制图研究的可重复性评估：基于机器学习方法的土壤属性预测及数字制图",
+    "author": "helloworld2060",
+    "repo": "helloworld2060/soil",
+    "members": [
+      {
+        "name": "秦子锐",
+        "sid": "2025303110128",
+        "gh": "helloworld2060",
+        "leader": true
+      },
+      {
+        "name": "郑桂玉",
+        "sid": "2025303120179",
+        "gh": "zhengzhenghuhuhu",
+        "leader": false
+      },
+      {
+        "name": "韩承言",
+        "sid": "2025303110134",
+        "gh": "hcy20030822",
+        "leader": false
+      },
+      {
+        "name": "张歆雅",
+        "sid": "2025303120169",
+        "gh": "nanlingZXY",
+        "leader": false
+      },
+      {
+        "name": "王子恒",
+        "sid": "2025303110125",
+        "gh": "WZH-303110125",
+        "leader": false
+      }
+    ],
+    "doi": "",
+    "journal": "",
+    "description": "评估机器学习方法预测土壤属性的可重复性",
+    "_hash": "5f748bdc188a58f24fb4469c660f7a2d"
+  },
+  {
+    "number": 60,
+    "title": "复现 Qu et al. (2016) 日降水分级方法：长江中游典型城市降水强度结构变化分析",
+    "author": "Zhu-123-er",
+    "repo": "https://github.com/Zhu-123-er/-Qu-et-al.-2016-",
+    "members": [
+      {
+        "name": "祝佳琦",
+        "sid": "2025303110127",
+        "gh": "Zhu-123-er",
+        "leader": true
+      }
+    ],
+    "doi": "10.3390/w8050185",
+    "journal": "Water",
+    "description": "复现Qu et al. (2016)日降水分级与趋势分析方法，应用于长江中游典型城市",
+    "_hash": "3e406abc567c15f0317a4567203580fb"
+  },
+  {
+    "number": 59,
+    "title": "磷酸盐肥料农学效率研究 - 可复现性评估报告",
+    "author": "c-duoduo",
+    "repo": "https://github.com/c-duoduo/loftex.git",
+    "members": [
+      {
+        "name": "程朵朵",
+        "sid": "2025303110104",
+        "gh": "c-duoduo",
+        "leader": true
+      },
+      {
+        "name": "崔玉姝",
+        "sid": "2025303120091",
+        "gh": "Cuiys123",
+        "leader": false
+      },
+      {
+        "name": "陶一凡",
+        "sid": "2025303120151",
+        "gh": "yftao0106-droid",
+        "leader": false
+      }
+    ],
+    "doi": "10.36783/18069657rbcs20240099",
+    "journal": "Revista Brasileira de Ciência do Solo",
+    "description": "复现磷酸盐肥料农学效率研究的核心图表分析",
+    "_hash": "012357659a6da0d4d4c1745edac9d68f"
+  },
+  {
+    "number": 58,
+    "title": "RABiTPy项目复现",
+    "author": "Ljy-cell429",
+    "repo": "https://github.com/Ljy-cell429/RABiTPy-ZY",
+    "members": [
+      {
+        "name": "龙嘉仪",
+        "sid": "2025303110044",
+        "gh": "Ljy-cell429",
+        "leader": true
+      },
+      {
+        "name": "梅若男",
+        "sid": "2025303110037",
+        "gh": "Mei0416",
+        "leader": false
+      },
+      {
+        "name": "向巧灵",
+        "sid": "2025303120011",
+        "gh": "qiaoling-X",
+        "leader": false
+      },
+      {
+        "name": "江俣",
+        "sid": "2025303110038",
+        "gh": "yu-jiangjinag",
+        "leader": false
+      }
+    ],
+    "doi": "",
+    "journal": "BMC Bioinformatics",
+    "description": "复现RABiTPy论文中细菌运动视频的自动化分析与统计图表",
+    "_hash": "166522cb1bd2e695cde9f5f4f10cc3f6"
+  },
+  {
+    "number": 56,
+    "title": "磁性 SA/PVA/Fe3O4复合载体固定化耐受菌株对土壤镉 的吸附及其机理研究",
+    "author": "cyz20030901",
+    "repo": "https://github.com/LiBoFei1129/soil-cadmium-immobilized-bacteria",
+    "members": [
+      {
+        "name": "陈艳姿",
+        "sid": "2025303110081",
+        "gh": "cyz20030901",
+        "leader": true
+      },
+      {
+        "name": "李愽菲",
+        "sid": "2025303110067",
+        "gh": "LiBoFei1129",
+        "leader": false
+      },
+      {
+        "name": "唐迎秋",
+        "sid": "2025303120084",
+        "gh": "tang7928",
+        "leader": false
+      }
+    ],
+    "doi": "",
+    "journal": "环境科学学报",
+    "description": "复现磁性SA/PVA/Fe3O4复合载体固定化菌株对土壤镉的吸附研究",
+    "_hash": "e144db880a9bd737f1e4870d4da6eb7e"
+  },
+  {
+    "number": 55,
+    "title": "氮添加对土壤微生物碳利用效率影响研究实验复现",
+    "author": "chen11810",
+    "repo": "D2RS-2026spring/new-reproduce-CUE-R",
+    "members": [
+      {
+        "name": "付琛",
+        "sid": "2025303110022",
+        "gh": "chen11810",
+        "leader": true
+      },
+      {
+        "name": "贠梦茹",
+        "sid": "2025303110042",
+        "gh": "ymr10",
+        "leader": false
+      },
+      {
+        "name": "欧美萍",
+        "sid": "2025303120117",
+        "gh": "omo-rlaith",
+        "leader": false
+      },
+      {
+        "name": "刘星雨",
+        "sid": "2025303120008",
+        "gh": "Fish-star-liu",
+        "leader": false
+      },
+      {
+        "name": "李昊琪",
+        "sid": "2025303120107",
+        "gh": "haoqi159",
+        "leader": false
+      }
+    ],
+    "doi": "10.5281/zenodo.15535868",
+    "journal": "",
+    "description": "复现氮添加对微生物碳利用效率影响的空间分布图",
+    "_hash": "919cbb9e9e2a7b84e792b9422600adf7"
+  },
+  {
+    "number": 54,
+    "title": "土壤特性和沉积物淤积调节恢复湿地甲烷通量的可重复性评估",
+    "author": "YangMiaoSi",
+    "repo": "https://github.com/YangMiaoSi/wetland-reproduction",
+    "members": [
+      {
+        "name": "杨淼思",
+        "sid": "2025303110035",
+        "gh": "YangMiaoSi",
+        "leader": true
+      },
+      {
+        "name": "高栋",
+        "sid": "2025303120063",
+        "gh": "boyfriend-svg",
+        "leader": false
+      },
+      {
+        "name": "王松",
+        "sid": "2025303120041",
+        "gh": "Wang-source-boop",
+        "leader": false
+      }
+    ],
+    "doi": "10.1111/gcb.14124",
+    "journal": "Global Change Biology",
+    "description": "复现土壤特性和沉积物淤积调节恢复湿地甲烷通量的论文",
+    "_hash": "3c82f2ca8648664f18354069eadc5300"
+  },
+  {
+    "number": 53,
+    "title": "基于功能视角的中国三峡库区经济林恢复对土壤物理质量影响评估结果复现",
+    "author": "zlznevergu",
+    "repo": "https://github.com/zlznevergu/zlzgroup-lunwenfuxian-project",
+    "members": [
+      {
+        "name": "曾令振",
+        "sid": "2025303110063",
+        "gh": "zlznevergu",
+        "leader": true
+      },
+      {
+        "name": "刘家洛",
+        "sid": "2025303120073",
+        "gh": "ly9495",
+        "leader": false
+      },
+      {
+        "name": "陈炳宇",
+        "sid": "2025303110144",
+        "gh": "chenbingyu-HZAU",
+        "leader": false
+      },
+      {
+        "name": "熊煜佳",
+        "sid": "2025303120126",
+        "gh": "xyj666357",
+        "leader": false
+      }
+    ],
+    "doi": "10.1016/j.catena.2025.109758",
+    "journal": "CATENA",
+    "description": "复现经济林恢复对三峡库区土壤物理质量影响评估论文的关键图表",
+    "_hash": "8dcea23f0a186df34312d1e23c908bae"
+  },
+  {
+    "number": 52,
+    "title": "水分损耗减少主导 CO₂提升的水分利用效率，而非光合作用增强论文复现",
+    "author": "BILLDOU",
+    "repo": "D2RS-2026spring/CO2-enhanced-water-use-efficiency",
+    "members": [
+      {
+        "name": "唐伟",
+        "sid": "2025303120014",
+        "gh": "BILLDOU",
+        "leader": true
+      },
+      {
+        "name": "童天柱",
+        "sid": "2025303120044",
+        "gh": "kskbl-CXY",
+        "leader": false
+      },
+      {
+        "name": "牛双红",
+        "sid": "2025303110039",
+        "gh": "Niu0306419",
+        "leader": false
+      },
+      {
+        "name": "李有漫",
+        "sid": "2025303110032",
+        "gh": "lym7755",
+        "leader": false
+      },
+      {
+        "name": "吕淑",
+        "sid": "2025303110004",
+        "gh": "Lvshu118",
+        "leader": false
+      }
+    ],
+    "doi": "10.1038/s41559-025-02761-0",
+    "journal": "Nature Ecology & Evolution",
+    "description": "复现论文中Figure1-Figure4及差分方法示例的图表",
+    "_hash": "95e51f360f17512fab8bf55a9acadb8b"
+  },
+  {
+    "number": 51,
+    "title": "用于陆面模式模拟的中国土壤属性数据集的数据复现项目",
+    "author": "niuideal",
+    "repo": "D2RS-2026spring/CHINA-SOIL-data",
+    "members": [
+      {
+        "name": "牛理想",
+        "sid": "2025303120127",
+        "gh": "niuideal",
+        "leader": true
+      },
+      {
+        "name": "李如梦",
+        "sid": "2025303120106",
+        "gh": "lirumeng-mary",
+        "leader": false
+      },
+      {
+        "name": "刘珺",
+        "sid": "2025303110090",
+        "gh": "yooyoo2",
+        "leader": false
+      },
+      {
+        "name": "徐嘉璐",
+        "sid": "2025303120101",
+        "gh": "20260305",
+        "leader": false
+      },
+      {
+        "name": "李雪",
+        "sid": "2025303110097",
+        "gh": "xueli9g",
+        "leader": false
+      }
+    ],
+    "doi": "10.11888/terre.tpdc.301235",
+    "journal": "",
+    "description": "复现中国土壤数据集CSDLv2中SOC与TN的空间分布特征及相互关系",
+    "_hash": "a46677488d62ea94f0ae9c156dc2b482"
+  },
+  {
+    "number": 50,
+    "title": "基于秀丽隐杆线虫的高通量毒性筛选：现有技术平台、核心优势与未来方向的数据复现",
+    "author": "jiaoliu425",
+    "repo": "D2RS-2026spring/nematode-toxicology-team",
+    "members": [
+      {
+        "name": "刘娇",
+        "sid": "2025303110024",
+        "gh": "jiaoliu425",
+        "leader": true
+      },
+      {
+        "name": "张颖格",
+        "sid": "2025303120025",
+        "gh": "xluug",
+        "leader": false
+      },
+      {
+        "name": "易佳顺",
+        "sid": "2025303110029",
+        "gh": "yijiashun08",
+        "leader": false
+      },
+      {
+        "name": "周暄烊",
+        "sid": "2025303120012",
+        "gh": "zxy189",
+        "leader": false
+      }
+    ],
+    "doi": "10.1021/acs.est.5c12562",
+    "journal": "ACS Environmental Science & Technology",
+    "description": "复现线虫高通量毒性筛选论文的核心图表分析",
+    "_hash": "f06c6c255bdbfea73e889386205e75aa"
+  },
+  {
+    "number": 48,
+    "title": "温度-深度时间序列反演饱和带土壤水分垂直通量试验的复现",
+    "author": "flovar",
+    "repo": "D2RS-2026spring/project",
+    "members": [
+      {
+        "name": "施振隆",
+        "sid": "2025303110061",
+        "gh": "flovar",
+        "leader": true
+      },
+      {
+        "name": "王羿人",
+        "sid": "2025303120134",
+        "gh": "WYR1016",
+        "leader": false
+      },
+      {
+        "name": "潘钰烁",
+        "sid": "2025303120124",
+        "gh": "tzy311",
+        "leader": false
+      },
+      {
+        "name": "贾雯偲",
+        "sid": "2025303120143",
+        "gh": "Ccwwjia-032",
+        "leader": false
+      },
+      {
+        "name": "刘壮壮",
+        "sid": "2025303110049",
+        "gh": "Leo-hub123",
+        "leader": false
+      }
+    ],
+    "doi": "10.1029/2022WR033677",
+    "journal": "Water Resources Research",
+    "description": "复现WRR-2023论文，利用温度-深度时间序列反演饱和带土壤水分垂直通量",
+    "_hash": "7994ef72f081c5b5df589d6372ba312c"
+  },
+  {
+    "number": 47,
+    "title": "基于机器学习的农业肥料推荐系统",
+    "author": "liming030523",
+    "repo": "https://github.com/D2RS-2026spring/Fertilizer_Prediction",
+    "members": [
+      {
+        "name": "李明",
+        "sid": "2025303110031",
+        "gh": "liming030523",
+        "leader": true
+      },
+      {
+        "name": "李浩宁",
+        "sid": "2025303120030",
+        "gh": "Lihn20030201",
+        "leader": false
+      },
+      {
+        "name": "李晨昊",
+        "sid": "2025303110017",
+        "gh": "kzdpgy",
+        "leader": false
+      },
+      {
+        "name": "叶蓓蕾",
+        "sid": "2025303120010",
+        "gh": "lvye-maker",
+        "leader": false
+      }
+    ],
+    "doi": "",
+    "journal": "",
+    "description": "基于机器学习的农业肥料推荐系统",
+    "_hash": "3ffdec6d86c3679aad28b2dc26b4ef18"
+  },
+  {
+    "number": 45,
+    "title": "CropGBWater项目可复现性评估——以 2020 年全球主粮四作物蓝绿水消耗复现为目标",
+    "author": "LingerYU",
+    "repo": "https://github.com/LingerYU/CropGBWater-reproducibility",
+    "members": [
+      {
+        "name": "余玲儿",
+        "sid": "2025303120004",
+        "gh": "LingerYU",
+        "leader": true
+      },
+      {
+        "name": "余明哲",
+        "sid": "2025303110002",
+        "gh": "159368qwe",
+        "leader": false
+      },
+      {
+        "name": "宋晨迪",
+        "sid": "2025303120167",
+        "gh": "SCD1106",
+        "leader": false
+      },
+      {
+        "name": "何文",
+        "sid": "2025303120003",
+        "gh": "hewen717478",
+        "leader": false
+      }
+    ],
+    "doi": "10.1038/s43016-025-01231-x",
+    "journal": "Nature Food",
+    "description": "复现CropGBWater模型，评估作物水消耗可复现性",
+    "_hash": "03b156a0a2191ec51b55db1ce6145255"
+  },
+  {
+    "number": 44,
+    "title": "关于济州岛柑橘园数字孪生的个性化农业潜力复现",
+    "author": "XuZQ-come",
+    "repo": "https://github.com/XuZQ-come/RSTUDIO.git",
+    "members": [
+      {
+        "name": "张清华",
+        "sid": "2025303110027",
+        "gh": "qinghuaZhang-prog",
+        "leader": false
+      },
+      {
+        "name": "张宇翔",
+        "sid": "2025303110026",
+        "gh": "zhangyuxiang04",
+        "leader": false
+      },
+      {
+        "name": "王力辉",
+        "sid": "2025303110040",
+        "gh": "dilikelei01",
+        "leader": false
+      },
+      {
+        "name": "徐智强",
+        "sid": "2025303110028",
+        "gh": "XuZQ-come",
+        "leader": true
+      },
+      {
+        "name": "邱悦欣",
+        "sid": "2025303120146",
+        "gh": "yunokaaa",
+        "leader": false
+      }
+    ],
+    "doi": "10.1038/s41467-024-45725-x",
+    "journal": "Nature Communications",
+    "description": "复现济州岛柑橘园数字孪生论文的图表分析",
+    "_hash": "b5c2083fcd834040617a52de857fa3ac"
+  },
+  {
+    "number": 43,
+    "title": "WRC15_Rhizo仓库根际养分与微生物群落关系图复现",
+    "author": "luWheeler",
+    "repo": "https://github.com/luWheeler/WRC15-.git",
+    "members": [
+      {
+        "name": "卢华",
+        "sid": "2025303120079",
+        "gh": "luWheeler",
+        "leader": true
+      },
+      {
+        "name": "敖文洁",
+        "sid": "2025303110060",
+        "gh": "AO-wj",
+        "leader": false
+      }
+    ],
+    "doi": "10.1128/mSphere.00035-20",
+    "journal": "mSphere",
+    "description": "复现长期氮磷添加对湿地土壤与植物根际微生物多样性影响的核心图表",
+    "_hash": "f5ac49d7a7658ac087412ba92f1457b5"
+  },
+  {
+    "number": 42,
+    "title": "基于随机森林模型的土壤pH预测方法的可重复性评估",
+    "author": "2025WL",
+    "repo": "https://github.com/20WPL/Homework-2026",
+    "members": [
+      {
+        "name": "吴沛林",
+        "sid": "2025303110052",
+        "gh": "20WPL",
+        "leader": true
+      },
+      {
+        "name": "吴蕾",
+        "sid": "2025303120081",
+        "gh": "2025WL",
+        "leader": false
+      }
+    ],
+    "doi": "",
+    "journal": "",
+    "description": "复现土壤pH预测的随机森林模型，评估可重复性",
+    "_hash": "6d602d7259b26633687b36ebfedf347f"
+  },
+  {
+    "number": 41,
+    "title": "人为气候变化可能会降低全球固氮生物多样性",
+    "author": "Chenht111",
+    "repo": "D2RS-2026spring/work",
+    "members": [
+      {
+        "name": "陈昊天",
+        "sid": "2025303120055",
+        "gh": "Chenht111",
+        "leader": true
+      },
+      {
+        "name": "陈雨",
+        "sid": "2025303110013",
+        "gh": "ChenYu-7317",
+        "leader": false
+      },
+      {
+        "name": "黄君蕾",
+        "sid": "2025303120158",
+        "gh": "Ray111-Arch",
+        "leader": false
+      },
+      {
+        "name": "汤灿",
+        "sid": "2025303120034",
+        "gh": "SHELLY203",
+        "leader": false
+      },
+      {
+        "name": "刘君若",
+        "sid": "2025303110023",
+        "gh": "Liujunruo",
+        "leader": false
+      }
+    ],
+    "doi": "10.1038/s41467-025-62843-2",
+    "journal": "Nature Communications",
+    "description": "利用R复现文献中的Figure2a、2c、3cd等图表",
+    "_hash": "4cca474da935e8ad765b92a333130eaf"
+  },
+  {
+    "number": 39,
+    "title": "AgriGPTs: Research and Development of Agricultural Large Models",
+    "author": "Xing0630",
+    "repo": "",
+    "members": [
+      {
+        "name": "刘行",
+        "sid": "2025303120163",
+        "gh": "20260305",
+        "leader": true
+      },
+      {
+        "name": "宋文博",
+        "sid": "2025303110055",
+        "gh": "Swb123-star",
+        "leader": false
+      },
+      {
+        "name": "王培正",
+        "sid": "2025303110143",
+        "gh": "RalphBaejeongWong",
+        "leader": false
+      }
+    ],
+    "doi": "",
+    "journal": "",
+    "description": "复现AgriGPTs农业大模型的代码、环境与端到端推理流程",
+    "_hash": "f6c5d9234a6a232f683d2e50f0ebf3ed"
+  },
+  {
+    "number": 38,
+    "title": "全球水稻多类分割项目可复现性分析报告",
+    "author": "DYRRRRUI",
+    "repo": "D2RS-2026spring/RiceSEG-Reproduction",
+    "members": [
+      {
+        "name": "刘夏",
+        "sid": "2025303120162",
+        "gh": "broucemonkey-stack",
+        "leader": false
+      },
+      {
+        "name": "丁奕睿",
+        "sid": "2025303120159",
+        "gh": "DYRRRRUI",
+        "leader": false
+      },
+      {
+        "name": "杨玉桐",
+        "sid": "2025303110124",
+        "gh": "YYT0511",
+        "leader": false
+      },
+      {
+        "name": "陈曦",
+        "sid": "2025303120180",
+        "gh": "CXWYWG",
+        "leader": false
+      }
+    ],
+    "doi": "10.1016/j.softx.2025.101105",
+    "journal": "SoftwareX",
+    "description": "复现RiceSEG数据集的水稻多类语义分割算法",
+    "_hash": "6dcb646ff2bb678ea9f9864bf7fdbe0f"
+  },
+  {
+    "number": 37,
+    "title": "Molecular trade-offs in soil organic carbon  composition at continental scale数据复现",
+    "author": "Shiwen-Yue",
+    "repo": "D2RS-2026spring/soil-soc-repro",
+    "members": [
+      {
+        "name": "姜宇洋",
+        "sid": "2025303110054",
+        "gh": "Jiang-yu-yang",
+        "leader": true
+      },
+      {
+        "name": "岳诗文",
+        "sid": "2025303110056",
+        "gh": "Shiwen-Yue",
+        "leader": false
+      },
+      {
+        "name": "吕智彤",
+        "sid": "2025303110051",
+        "gh": "LZT56",
+        "leader": false
+      }
+    ],
+    "doi": "10.1038/s41561-020-0634-x",
+    "journal": "Nature Geoscience",
+    "description": "复现土壤有机碳组成分子权衡论文的核心图表分析",
+    "_hash": "2976b9db04d7dd613f900a5d2d2f6559"
+  },
+  {
+    "number": 36,
+    "title": "关于微生物群落中的协同生长是多稳态形成的驱动力的论文复现",
+    "author": "JZHEN03625",
+    "repo": "https://github.com/HY-hyyyy/Microbiology-Team",
+    "members": [
+      {
+        "name": "黄跃",
+        "sid": "2025303110085",
+        "gh": "HY-hyyyy",
+        "leader": true
+      },
+      {
+        "name": "郭有艳",
+        "sid": "2025303110077",
+        "gh": "guoyouyan391-maker",
+        "leader": false
+      },
+      {
+        "name": "姜真",
+        "sid": "2025303120085",
+        "gh": "JZHEN03625",
+        "leader": false
+      },
+      {
+        "name": "马文静",
+        "sid": "2025303120155",
+        "gh": "unique520521",
+        "leader": false
+      }
+    ],
+    "doi": "10.1038/s41467-024-48521-9",
+    "journal": "Nature Communications",
+    "description": "复现微生物群落中种内合作生长驱动多稳态的论文结果",
+    "_hash": "5f7f48024a13078fe186fb40ecf92af0"
+  },
+  {
+    "number": 35,
+    "title": "农业面源污染K-Means聚类与多元回归分析 - 可重复研究项目",
+    "author": "JiangYida666",
+    "repo": "D2RS-2026spring/Agricultural_NPS_ML_Reproducibility",
+    "members": [
+      {
+        "name": "蒋奕达",
+        "sid": "2025303110130",
+        "gh": "JiangYida666",
+        "leader": true
+      },
+      {
+        "name": "马志慧",
+        "sid": "2025303120061",
+        "gh": "mazhihui-star",
+        "leader": false
+      },
+      {
+        "name": "马明玮",
+        "sid": "2025303120062",
+        "gh": "mamingwei2026",
+        "leader": false
+      }
+    ],
+    "doi": "10.3390/su18010013",
+    "journal": "Sustainability",
+    "description": "复现农业面源污染K-Means聚类与多元回归分析论文",
+    "_hash": "755a0a4c8bf7246c3062afb34a6a8dbd"
+  },
+  {
+    "number": 34,
+    "title": "可重复研究评估作业 - 沐禹廷",
+    "author": "yuting-Mu",
+    "repo": "D2RS-2026spring/gamma-swc-reproduction",
+    "members": [
+      {
+        "name": "沐禹廷",
+        "sid": "2025303120121",
+        "gh": "yuting-Mu",
+        "leader": true
+      },
+      {
+        "name": "张一鸣",
+        "sid": "2025303120095",
+        "gh": "Zhang-ym-ing",
+        "leader": false
+      },
+      {
+        "name": "韦荣耀",
+        "sid": "2025303120153",
+        "gh": "xiaozz-zl",
+        "leader": false
+      },
+      {
+        "name": "张荣耀",
+        "sid": "2025303120099",
+        "gh": "ZHGlory",
+        "leader": false
+      },
+      {
+        "name": "李清源",
+        "sid": "2025303120108",
+        "gh": "LQY123-Sketch",
+        "leader": false
+      }
+    ],
+    "doi": "",
+    "journal": "Sensors",
+    "description": "复现伽马能谱法估算土壤含水量的论文结果",
+    "_hash": "57fac90a120068ca37b8ce0b680e92ae"
+  },
+  {
+    "number": 33,
+    "title": "全球耕地氮损失复现-Nature food-Optimized agricultural management reduces global cropland nitrogen losses to air and water",
+    "author": "1712203708-a11y",
+    "repo": "D2RS-2026spring/cropland-nitrogen-reproduction",
+    "members": [
+      {
+        "name": "高欣昱",
+        "sid": "2025303110014",
+        "gh": "1712203708-a11y",
+        "leader": true
+      },
+      {
+        "name": "李安琪",
+        "sid": "2025303110095",
+        "gh": "l110095",
+        "leader": false
+      },
+      {
+        "name": "林蓉",
+        "sid": "2025303110070",
+        "gh": "LLLLLinin",
+        "leader": false
+      },
+      {
+        "name": "马文倩",
+        "sid": "2025303110112",
+        "gh": "Q110112",
+        "leader": false
+      },
+      {
+        "name": "刘慧",
+        "sid": "2025303110089",
+        "gh": "liuhui0411",
+        "leader": false
+      }
+    ],
+    "doi": "10.1038/s43016-024-01076-w",
+    "journal": "Nature Food",
+    "description": "复现全球耕地氮损失论文的Figure1-3图表",
+    "_hash": "cbedf4abcf04a05ad1e76435fed28857"
+  },
+  {
+    "number": 32,
+    "title": "分散式氨肥生产研究论文复现",
+    "author": "solitude879",
+    "repo": "D2RS-2026spring/ammonia-fertilizer-production-team-project",
+    "members": [
+      {
+        "name": "刘慧",
+        "sid": "2025303120075",
+        "gh": "solitude879",
+        "leader": true
+      },
+      {
+        "name": "李亚茹",
+        "sid": "2025303120104",
+        "gh": "EIO-lyr",
+        "leader": false
+      },
+      {
+        "name": "王焱栋",
+        "sid": "2025303120131",
+        "gh": "WANGSpecial",
+        "leader": false
+      },
+      {
+        "name": "高彬",
+        "sid": "2025303120156",
+        "gh": "geiut",
+        "leader": false
+      },
+      {
+        "name": "倪龙",
+        "sid": "2025303110088",
+        "gh": "nilongaixuexi66",
+        "leader": false
+      }
+    ],
+    "doi": "10.1038/s43016-024-00979-y",
+    "journal": "Nature Food",
+    "description": "复现分散式氨肥生产成本计算与可视化",
+    "_hash": "40ea3e9c1896d3df77a9487665a9e75e"
+  },
+  {
+    "number": 31,
+    "title": "基于 DeepHighlight 项目的可重复性研究评估",
+    "author": "dadfr",
+    "repo": "",
+    "members": [
+      {
+        "name": "张强",
+        "sid": "2025317120090",
+        "gh": "dadfr",
+        "leader": true
+      },
+      {
+        "name": "李磊",
+        "sid": "2025317120097",
+        "gh": "1613208672lilei-dotcom",
+        "leader": false
+      },
+      {
+        "name": "王彬",
+        "sid": "2025317120099",
+        "gh": "wangbin98765432100-pixel",
+        "leader": false
+      }
+    ],
+    "doi": "",
+    "journal": "",
+    "description": "复现flotilla项目，评估其可重复性，包括环境、数据和代码复现。",
+    "_hash": "14dd7ff671c07ed1c93dfa5de4e3e0d8"
+  },
+  {
+    "number": 30,
+    "title": "Crop-Recommendation-System-Using-Machine-Learning项目的可复性评估与复现",
+    "author": "JieHan369",
+    "repo": "D2RS-2026spring/Crop-Recommendation-System-Using-Machine-Learning",
+    "members": [
+      {
+        "name": "韩杰",
+        "sid": "2025303120182",
+        "gh": "JieHan369",
+        "leader": true
+      },
+      {
+        "name": "傅垣毓",
+        "sid": "2025303120161",
+        "gh": "FYY0130",
+        "leader": false
+      },
+      {
+        "name": "周蕴熙",
+        "sid": "2025303120166",
+        "gh": "SuperXi-9",
+        "leader": false
+      },
+      {
+        "name": "王子恒",
+        "sid": "2025303110125",
+        "gh": "WZH-303110125",
+        "leader": false
+      }
+    ],
+    "doi": "",
+    "journal": "",
+    "description": "复现作物推荐系统的机器学习模型训练与评估",
+    "_hash": "7426211eefe084bf28f699c42c4509b0"
+  },
+  {
+    "number": 29,
+    "title": "中国沿海泥滩潮间带病毒的生物多样性项目复现",
+    "author": "winter0120",
+    "repo": "",
+    "members": [
+      {
+        "name": "陈寒玉",
+        "sid": "2025303110012",
+        "gh": "winter0120",
+        "leader": true
+      },
+      {
+        "name": "周雅俊",
+        "sid": "2025303110006",
+        "gh": "2025303110006",
+        "leader": false
+      },
+      {
+        "name": "徐县",
+        "sid": "2025303120026",
+        "gh": "aixfang-two",
+        "leader": false
+      }
+    ],
+    "doi": "10.1038/s41467-024-52996-x",
+    "journal": "Nature Communications",
+    "description": "复现中国沿海潮间带泥滩病毒多样性研究论文的核心图表",
+    "_hash": "4695827662a995731490e016bcc22624"
+  },
+  {
+    "number": 28,
+    "title": "SoilGrids250m 项目可重复性评估",
+    "author": "WJJ200212",
+    "repo": "WJJ200212/soilgrids250m-reproduce",
+    "members": [
+      {
+        "name": "王俊杰",
+        "sid": "2025303120037",
+        "gh": "WJJ200212",
+        "leader": true
+      },
+      {
+        "name": "潘攀",
+        "sid": "2025303110103",
+        "gh": "Zukoin",
+        "leader": false
+      },
+      {
+        "name": "盛贤",
+        "sid": "2025303120136",
+        "gh": "shengxian9277",
+        "leader": false
+      }
+    ],
+    "doi": "10.1371/journal.pone.0169748",
+    "journal": "PLoS ONE",
+    "description": "复现SoilGrids250m全球土壤属性250m栅格数据集",
+    "_hash": "cbed23485737131af67ee7b530789cf5"
+  },
+  {
+    "number": 27,
+    "title": "基于像素集编码器与时间自注意力的卫星影像时间序列分类",
+    "author": "mustiheng",
+    "repo": "https://github.com/mustiheng/SatelliteImageTimeSeriesClassi-cation-withPixel-SetEncodersandTemporalSelf-Attention",
+    "members": [
+      {
+        "name": "王少艺",
+        "sid": "2025303120175",
+        "gh": "mustiheng",
+        "leader": true
+      },
+      {
+        "name": "丁红俊",
+        "sid": "2025303110115",
+        "gh": "Dhjsmart",
+        "leader": false
+      },
+      {
+        "name": "余娟",
+        "sid": "2025303110117",
+        "gh": "Yu-yuyuy",
+        "leader": false
+      },
+      {
+        "name": "刘小梅",
+        "sid": "2025303110120",
+        "gh": "CANGSU-mei",
+        "leader": false
+      }
+    ],
+    "doi": "10.1109/CVPR42600.2020.01233",
+    "journal": "",
+    "description": "复现PSE-TAE遥感影像时空分类模型，实现像素级地物分类",
+    "_hash": "9d1cae1081f1b430321050bf4ee8ff8e"
+  },
+  {
+    "number": 26,
+    "title": "基于无人机多光谱与点云数据的植被生物物理参数估算",
+    "author": "Xczx1000",
+    "repo": "https://github.com/Xczx1000/DeepFapar",
+    "members": [
+      {
+        "name": "仝大伟",
+        "sid": "2025303120160",
+        "gh": "Xczx1000",
+        "leader": true
+      },
+      {
+        "name": "于振潼",
+        "sid": "2025303110001",
+        "gh": "APFSDS-HE",
+        "leader": false
+      },
+      {
+        "name": "周力",
+        "sid": "2025303110091",
+        "gh": "ddjspx",
+        "leader": false
+      }
+    ],
+    "doi": "",
+    "journal": "",
+    "description": "基于无人机多光谱与点云数据估算植被叶面积指数与截获光合有效辐射比例",
+    "_hash": "f7ab89500203ea7ba1149367e1d884b2"
+  },
+  {
+    "number": 25,
+    "title": "基于机器学习的环境监测与定量分析的可重复性实验",
+    "author": "dinglsnow",
+    "repo": "D2RS-2026spring/datars-assignment-4",
+    "members": [
+      {
+        "name": "丁俐杉",
+        "sid": "2025303110114",
+        "gh": "dinglsnow",
+        "leader": true
+      },
+      {
+        "name": "于辛铠",
+        "sid": "2025303110116",
+        "gh": "nicek4267-max",
+        "leader": false
+      },
+      {
+        "name": "成一潇",
+        "sid": "2025303110122",
+        "gh": "cyxxx101",
+        "leader": false
+      },
+      {
+        "name": "霍晶晶",
+        "sid": "2025303110132",
+        "gh": "star0421",
+        "leader": false
+      }
+    ],
+    "doi": "10.3390/rs13132525",
+    "journal": "Remote Sensing",
+    "description": "复现论文Figure 3的散点密度图，展示模型预测与观测值的拟合及数据密度",
+    "_hash": "56ab5def5aed2a6e8f2fb1510d8406a2"
+  },
+  {
+    "number": 24,
+    "title": "基于深度残差神经网络与SAR-光学融合的Sentinel-2云去除",
+    "author": "fza20030825-star",
+    "repo": "",
+    "members": [
+      {
+        "name": "冯子昂",
+        "sid": "2025303110118",
+        "gh": "fza20030825-star",
+        "leader": true
+      },
+      {
+        "name": "李畅",
+        "sid": "2025303120172",
+        "gh": "Lc898",
+        "leader": false
+      },
+      {
+        "name": "向路",
+        "sid": "2025303121002",
+        "gh": "Luxiaolu330",
+        "leader": false
+      }
+    ],
+    "doi": "10.1016/j.isprsjprs.2020.05.013",
+    "journal": "ISPRS Journal of Photogrammetry and Remote Sensing",
+    "description": "复现使用深度残差网络与SAR-光学数据融合进行Sentinel-2云去除的论文",
+    "_hash": "a103fb3ae8f5593bf4060036a42000c9"
+  },
+  {
+    "number": 20,
+    "title": "cross-scale-ecology-team-project",
+    "author": "hzauShixin",
+    "repo": "D2RS-2026spring/cross-scale-ecology-team-project",
+    "members": [
+      {
+        "name": "师鑫",
+        "sid": "2025303120092",
+        "gh": "hzauShixin",
+        "leader": true
+      },
+      {
+        "name": "陈浩",
+        "sid": "2025303110111",
+        "gh": "haochen-co",
+        "leader": false
+      },
+      {
+        "name": "梅良",
+        "sid": "2025303120116",
+        "gh": "shi-mlml",
+        "leader": false
+      },
+      {
+        "name": "陈希",
+        "sid": "2025303110109",
+        "gh": "Doloressss770",
+        "leader": false
+      },
+      {
+        "name": "杨瑀珩",
+        "sid": "2025303110100",
+        "gh": "logicyyh",
+        "leader": false
+      }
+    ],
+    "doi": "10.1002/ecy.2552",
+    "journal": "Ecology",
+    "description": "复现多尺度下物种入侵悖论的Meta分析研究",
+    "_hash": "560899781c7fec89b686ee75170ded1f"
+  },
+  {
+    "number": 18,
+    "title": "[可重复研究] 凋落物分解主场效应",
+    "author": "Mayshn",
+    "repo": "https://github.com/D2RS-2026spring/litter-decomposition-hfa",
+    "members": [
+      {
+        "name": "王新梅",
+        "sid": "2025305110001",
+        "gh": "Mayshn",
+        "leader": true
+      }
+    ],
+    "doi": "",
+    "journal": "New Phytologist",
+    "description": "复现凋落物分解主场效应中叶际微生物关键作用的论文图表",
+    "_hash": "fc5c8d1a2692255ce1c5c03a3a7d03b0"
+  },
+  {
+    "number": 17,
+    "title": "多年冻土中矿物-酶相互作用 复现",
+    "author": "zhuxinglin8",
+    "repo": "D2RS-2026spring/D2RS-2026spring",
+    "members": [
+      {
+        "name": "朱兴林",
+        "sid": "2025303110065",
+        "gh": "zhuxinglin8",
+        "leader": true
+      },
+      {
+        "name": "曾维城",
+        "sid": "2025303110064",
+        "gh": "Ban-bit",
+        "leader": false
+      },
+      {
+        "name": "郑迪",
+        "sid": "2025303120148",
+        "gh": "zhengdispecial",
+        "leader": false
+      },
+      {
+        "name": "张普贤",
+        "sid": "2025303120023",
+        "gh": "zhangpuxian",
+        "leader": false
+      }
+    ],
+    "doi": "10.1021/acs.est.5c08036",
+    "journal": "Environmental Science & Technology",
+    "description": "复现多年冻土中矿物-酶相互作用驱动土壤有机碳积累与稳定的核心分析",
+    "_hash": "6b4a5ce187b4d42ac06119c3ffe34f04"
+  },
+  {
+    "number": 16,
+    "title": "土壤信息数据库及其机器学习建模",
+    "author": "wenyujia2003",
+    "repo": "",
+    "members": [
+      {
+        "name": "文宇佳",
+        "sid": "2025303120102",
+        "gh": "wenyujia2003",
+        "leader": true
+      },
+      {
+        "name": "黄灿",
+        "sid": "2025303110084",
+        "gh": "huangcan-1",
+        "leader": false
+      },
+      {
+        "name": "汪梦鑫",
+        "sid": "2025303110071",
+        "gh": "Dear-meng",
+        "leader": false
+      },
+      {
+        "name": "杜艳坤",
+        "sid": "2025303110018",
+        "gh": "duyankun",
+        "leader": false
+      }
+    ],
+    "doi": "10.5194/essd-18-989-2026",
+    "journal": "Earth System Science Data",
+    "description": "复现全球30米分辨率土壤信息数据库及其机器学习建模框架",
+    "_hash": "bd6d379d084423327dc12324e24fc22a"
+  },
+  {
+    "number": 15,
+    "title": "删除此项目",
+    "author": "meilin090",
+    "repo": "D2RS-2026spring/neanderthal-ecosystem-productivity",
+    "members": [
+      {
+        "name": "陈美林",
+        "sid": "2025303110140",
+        "gh": "meilin090",
+        "leader": true
+      },
+      {
+        "name": "郜锦华",
+        "sid": "2025303120052",
+        "gh": "Gao-Jinhua",
+        "leader": false
+      },
+      {
+        "name": "王嘉仪",
+        "sid": "2025303120039",
+        "gh": "Jyyy12138",
+        "leader": false
+      },
+      {
+        "name": "杨舒妍",
+        "sid": "2025303110036",
+        "gh": "shuyan-yang326",
+        "leader": false
+      },
+      {
+        "name": "秦思怡",
+        "sid": "2025303110047",
+        "gh": "Qin1310",
+        "leader": false
+      }
+    ],
+    "doi": "10.1002/ecm.1249",
+    "journal": "Ecological Monographs",
+    "description": "复现Ratajczak等人2017年关于火烧干扰对草原生态系统状态转移影响的研究",
+    "_hash": "982fabc8ccee5e03de1061760d11e56a"
+  },
+  {
+    "number": 14,
+    "title": "基于点注释内场图像的大豆种子定位与计数",
+    "author": "dongshuai9331",
+    "repo": "D2RS-2026spring/612",
+    "members": [
+      {
+        "name": "董帅",
+        "sid": "2025303120177",
+        "gh": "dongshuai9331",
+        "leader": true
+      },
+      {
+        "name": "任鹏",
+        "sid": "2025303120002",
+        "gh": "renpeng-rp916",
+        "leader": false
+      },
+      {
+        "name": "张若宇",
+        "sid": "2025303120097",
+        "gh": "zry0309",
+        "leader": false
+      },
+      {
+        "name": "陈旭",
+        "sid": "2025303110080",
+        "gh": "cx20263333333",
+        "leader": false
+      },
+      {
+        "name": "彭钦昊",
+        "sid": "2025303110058",
+        "gh": "Qinova02",
+        "leader": false
+      }
+    ],
+    "doi": "10.34133/plantphenomics.0026",
+    "journal": "Plant Phenomics",
+    "description": "复现基于点注释内场图像的大豆种子定位与计数方法",
+    "_hash": "8e05f4f11e5718e21d84b894d93dab06"
+  },
+  {
+    "number": 13,
+    "title": "基于Anthropogenic climate change may reduce global diazotroph diversity文献的部分数据图复现",
+    "author": "oyang666",
+    "repo": "https://github.com/D2RS-2026spring/data_review_project",
+    "members": [
+      {
+        "name": "欧阳环",
+        "sid": "2025303120033",
+        "gh": "oyang666",
+        "leader": true
+      },
+      {
+        "name": "蔡洋洋",
+        "sid": "2025303120047",
+        "gh": "CYY386",
+        "leader": false
+      },
+      {
+        "name": "罗秋艳",
+        "sid": "2025303110041",
+        "gh": "luoqiuqiu123",
+        "leader": false
+      },
+      {
+        "name": "涂君毅",
+        "sid": "2025303120036",
+        "gh": "tujunyi124",
+        "leader": false
+      }
+    ],
+    "doi": "",
+    "journal": "",
+    "description": "利用R对文献中的图片进行复现",
+    "_hash": "6d3d4f10f01b6717dae23669e8a79b80"
+  },
+  {
+    "number": 12,
+    "title": "鸢尾花数据集的可重复数据分析",
+    "author": "Tziyu125",
+    "repo": "D2RS-2026spring/iris-reproducible-project",
+    "members": [
+      {
+        "name": "肖新怡",
+        "sid": "2025303120045",
+        "gh": "Tziyu125",
+        "leader": true
+      },
+      {
+        "name": "刘芸慧",
+        "sid": "2025303120009",
+        "gh": "18135600866",
+        "leader": false
+      },
+      {
+        "name": "周炎",
+        "sid": "2025303120013",
+        "gh": "Firezyyy",
+        "leader": false
+      }
+    ],
+    "doi": "",
+    "journal": "",
+    "description": "基于R和renv的鸢尾花数据集可重复分析项目",
+    "_hash": "ec20166f56117ef1e6f4e3f8dda1f0b2"
+  },
+  {
+    "number": 11,
+    "title": "可重复研究评估---植物表型与营养数据分析开源项目",
+    "author": "zh-ang-jing",
+    "repo": "",
+    "members": [
+      {
+        "name": "章靖",
+        "sid": "2025303110106",
+        "gh": "zh-ang-jing",
+        "leader": true
+      },
+      {
+        "name": "李俊杰",
+        "sid": "2025303120105",
+        "gh": "lijj2K",
+        "leader": false
+      },
+      {
+        "name": "高心灵",
+        "sid": "2025303120157",
+        "gh": "gaoxinling",
+        "leader": false
+      }
+    ],
+    "doi": "",
+    "journal": "",
+    "description": "评估PlantCV植物表型与营养数据分析开源项目的可重复性",
+    "_hash": "bf16719d2bb94d5c4bd35fcba6612263"
+  },
+  {
+    "number": 10,
+    "title": "【土壤微生物311组】可重复研究项目评估 - 高寒矿区土壤微生物肥料研究",
+    "author": "CishuiMoon",
+    "repo": "",
+    "members": [
+      {
+        "name": "刘丝弦",
+        "sid": "2025303110048",
+        "gh": "HIMENO873",
+        "leader": false
+      },
+      {
+        "name": "吴雨静",
+        "sid": "2025303120082",
+        "gh": "CishuiMoon",
+        "leader": true
+      },
+      {
+        "name": "陈锦德",
+        "sid": "2025303120059",
+        "gh": "cjd-alt",
+        "leader": false
+      }
+    ],
+    "doi": "10.1128/spectrum.00840-25",
+    "journal": "Microbiology Spectrum",
+    "description": "复现羊粪与有机肥联合施用对矿区土壤微生物群落影响的论文分析",
+    "_hash": "7ea572704875fe1e919d65d140fee75c"
+  },
+  {
+    "number": 9,
+    "title": "滦河流域径流变化主控因子模型复现",
+    "author": "619890876-lgtm",
+    "repo": "https://github.com/619890876-lgtm/619890876-lgtm.github.io",
+    "members": [
+      {
+        "name": "杨徵泉",
+        "sid": "2025303120031",
+        "gh": "619890876-lgtm",
+        "leader": true
+      },
+      {
+        "name": "宦秀敏",
+        "sid": "2025303120017",
+        "gh": "hxm0123",
+        "leader": false
+      },
+      {
+        "name": "张佩琦",
+        "sid": "2025303110136",
+        "gh": "zpq2003",
+        "leader": false
+      },
+      {
+        "name": "苏盼",
+        "sid": "2025303120138",
+        "gh": "Neflibata0627",
+        "leader": false
+      }
+    ],
+    "doi": "",
+    "journal": "",
+    "description": "复现滦河流域径流变化主控因子分析，结合SWAT与机器学习模型",
+    "_hash": "295f3212ef7413e68e10375257cdfbd9"
+  },
+  {
+    "number": 8,
+    "title": "空气质量数据分析",
+    "author": "MHFDH",
+    "repo": "https://github.com/MHFDH/my_reproduce_project",
+    "members": [
+      {
+        "name": "蒙红帆",
+        "sid": "2025303120141",
+        "gh": "MHFDH",
+        "leader": true
+      },
+      {
+        "name": "陈凯亮",
+        "sid": "2025303120150",
+        "gh": "GS-Liang",
+        "leader": false
+      },
+      {
+        "name": "黄梦瑶",
+        "sid": "2025303110083",
+        "gh": "yeelike",
+        "leader": false
+      }
+    ],
+    "doi": "",
+    "journal": "",
+    "description": "复现Kaggle空气质量数据集的完整分析流程，包含数据读取、可视化和Quarto报告",
+    "_hash": "358cfa8c6aee6318b00dc0dbef41074f"
+  },
+  {
+    "number": 7,
+    "title": "【Self-Supervised Pretraining of Transformers for Satellite Image Time Series】论文复刻",
+    "author": "yisar",
+    "repo": "D2RS-2026spring/rsts-encoder",
+    "members": [
+      {
+        "name": "赵昌浩",
+        "sid": "2025303120178",
+        "gh": "yisar",
+        "leader": true
+      },
+      {
+        "name": "陈兴灿",
+        "sid": "2025303110131",
+        "gh": "yunyuntiantian",
+        "leader": false
+      },
+      {
+        "name": "李世豪",
+        "sid": "2025303120170",
+        "gh": "lsh1221",
+        "leader": false
+      },
+      {
+        "name": "李迁",
+        "sid": "2025303120110",
+        "gh": "li20010229-eng",
+        "leader": false
+      }
+    ],
+    "doi": "10.1109/ACCESS.2020.3041234",
+    "journal": "IEEE Access",
+    "description": "复现遥感时序双向掩码机制论文的核心图表分析",
+    "_hash": "23ecc83d3b573b76fc493e4deed2e8f7"
+  },
+  {
+    "number": 6,
+    "title": "基于 OpenLandMap 数据的土壤属性预测",
+    "author": "herb1124",
+    "repo": "https://github.com/herb1124/soil-mapping-reproduction1.git",
+    "members": [
+      {
+        "name": "钟朝玥",
+        "sid": "2025303110078",
+        "gh": "herb1124",
+        "leader": true
+      },
+      {
+        "name": "邬丹",
+        "sid": "2025303120145",
+        "gh": "wudan-06",
+        "leader": false
+      },
+      {
+        "name": "宋家伟",
+        "sid": "2025303120089",
+        "gh": "erwin214",
+        "leader": false
+      }
+    ],
+    "doi": "",
+    "journal": "",
+    "description": "基于OpenLandMap数据复现土壤有机碳空间分布图",
+    "_hash": "44a6487a2006b236c1f43ef3917f5974"
+  },
+  {
+    "number": 3,
+    "title": "RadEro v1.0.8 示例复现报告",
+    "author": "Fuguiera11y",
+    "repo": "D2RS-2026spring/Radero-Main-Project",
+    "members": [
+      {
+        "name": "王东浩",
+        "sid": "2025303110072",
+        "gh": "Fuguiera11y",
+        "leader": true
+      },
+      {
+        "name": "邹毅",
+        "sid": "2025303110076",
+        "gh": "zy076",
+        "leader": false
+      },
+      {
+        "name": "刘谦",
+        "sid": "2025303110050",
+        "gh": "Liuqian615",
+        "leader": false
+      },
+      {
+        "name": "李飒",
+        "sid": "2025303120111",
+        "gh": "kajolliangeliki857-cpu",
+        "leader": false
+      },
+      {
+        "name": "赵俊然",
+        "sid": "2025303110075",
+        "gh": "Zhao2002jun",
+        "leader": false
+      }
+    ],
+    "doi": "10.1016/j.envsoft.2025.106551",
+    "journal": "Environmental Modelling & Software",
+    "description": "复现RadEro模型，使用137Cs分析估算土壤再分布速率",
+    "_hash": "bb32c89c827fa128abbe642bde7d6fe6"
+  },
+  {
+    "number": 2,
+    "title": "基于MediaPipe的关键点检测复现",
+    "author": "cito37",
+    "repo": "https://github.com/cito37/mediapipe",
+    "members": [
+      {
+        "name": "欧阳权",
+        "sid": "2025303120173",
+        "gh": "cito37",
+        "leader": true
+      },
+      {
+        "name": "胡乐怡",
+        "sid": "2025303110129",
+        "gh": "Hu-liye",
+        "leader": false
+      },
+      {
+        "name": "李嘉睿",
+        "sid": "2025303110123",
+        "gh": "Rrhly",
+        "leader": false
+      },
+      {
+        "name": "常东颖",
+        "sid": "2025303120093",
+        "gh": "niun8108-boop",
+        "leader": false
+      },
+      {
+        "name": "沈文君",
+        "sid": "2025303120174",
+        "gh": "shenwenjun111",
+        "leader": false
+      }
+    ],
+    "doi": "",
+    "journal": "",
+    "description": "基于MediaPipe的人体手指关节点动作检测复现",
+    "_hash": "e1929e01788716cd74c41439f0611a99"
+  }
+]
