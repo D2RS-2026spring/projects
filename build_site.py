@@ -516,7 +516,7 @@ def wrap(title, body_inner):
 stats_html = f'''
 <div class="stats">
   <div class="stat"><div class="n">{len(students)}</div><div class="l">课程总人数</div></div>
-  <div class="stat"><div class="n">{len(issues)}</div><div class="l">总项目（Issue）</div></div>
+  <div class="stat"><div class="n">{len(issue_data)}</div><div class="l">总项目（Issue）</div></div>
   <div class="stat"><div class="n">{len(all_names)}</div><div class="l">已发现结课作业人数</div></div>
   <div class="stat"><div class="n">{len(unique)}</div><div class="l">已注册项目</div></div>
   <div class="stat"><div class="n">{submitted_count}</div><div class="l">已提交项目</div></div>
