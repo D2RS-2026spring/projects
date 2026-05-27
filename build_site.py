@@ -155,7 +155,7 @@ for p in parsed:
         seen[key] = p
     else:
         old = seen[key]
-        if len(p['full_text']) > len(old['full_text']):
+        if p['num'] > old['num']:
             seen[key] = p
 
 unique = sorted(seen.values(), key=lambda x: -x['num'])
