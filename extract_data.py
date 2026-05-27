@@ -150,11 +150,16 @@ for i, issue in enumerate(issues):
                 data = {"repo": "", "members": [], "doi": "", "journal": "",
                         "description": title}
 
+    # Normalize repo URL: strip https://github.com/ prefix, .git suffix
+    repo = data.get("repo", "")
+    repo = re.sub(r'^https?://github\.com/', '', repo)
+    repo = repo.removesuffix('.git')
+
     results.append({
         "number": num,
         "title": title,
         "author": author,
-        "repo": data.get("repo", ""),
+        "repo": repo,
         "members": data.get("members", []),
         "doi": data.get("doi", ""),
         "journal": data.get("journal", ""),
