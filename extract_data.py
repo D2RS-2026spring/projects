@@ -56,9 +56,11 @@ if data_file.exists():
 # ── Call DeepSeek API ───────────────────────────────────────────────────────
 from openai import OpenAI
 
-api_key = (os.environ.get('DEEPSEEK_API_KEY') or
-           (SCRIPT_DIR / '.env').read_text().strip()
-           if (SCRIPT_DIR / '.env').exists() else None)
+api_key = os.environ.get('DEEPSEEK_API_KEY')
+if not api_key:
+    env_file = SCRIPT_DIR / '.env'
+    if env_file.exists():
+        api_key = env_file.read_text().strip()
 if not api_key:
     print("ERROR: DEEPSEEK_API_KEY not set. Export it or create .env file.")
     sys.exit(1)
