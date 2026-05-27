@@ -31,126 +31,51 @@ with open(SCRIPT_DIR / 'data' / 'student-list.csv', encoding='utf-8-sig') as f:
 
 with open(SCRIPT_DIR / 'data' / 'student_github_map.json') as f:
     id_to_github = json.load(f)
-github_to_id = {v: k for k, v in id_to_github.items()}
 
-result = subprocess.run(
-    ['gh', 'issue', 'list', '--repo', 'D2RS-2026spring/projects',
-     '--state', 'open', '--limit', '200', '--json', 'number,body,title,author'],
-    capture_output=True, text=True)
-issues = json.loads(result.stdout)
-
-# Fetch comments for each issue so we can detect repo links posted in replies
-for issue in issues:
-    num = issue['number']
-    result_c = subprocess.run(
-        ['gh', 'api', f'repos/D2RS-2026spring/issues/{num}/comments',
-         '--paginate', '--jq', '.[].body'],
-        capture_output=True, text=True)
-    comments = result_c.stdout or ''
-    issue['_comments'] = comments
+# Load pre-extracted issue data (from extract_data.py)
+with open(SCRIPT_DIR / 'data' / 'issue_data.json', encoding='utf-8') as f:
+    issue_data = json.load(f)
 
 # ══════════════════════════════════════════════════════════════════════════════
-# 2. Parse issues → extract members (with leader), repo, DOI
+# 2. Convert extracted data to parsed format
 # ══════════════════════════════════════════════════════════════════════════════
 parsed = []
-for issue in issues:
-    body = issue.get('body', '') or ''
-    comments = issue.get('_comments', '') or ''
-    full_text = body + '\n' + comments
-    num = issue['number']
-    title = issue.get('title', '').strip()
-    author_login = issue['author']['login']
+for d in issue_data:
+    num = d['number']
+    title = d.get('title', '').strip()
+    author = d.get('author', '')
+    repo = d.get('repo') or None
+    doi = d.get('doi') or None
+    journal = d.get('journal') or ''
+    desc = d.get('description', '')
 
-    # Resolve leader student ID
-    leader_sid = github_to_id.get(author_login)
-    # Fallback 1: author not in mapping — try @mention in body
-    if not leader_sid:
-        for m in re.findall(r'@([a-zA-Z0-9][\w.-]*)', full_text):
-            if m.lower() == author_login.lower() and m in github_to_id:
-                leader_sid = github_to_id[m]
-                break
-    # Fallback 2: find author's student ID from the line containing their login
-    if not leader_sid:
-        for line in full_text.split('\n'):
-            if author_login in line:
-                for sid in re.findall(r'\d{13}', line):
-                    if sid in students:
-                        leader_sid = sid
-                        break
-            if leader_sid:
-                break
-
-    # Collect all member student IDs
-    ids = {sid for sid in re.findall(r'\d{13}', full_text) if sid in students}
-    for m in re.findall(r'@([a-zA-Z0-9][\w.-]*)', full_text):
-        if m in github_to_id:
-            ids.add(github_to_id[m])
-    if leader_sid:
-        ids.add(leader_sid)
-
-    # Build member list: leader first, then others sorted by name
+    # Build member list from LLM-extracted data
     members = []
-    if leader_sid and leader_sid in students:
-        members.append({'sid': leader_sid, 'name': students[leader_sid],
-                        'gh': author_login, 'leader': True})
-    # Fallback 3: author unidentified — default first listed member as leader
-    if not leader_sid and ids:
-        first_sid = sorted(ids)[0]
-        if first_sid in students:
-            leader_sid = first_sid
-            members.append({'sid': first_sid, 'name': students[first_sid],
-                            'gh': id_to_github.get(first_sid), 'leader': True})
-    for sid in sorted(ids):
-        if sid == leader_sid:
-            continue
-        if sid in students:
-            gh = id_to_github.get(sid)
-            members.append({'sid': sid, 'name': students[sid],
-                            'gh': gh, 'leader': False})
+    for m in d.get('members', []):
+        members.append({
+            'sid': m.get('sid', ''),
+            'name': m.get('name', ''),
+            'gh': m.get('gh'),
+            'leader': m.get('leader', False),
+        })
 
-    # Repo URL — skip image/file attachments; search body + comments
-    repos = [r for r in re.findall(r'github\.com/([a-zA-Z0-9_.-]+/[a-zA-Z0-9_.-]+)', full_text)
-             if not r.startswith('user-attachments')]
-    repo = repos[0].removesuffix('.git') if repos else None
+    # Fallback: if LLM extracted no members, use author info
+    if not members:
+        gh_to_sid = {v: k for k, v in id_to_github.items()}
+        sid = gh_to_sid.get(author)
+        members = [{'sid': sid or '', 'name': students.get(sid, author),
+                     'gh': author, 'leader': True}]
 
-    # DOI — allowlist approach: only [a-zA-Z0-9/\-_.:] are valid DOI chars
-    raw = re.findall(r'10\.\d{4,}/[a-zA-Z0-9/\-_.:]+', full_text)
-    from_org = re.findall(r'doi\.org/(10\.\d{4,}/[a-zA-Z0-9/\-_.:]+)', full_text)
-    candidates = from_org + [d for d in raw if d not in from_org]
-    DOI_FIX = {65: '10.48550/arXiv.2412.10448'}
-    doi = DOI_FIX.get(num)
-    if not doi:
-        for c in candidates:
-            if re.match(r'^10\.\d{4,}/', c):
-                doi = c
-                break
-
-    # Journal / paper hint from body + comments
-    journal = ''
-    jmatch = re.search(
-        r'(?:发表于|published in|Journal[:\s]+|期刊[:\s]*|iMeta|Nature|Science|PNAS|'
-        r'Geoderma|CATENA|GCB|SOIL|mSphere|Sustainability|JOSS|IEEE|'
-        r'Comput Struct Biotechnol J|Applied Soil Ecology|'
-        r'Global Change Biology|Nature Communications|Nature Food|'
-        r'Nature Geoscience|ACS EST|J Environmental Management|'
-        r'International Journal of Hydrogen Energy|Environ Sci Technol|'
-        r'Remote Sensing|ISPRS|Water Resources Research|'
-        r'Ecological Monographs|New Phytologist|Ecology|'
-        r'Microbiome|iMeta)',
-        full_text, re.I)
-    if jmatch:
-        journal = jmatch.group(0)
-
-    parsed.append(dict(num=num, title=title, author=author_login,
+    parsed.append(dict(num=num, title=title, author=author,
                        members=members, repo=repo, doi=doi, journal=journal,
-                       body=body, full_text=full_text))
+                       description=desc, body='', full_text=''))
 
 # ══════════════════════════════════════════════════════════════════════════════
 # 3. Deduplicate by member-set
 # ══════════════════════════════════════════════════════════════════════════════
 seen = {}
 for p in parsed:
-    key = tuple(m['sid'] for m in p['members']) or f"__{p['author']}_{p['num']}"
+    key = tuple(m['sid'] for m in p['members'] if m['sid']) or f"__{p['author']}_{p['num']}"
     if key not in seen:
         seen[key] = p
     else:
@@ -341,7 +266,7 @@ KW = {
 }
 
 def categorise(p):
-    text = (p['title'] + ' ' + DESC.get(p['num'], '')).lower()
+    text = (p['title'] + ' ' + (p.get('description') or DESC.get(p['num'], ''))).lower()
     scores = {c: sum(1 for kw in kws if kw.lower() in text) for c, kws in KW.items()}
     best = max(scores, key=scores.get)
     return best if scores[best] > 0 else 'data'
@@ -397,7 +322,7 @@ cards_html = ''
 for p in unique:
     cat = p['cat']
     e = E.escape
-    desc = DESC.get(p['num'], p['title'])
+    desc = p.get('description') or DESC.get(p['num'], p['title'])
     title_short = e(p['title'][:72])
     desc_esc = e(desc)
     repo = f"https://github.com/{p['repo']}" if p.get('repo') else f"https://github.com/D2RS-2026spring/projects/issues/{p['num']}"
