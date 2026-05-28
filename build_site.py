@@ -1,22 +1,10 @@
 #!/usr/bin/env python3
-"""Build the D2RS project showcase website from GitHub issues."""
+"""Build the D2RS project website from GitHub issues."""
 import json, re, csv, subprocess, html as E, os
 from pathlib import Path
 from datetime import datetime, timezone, timedelta
 
 SCRIPT_DIR = Path(__file__).resolve().parent
-
-# Load showcase build report (if exists)
-showcase_ok = set()
-report_path = SCRIPT_DIR / 'showcase-build-report.json'
-if report_path.exists():
-    try:
-        with open(report_path) as f:
-            for r in json.load(f):
-                if r.get('status') == 'ok':
-                    showcase_ok.add(r['repo'])
-    except Exception:
-        pass
 
 CST = timezone(timedelta(hours=8))
 UPDATE_TIME = datetime.now(CST).strftime('%Y-%m-%d %H:%M CST')
@@ -341,13 +329,6 @@ for p in unique:
     if p.get('doi'):
         doi_html = f'<a class="clink doi" href="https://doi.org/{e(p["doi"])}" target="_blank" rel="noopener">DOI</a>'
 
-    # Showcase link
-    repo_name = p['repo'].split('/', 1)[1] if p.get('repo') and '/' in p['repo'] else ''
-    if repo_name and repo_name in showcase_ok:
-        showcase_html = f'<a class="clink showcase" href="/projects/showcase/{repo_name}/" target="_blank">结课作品</a>'
-    else:
-        showcase_html = ''
-
     # Transfer warning
     transfer_warn = ''
     if not p.get('has_repo', True):
@@ -368,7 +349,6 @@ for p in unique:
       <div class="card-foot">
         <div class="clinks">
           {doi_html}
-          {showcase_html}
           <a class="clink" href="{repo}" target="_blank" rel="noopener">
             <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
             仓库
@@ -455,7 +435,6 @@ body{font-family:'Noto Sans SC',system-ui,sans-serif;background:var(--bg);color:
 .clink{display:inline-flex;align-items:center;gap:3px;font-size:.74rem;color:var(--pri-l);text-decoration:none;font-weight:500;white-space:nowrap;transition:color .15s}
 .clink:hover{color:var(--acc)}.clink.doi{color:#e67e22;font-weight:600}.clink.doi:hover{color:#d35400}
 .clink.issue{color:var(--txt2);font-weight:400}.clink.issue:hover{color:var(--pri)}
-.clink.showcase{color:#27ae60;font-weight:600}.clink.showcase:hover{color:#1e8449}
 .clink svg{width:13px;height:13px;fill:currentColor}
 
 .cat-soil .card-icon{background:#8d6e63}.cat-plant .card-icon{background:#66bb6a}.cat-env .card-icon{background:#42a5f5}.cat-micro .card-icon{background:#ab47bc}.cat-data .card-icon{background:#ef5350}
@@ -511,7 +490,7 @@ def wrap(title, body_inner):
 </html>'''
 
 # ══════════════════════════════════════════════════════════════════════════════
-# 11. Page 1: Main showcase (index.html)
+# 11. Page 1: Main page (index.html)
 # ══════════════════════════════════════════════════════════════════════════════
 stats_html = f'''
 <div class="stats">
