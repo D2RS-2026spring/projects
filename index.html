@@ -1,0 +1,2056 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>D2RS 2026 春季 — 结课作品展</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+:root{--pri:#1a5276;--pri-l:#2980b9;--acc:#27ae60;--gold:#f39c12;--bg:#f8f9fa;--card:#fff;--txt:#2c3e50;--txt2:#636e72;--bdr:#e0e6ed;--shd:0 2px 12px rgba(0,0,0,.08);--r:12px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Noto Sans SC',system-ui,sans-serif;background:var(--bg);color:var(--txt);line-height:1.6}
+
+.hero{background:linear-gradient(135deg,#1a5276 0%,#2980b9 50%,#1abc9c 100%);color:#fff;padding:68px 24px 52px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:-50%;width:200%;height:200%;background:radial-gradient(circle at 30% 50%,rgba(255,255,255,.08) 0%,transparent 50%);pointer-events:none}
+.hero h1{font-size:clamp(1.7rem,4vw,2.5rem);font-weight:700;margin-bottom:8px;letter-spacing:1px}
+.hero .sub{font-size:clamp(.9rem,1.8vw,1.05rem);font-weight:300;opacity:.92;max-width:680px;margin:0 auto 18px}
+.hero .badges{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:14px}
+.hero .badge{background:rgba(255,255,255,.18);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,.25);padding:5px 14px;border-radius:18px;font-size:.78rem;font-weight:500}
+
+.nav{display:flex;justify-content:center;gap:4px;padding:0;background:#fff;border-bottom:1px solid var(--bdr);flex-wrap:wrap}
+.nav a{padding:10px 18px;font-size:.84rem;color:var(--txt2);text-decoration:none;border-bottom:2px solid transparent;transition:all .2s;white-space:nowrap}
+.nav a:hover{color:var(--pri)}
+.nav a.on{color:var(--pri);font-weight:600;border-bottom-color:var(--pri)}
+
+.stats{display:flex;justify-content:center;gap:44px;padding:22px;background:#fff;border-bottom:1px solid var(--bdr);flex-wrap:wrap}
+.stat .n{font-size:1.6rem;font-weight:700;color:var(--pri)}.stat .l{font-size:.78rem;color:var(--txt2);margin-top:2px}
+
+.fb{max-width:1200px;margin:26px auto 0;padding:0 20px;display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+.fbtn{border:1.5px solid var(--bdr);background:#fff;color:var(--txt2);padding:6px 16px;border-radius:18px;cursor:pointer;font-size:.82rem;font-family:inherit;transition:all .2s}
+.fbtn:hover{border-color:var(--pri-l);color:var(--pri)}.fbtn.on{background:var(--pri);color:#fff;border-color:var(--pri)}
+
+.ctn{max-width:1200px;margin:22px auto 48px;padding:0 20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:16px}
+
+.card{background:var(--card);border:1px solid var(--bdr);border-radius:var(--r);box-shadow:var(--shd);overflow:hidden;transition:transform .18s,box-shadow .18s;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-3px);box-shadow:0 6px 20px rgba(0,0,0,.12)}
+.card-top{padding:16px 16px 0;display:flex;align-items:flex-start;gap:10px}
+.card-icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.15rem;flex-shrink:0;color:#fff}
+.card-top .info{flex:1;min-width:0}
+.card-top .title{font-size:.9rem;font-weight:700;color:var(--txt);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;line-height:1.35}
+
+.tags{display:flex;gap:5px;flex-wrap:wrap;padding:0 16px 8px}
+.tag{font-size:.68rem;padding:2px 8px;border-radius:10px;background:#eaf4fc;color:var(--pri-l);font-weight:500}
+.tag.r{background:#eaf7ed;color:#27ae60}.tag.py{background:#fef3e2;color:#e67e22}
+
+.card-body{padding:0 16px 10px;flex:1}
+.card-body .desc{font-size:.8rem;color:var(--txt2);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;line-height:1.5}
+
+.card-mem{padding:0 16px 10px;display:flex;flex-wrap:wrap;gap:4px 8px}
+.mlink{font-size:.74rem;text-decoration:none;border-radius:10px;padding:2px 8px;transition:background .15s;white-space:nowrap}
+.mlink.leader{background:#fef9e7;color:#b7950b;font-weight:600;border:1px solid #f9e79f}
+.mlink.leader:hover{background:#fdebd0}
+.mlink.member{background:#eaf2f8;color:#2c3e50;border:1px solid transparent}
+.mlink.member:hover{background:#d6eaf8;border-color:#aed6f1}
+
+.transfer-warn{margin:0 16px;padding:6px 12px;background:#fff3cd;border:1px solid #ffc107;border-radius:6px;font-size:.76rem;color:#856404;font-weight:500}
+.transfer-no-repo{background:#f8d7da;border-color:#f5c6cb;color:#721c24}
+
+.card-foot{padding:8px 16px 12px;border-top:1px solid var(--bdr);display:flex;align-items:center;justify-content:space-between;gap:6px}
+.clinks{display:flex;gap:8px;align-items:center}
+.clink{display:inline-flex;align-items:center;gap:3px;font-size:.74rem;color:var(--pri-l);text-decoration:none;font-weight:500;white-space:nowrap;transition:color .15s}
+.clink:hover{color:var(--acc)}.clink.doi{color:#e67e22;font-weight:600}.clink.doi:hover{color:#d35400}
+.clink.issue{color:var(--txt2);font-weight:400}.clink.issue:hover{color:var(--pri)}
+.clink svg{width:13px;height:13px;fill:currentColor}
+
+.cat-soil .card-icon{background:#8d6e63}.cat-plant .card-icon{background:#66bb6a}.cat-env .card-icon{background:#42a5f5}.cat-micro .card-icon{background:#ab47bc}.cat-data .card-icon{background:#ef5350}
+
+.reminder{padding:12px 16px;background:#fff3cd;border:1px solid #ffc107;border-radius:8px;font-size:.86rem;color:#856404;margin-bottom:16px;line-height:1.5}.reminder a{color:#856404;font-weight:600}
+.reminder-danger{padding:12px 16px;background:#f8d7da;border:1px solid #f5c6cb;border-radius:8px;font-size:.86rem;color:#721c24;margin-bottom:16px;line-height:1.5}.reminder-danger a{color:#721c24;font-weight:600}
+.ns{max-width:1200px;margin:0 auto 48px;padding:0 20px}
+.ns h2{font-size:1.05rem;color:var(--pri);margin-bottom:10px;padding-bottom:8px;border-bottom:2px solid var(--pri-l)}
+.ns-tbl{width:100%;border-collapse:collapse;font-size:.84rem}.ns-tbl th{background:#f0f4f8;padding:7px 12px;text-align:left;font-weight:600;border-bottom:2px solid var(--bdr)}.ns-tbl td{padding:6px 12px;border-bottom:1px solid var(--bdr)}.ns-tbl tr:hover td{background:#f8f9fa}
+.ns-tbl a{color:var(--pri-l);text-decoration:none}.ns-tbl a:hover{text-decoration:underline}
+.ns-tbl .col-num{width:60px}.ns-tbl .col-status{width:120px}
+
+footer{text-align:center;padding:26px 20px;font-size:.78rem;color:var(--txt2);border-top:1px solid var(--bdr);background:#fff}footer a{color:var(--pri-l);text-decoration:none}
+
+@media(max-width:600px){.hero{padding:44px 16px 32px}.grid{grid-template-columns:1fr}.stats{gap:18px}.stat .n{font-size:1.3rem}.nav a{padding:8px 12px;font-size:.8rem}}
+
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <h1>数据驱动的可重复性研究</h1>
+  <p class="sub">Data Driven Reproducible Study (D2RS) — 2026 春季学期<br>学生结课作品展示</p>
+  <div class="badges">
+    <span class="badge">Quarto 文学化编程</span>
+    <span class="badge">可重复性研究</span>
+    <span class="badge">科学论文复现</span>
+    <span class="badge">开放科学</span>
+  </div>
+</section>
+<nav class="nav"><a href="index.html" class="on">主页</a><a href="submitted.html" class="">已提交项目</a><a href="pending.html" class="">待提交项目</a><a href="not_submitted.html" class="">未提交名单</a></nav>
+
+<div class="stats">
+  <div class="stat"><div class="n">311</div><div class="l">课程总人数</div></div>
+  <div class="stat"><div class="n">96</div><div class="l">总项目（Issue）</div></div>
+  <div class="stat"><div class="n">309</div><div class="l">已发现结课作业人数</div></div>
+  <div class="stat"><div class="n">96</div><div class="l">已注册项目</div></div>
+  <div class="stat"><div class="n">95</div><div class="l">已提交项目</div></div>
+</div>
+<div class="fb" id="fb">
+  <button class="fbtn on" data-f="all">全部</button>
+  <button class="fbtn" data-f="soil">土壤与生态</button>
+  <button class="fbtn" data-f="plant">农业与植物</button>
+  <button class="fbtn" data-f="env">环境科学</button>
+  <button class="fbtn" data-f="micro">微生物与生物信息</button>
+  <button class="fbtn" data-f="data">数据科学与遥感</button>
+</div>
+<div class="ctn">
+  <div class="reminder"><strong>⚠ 未提交：</strong>2 位同学尚未提交结课作业，详见 <a href="not_submitted.html">未提交名单</a></div>
+<div class="reminder-danger"><strong>⚠ 待处理：</strong>0 个项目未提供仓库链接，1 个项目的仓库仍在个人账号下，详见 <a href="pending.html">待提交项目</a></div>
+
+  <div class="grid" id="g">
+
+    <div class="card cat-soil" data-cat="soil">
+      <div class="card-top">
+        <div class="card-icon">🌍</div>
+        <div class="info"><div class="title">土壤属性数字制图复现</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现普通克里格空间插值方法，实现县域土壤属性数字制图。</div></div>
+      <div class="card-mem"><a href="https://github.com/helloworld2060" target="_blank" rel="noopener" class="mlink leader" title="@helloworld2060">★ 秦子锐</a><a href="https://github.com/nanlingZXY" target="_blank" rel="noopener" class="mlink member" title="@nanlingZXY">张歆雅</a><a href="https://github.com/hcy20030822" target="_blank" rel="noopener" class="mlink member" title="@hcy20030822">韩承言</a><a href="https://github.com/WZH-303110125" target="_blank" rel="noopener" class="mlink member" title="@WZH-303110125">王子恒</a><a href="https://github.com/zhengzhenghuhuhu" target="_blank" rel="noopener" class="mlink member" title="@zhengzhenghuhuhu">郑桂玉</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          <a class="clink doi" href="https://doi.org/10.19336/j.cnki.trtb.2024090502" target="_blank" rel="noopener">DOI</a>
+          <a class="clink" href="https://github.com/nanlingZXY/soil_mapping_repro" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/158" target="_blank" rel="noopener">Issue #158</a>
+      </div>
+    </div>
+    <div class="card cat-env" data-cat="env">
+      <div class="card-top">
+        <div class="card-icon">⚗️</div>
+        <div class="info"><div class="title">梅森伯罗岛水质20年时空变化趋势分析</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现水质趋势分析论文，配置R环境并演示完整流程</div></div>
+      <div class="card-mem"><a href="https://github.com/18135600866" target="_blank" rel="noopener" class="mlink leader" title="@18135600866">★ 刘芸慧</a><a href="https://github.com/Tziyu125" target="_blank" rel="noopener" class="mlink member" title="@Tziyu125">肖新怡</a><a href="https://github.com/Firezyyy" target="_blank" rel="noopener" class="mlink member" title="@Firezyyy">周炎</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          <a class="clink doi" href="https://doi.org/10.1016/j.ecss.2024.108937" target="_blank" rel="noopener">DOI</a>
+          <a class="clink" href="https://github.com/D2RS-2026spring/SWMP_Trends-2026" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/157" target="_blank" rel="noopener">Issue #157</a>
+      </div>
+    </div>
+    <div class="card cat-env" data-cat="env">
+      <div class="card-top">
+        <div class="card-icon">🧲</div>
+        <div class="info"><div class="title">[复现] 区域一体化如何影响环境不平等——排污规模与排污强度的双重视角 | 张芷璇</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现区域一体化影响环境不平等的论文核心结果</div></div>
+      <div class="card-mem"><a href="https://github.com/zhixuan-zhang767" target="_blank" rel="noopener" class="mlink leader" title="@zhixuan-zhang767">★ 张芷璇</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          <a class="clink doi" href="https://doi.org/10.19581/j.cnki.ciejournal.2025.10.001" target="_blank" rel="noopener">DOI</a>
+          <a class="clink" href="https://github.com/D2RS-2026spring/reproduce-sun2025-environmental-inequality" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/156" target="_blank" rel="noopener">Issue #156</a>
+      </div>
+    </div>
+    <div class="card cat-plant" data-cat="plant">
+      <div class="card-top">
+        <div class="card-icon">🌾</div>
+        <div class="info"><div class="title">土壤养分与作物产量关系图复现代码</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现土壤养分与作物产量关系图，分析作物对养分的响应。</div></div>
+      <div class="card-mem"><a href="https://github.com/wblai" target="_blank" rel="noopener" class="mlink leader" title="@wblai">★ 王宝丽</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          <a class="clink doi" href="https://doi.org/10.1016/j.softx.2022.101275" target="_blank" rel="noopener">DOI</a>
+          <a class="clink" href="https://github.com/D2RS-2026spring/wblai.github.io" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/155" target="_blank" rel="noopener">Issue #155</a>
+      </div>
+    </div>
+    <div class="card cat-data" data-cat="data">
+      <div class="card-top">
+        <div class="card-icon">📊</div>
+        <div class="info"><div class="title">PM2.5复现</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现PM2.5高斯过程回归预测，包含数据预处理、模型训练与评估流程。</div></div>
+      <div class="card-mem"><a href="https://github.com/2160698686-ship-it" target="_blank" rel="noopener" class="mlink leader" title="@2160698686-ship-it">★ 汪同宇</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          
+          <a class="clink" href="https://github.com/D2RS-2026spring/PM25" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/154" target="_blank" rel="noopener">Issue #154</a>
+      </div>
+    </div>
+    <div class="card cat-data" data-cat="data">
+      <div class="card-top">
+        <div class="card-icon">🛰️</div>
+        <div class="info"><div class="title">基于 DeepHighlight 项目的可重复性研究评估</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现flotilla平台，融合无监督降维与监督式特征挖掘，分析单细胞多模态数据。</div></div>
+      <div class="card-mem"><a href="https://github.com/dadfr" target="_blank" rel="noopener" class="mlink leader" title="@dadfr">★ 张强</a><a href="https://github.com/1613208672lilei-dotcom" target="_blank" rel="noopener" class="mlink member" title="@1613208672lilei-dotcom">李磊</a><a href="https://github.com/wangbin98765432100-pixel" target="_blank" rel="noopener" class="mlink member" title="@wangbin98765432100-pixel">王彬</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          
+          <a class="clink" href="https://github.com/dadfr/DeepHighlight" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/153" target="_blank" rel="noopener">Issue #153</a>
+      </div>
+    </div>
+    <div class="card cat-soil" data-cat="soil">
+      <div class="card-top">
+        <div class="card-icon">🏔️</div>
+        <div class="info"><div class="title">Lime Recommendation Formulas for Tropical Acid Soils</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现热带土壤石灰需要量估算模型，实现多种公式及图表生成。</div></div>
+      <div class="card-mem"><a href="https://github.com/Jneey-add" target="_blank" rel="noopener" class="mlink leader" title="@Jneey-add">★ 韦佳妮</a><a href="https://github.com/Ahatm" target="_blank" rel="noopener" class="mlink member" title="@Ahatm">屈文龙</a><a href="https://github.com/Tuyuhan" target="_blank" rel="noopener" class="mlink member" title="@Tuyuhan">涂雨涵</a><a href="https://github.com/Abudula-Aizezi" target="_blank" rel="noopener" class="mlink member" title="@Abudula-Aizezi">阿布都拉·艾则孜</a><a href="https://github.com/houkunjun" target="_blank" rel="noopener" class="mlink member" title="@houkunjun">侯坤均</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          <a class="clink doi" href="https://doi.org/10.1016/j.geoderma.2023.116421" target="_blank" rel="noopener">DOI</a>
+          <a class="clink" href="https://github.com/D2RS-2026spring/reproduce-paper-Jenny" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/152" target="_blank" rel="noopener">Issue #152</a>
+      </div>
+    </div>
+    <div class="card cat-soil" data-cat="soil">
+      <div class="card-top">
+        <div class="card-icon">❄️</div>
+        <div class="info"><div class="title">土壤化学与环境研究小组复现球囊霉素对土壤团聚体影响</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现论文Figure2和Figure3的土壤团聚体稳定性分析图表</div></div>
+      <div class="card-mem"><a href="https://github.com/Dear-meng" target="_blank" rel="noopener" class="mlink leader" title="@Dear-meng">★ 汪梦鑫</a><a href="https://github.com/duyankun" target="_blank" rel="noopener" class="mlink member" title="@duyankun">杜艳坤</a><a href="https://github.com/wenyujia2003" target="_blank" rel="noopener" class="mlink member" title="@wenyujia2003">文宇佳</a><a href="https://github.com/huangcan-1" target="_blank" rel="noopener" class="mlink member" title="@huangcan-1">黄灿</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          <a class="clink doi" href="https://doi.org/10.1016/j.soilbio.2025.109908" target="_blank" rel="noopener">DOI</a>
+          <a class="clink" href="https://github.com/Dear-meng/glomalin_reproduce" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/151" target="_blank" rel="noopener">Issue #151</a>
+      </div>
+    </div>
+    <div class="card cat-soil" data-cat="soil">
+      <div class="card-top">
+        <div class="card-icon">🌱</div>
+        <div class="info"><div class="title">在干旱胁迫下土壤真菌仍保持活性并合成储能物质，且该过程不受未来气候条件影响论文复现</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现土壤真菌在干旱条件下保持活性并储存化合物的研究分析图表</div></div>
+      <div class="card-mem"><a href="https://github.com/JIAOjiao0504" target="_blank" rel="noopener" class="mlink leader" title="@JIAOjiao0504">★ 焦静雨</a><a href="https://github.com/hongyu929" target="_blank" rel="noopener" class="mlink member" title="@hongyu929">余虹</a><a href="https://github.com/Mingyi-SUN" target="_blank" rel="noopener" class="mlink member" title="@Mingyi-SUN">孙铭仪</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          <a class="clink doi" href="https://doi.org/10.1038/s41467-024-54537-y" target="_blank" rel="noopener">DOI</a>
+          <a class="clink" href="https://github.com/Mingyi-SUN/soil-fungi-drought-repro" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/150" target="_blank" rel="noopener">Issue #150</a>
+      </div>
+    </div>
+    <div class="card cat-plant" data-cat="plant">
+      <div class="card-top">
+        <div class="card-icon">🌰</div>
+        <div class="info"><div class="title">大种子的智慧：种子大小就是一种防御策略</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现大种子作为防御部分食草动物的策略论文，分析种子大小与防御功能的关系。</div></div>
+      <div class="card-mem"><a href="https://github.com/tianjiayu-6" target="_blank" rel="noopener" class="mlink leader" title="@tianjiayu-6">★ 田佳玉</a><a href="https://github.com/Linyunyun123" target="_blank" rel="noopener" class="mlink member" title="@Linyunyun123">林芸芸</a><a href="https://github.com/abcdefg123803" target="_blank" rel="noopener" class="mlink member" title="@abcdefg123803">吴平</a><a href="https://github.com/Qhaiyu777" target="_blank" rel="noopener" class="mlink member" title="@Qhaiyu777">秦红阳</a><a href="https://github.com/MFWWW" target="_blank" rel="noopener" class="mlink member" title="@MFWWW">黄雅斯</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          <a class="clink doi" href="https://doi.org/10.1111/1365-2745.14480" target="_blank" rel="noopener">DOI</a>
+          <a class="clink" href="https://github.com/D2RS-2026spring/project68" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/147" target="_blank" rel="noopener">Issue #147</a>
+      </div>
+    </div>
+    <div class="card cat-data" data-cat="data">
+      <div class="card-top">
+        <div class="card-icon">🥭</div>
+        <div class="info"><div class="title">基于 ResNet18 特征反演的视觉隐私泄露复现分析</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现论文中神经网络中间特征泄露图像信息的思想，使用ResNet18进行轻量级特征反演实验。</div></div>
+      <div class="card-mem"><a href="https://github.com/AetaosRauKeres" target="_blank" rel="noopener" class="mlink leader" title="@AetaosRauKeres">★ 杨舒桓</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          
+          <a class="clink" href="https://github.com/D2RS-2026spring/unlocking-visual-secrets-resnet18" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/146" target="_blank" rel="noopener">Issue #146</a>
+      </div>
+    </div>
+    <div class="card cat-data" data-cat="data">
+      <div class="card-top">
+        <div class="card-icon">👤</div>
+        <div class="info"><div class="title">基于 Pheno4D 点云数据的玉米时序表型复现分析</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">基于Pheno4D点云数据复现玉米时序表型分析</div></div>
+      <div class="card-mem"><a href="https://github.com/Luxiaolu330" target="_blank" rel="noopener" class="mlink leader" title="@Luxiaolu330">★ 向路</a><a href="https://github.com/CXWYWG" target="_blank" rel="noopener" class="mlink member" title="@CXWYWG">陈曦</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          <a class="clink doi" href="https://doi.org/10.1371/journal.pone.0256340" target="_blank" rel="noopener">DOI</a>
+          <a class="clink" href="https://github.com/D2RS-2026spring/pheno4d-maize-phenotyping" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/145" target="_blank" rel="noopener">Issue #145</a>
+      </div>
+    </div>
+    <div class="card cat-env" data-cat="env">
+      <div class="card-top">
+        <div class="card-icon">🌊</div>
+        <div class="info"><div class="title">关于中国沿海泥滩潮间带病毒的生物多样性的项目复现</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现中国沿海潮间带泥滩病毒多样性研究中的图表分析</div></div>
+      <div class="card-mem"><a href="https://github.com/winter0120" target="_blank" rel="noopener" class="mlink leader" title="@winter0120">★ 陈寒玉</a><a href="https://github.com/2025303110006" target="_blank" rel="noopener" class="mlink member" title="@2025303110006">周雅俊</a><a href="https://github.com/aixfang-two" target="_blank" rel="noopener" class="mlink member" title="@aixfang-two">徐县</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          <a class="clink doi" href="https://doi.org/10.1038/s41467-024-52996-x" target="_blank" rel="noopener">DOI</a>
+          <a class="clink" href="https://github.com/D2RS-2026spring/Restore-code" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/143" target="_blank" rel="noopener">Issue #143</a>
+      </div>
+    </div>
+    <div class="card cat-data" data-cat="data">
+      <div class="card-top">
+        <div class="card-icon">🚲</div>
+        <div class="info"><div class="title">补充仓库链接</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">补充仓库链接</div></div>
+      <div class="card-mem"><a href="https://github.com/yuting-Mu" target="_blank" rel="noopener" class="mlink leader" title="@yuting-Mu">★ 沐禹廷</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          
+          <a class="clink" href="https://github.com/D2RS-2026spring/gamma-swc-reproduction" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/142" target="_blank" rel="noopener">Issue #142</a>
+      </div>
+    </div>
+    <div class="card cat-soil" data-cat="soil">
+      <div class="card-top">
+        <div class="card-icon">🗺️</div>
+        <div class="info"><div class="title">多组学宿主-微生物互作论文复现</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现宿主-微生物组互作驱动根系发育和氮获取的多组学研究</div></div>
+      <div class="card-mem"><a href="https://github.com/wovej" target="_blank" rel="noopener" class="mlink leader" title="@wovej">★ 武伟杰</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          
+          <a class="clink" href="https://github.com/D2RS-2026spring/microbiome-homework-23" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/141" target="_blank" rel="noopener">Issue #141</a>
+      </div>
+    </div>
+    <div class="card cat-soil" data-cat="soil">
+      <div class="card-top">
+        <div class="card-icon">📡</div>
+        <div class="info"><div class="title">基于功能视角的中国三峡库区经济林恢复对土壤物理质量影响评估结果复现</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现经济林恢复对三峡库区土壤物理质量影响评估论文的关键图表</div></div>
+      <div class="card-mem"><a href="https://github.com/xyj666357" target="_blank" rel="noopener" class="mlink leader" title="@xyj666357">★ 熊煜佳</a><a href="https://github.com/zlznevergu" target="_blank" rel="noopener" class="mlink member" title="@zlznevergu">曾令振</a><a href="https://github.com/ly9495" target="_blank" rel="noopener" class="mlink member" title="@ly9495">刘家洛</a><a href="https://github.com/chenbingyu-HZAU" target="_blank" rel="noopener" class="mlink member" title="@chenbingyu-HZAU">陈炳宇</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          <a class="clink doi" href="https://doi.org/10.1016/j.catena.2025.109758" target="_blank" rel="noopener">DOI</a>
+          <a class="clink" href="https://github.com/D2RS-2026spring/xyjlunwenfuxian" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/140" target="_blank" rel="noopener">Issue #140</a>
+      </div>
+    </div>
+    <div class="card cat-data" data-cat="data">
+      <div class="card-top">
+        <div class="card-icon">📋</div>
+        <div class="info"><div class="title">单细胞转录组数据分析流程</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现单细胞转录组数据分析流程，包括Seurat预处理、Harmony批次矫正、UMAP聚类、细胞注释、DoubletFinder双细胞检测、差异表达分析和火山图可视化。</div></div>
+      <div class="card-mem"><a href="https://github.com/huanyu8" target="_blank" rel="noopener" class="mlink leader" title="@huanyu8">★ 邹林</a><a href="https://github.com/LGQ559492" target="_blank" rel="noopener" class="mlink member" title="@LGQ559492">林观清</a><a href="https://github.com/zcguksjv65" target="_blank" rel="noopener" class="mlink member" title="@zcguksjv65">郑永琪</a><a href="https://github.com/li20010229-eng" target="_blank" rel="noopener" class="mlink member" title="@li20010229-eng">李迁</a><a href="https://github.com/hirasauayui" target="_blank" rel="noopener" class="mlink member" title="@hirasauayui">黄子凯</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          
+          <a class="clink" href="https://github.com/huanyu8/-" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/139" target="_blank" rel="noopener">Issue #139</a>
+      </div>
+    </div>
+    <div class="card cat-data" data-cat="data">
+      <div class="card-top">
+        <div class="card-icon">🤖</div>
+        <div class="info"><div class="title">PyLUSAT 文献复现分析报告</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现PyLUSAT工具库的土地利用适宜性分析核心图表</div></div>
+      <div class="card-mem"><a href="https://github.com/justleap-amdd" target="_blank" rel="noopener" class="mlink leader" title="@justleap-amdd">★ 杨丽萍</a><a href="https://github.com/lcx920" target="_blank" rel="noopener" class="mlink member" title="@lcx920">李春雪</a><a href="https://github.com/dj4296" target="_blank" rel="noopener" class="mlink member" title="@dj4296">董娟</a><a href="https://github.com/Maikexin" target="_blank" rel="noopener" class="mlink member" title="@Maikexin">买柯馨</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          <a class="clink doi" href="https://doi.org/10.1016/j.envsoft.2022.105357" target="_blank" rel="noopener">DOI</a>
+          <a class="clink" href="https://github.com/D2RS-2026spring/PyLUSAT-" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/138" target="_blank" rel="noopener">Issue #138</a>
+      </div>
+    </div>
+    <div class="card cat-micro" data-cat="micro">
+      <div class="card-top">
+        <div class="card-icon">🧬</div>
+        <div class="info"><div class="title">大豆土壤微生物群繁殖</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现大豆根际微生物组论文的Fig.2和Fig.3</div></div>
+      <div class="card-mem"><a href="https://github.com/Liuxinrui926" target="_blank" rel="noopener" class="mlink leader" title="@Liuxinrui926">★ 刘心蕊</a><a href="https://github.com/YR-yyy" target="_blank" rel="noopener" class="mlink member" title="@YR-yyy">于冉</a><a href="https://github.com/nie-3" target="_blank" rel="noopener" class="mlink member" title="@nie-3">聂雅杉</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          <a class="clink doi" href="https://doi.org/10.1038/s41467-024-45925-5" target="_blank" rel="noopener">DOI</a>
+          <a class="clink" href="https://github.com/D2RS-2026spring/liuxinrui-jiekezuoye" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/137" target="_blank" rel="noopener">Issue #137</a>
+      </div>
+    </div>
+    <div class="card cat-micro" data-cat="micro">
+      <div class="card-top">
+        <div class="card-icon">🦠</div>
+        <div class="info"><div class="title">关于 早期多重微量营养素缺乏导致小鼠肠道菌群和固有抗生素抗性基因的多物种变化 数据的复现</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现论文Figure 1中关于小鼠肠道微生物组和抗生素抗性基因的分析</div></div>
+      <div class="card-mem"><a href="https://github.com/Lzy-NICE" target="_blank" rel="noopener" class="mlink leader" title="@Lzy-NICE">★ 刘卓益</a><a href="https://github.com/lijj2k" target="_blank" rel="noopener" class="mlink member" title="@lijj2k">李俊杰</a><a href="https://github.com/DragonBron23" target="_blank" rel="noopener" class="mlink member" title="@DragonBron23">朱烁龙</a><a href="https://github.com/gaoxinling" target="_blank" rel="noopener" class="mlink member" title="@gaoxinling">高心灵</a><a href="https://github.com/zh–ang–jing" target="_blank" rel="noopener" class="mlink member" title="@zh–ang–jing">章靖</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          <a class="clink doi" href="https://doi.org/10.1038/s41564-023-01519-3" target="_blank" rel="noopener">DOI</a>
+          <a class="clink" href="https://github.com/D2RS-2026spring/HAPPYy" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/135" target="_blank" rel="noopener">Issue #135</a>
+      </div>
+    </div>
+    <div class="card cat-plant" data-cat="plant">
+      <div class="card-top">
+        <div class="card-icon">🍊</div>
+        <div class="info"><div class="title">复现植物基生物炭对 Cd(II)、Pb(II)、Zn(II) 的吸附等温线分析</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现植物基生物炭对重金属吸附等温线分析</div></div>
+      <div class="card-mem"><a href="https://github.com/Fu-cole" target="_blank" rel="noopener" class="mlink member" title="@Fu-cole">冯王福临</a><a href="https://github.com/KANGJINGWEN0803" target="_blank" rel="noopener" class="mlink member" title="@KANGJINGWEN0803">康静文</a><a href="https://github.com/Xushining1220" target="_blank" rel="noopener" class="mlink member" title="@Xushining1220">徐世宁</a><a href="https://github.com/cyx-coco" target="_blank" rel="noopener" class="mlink member" title="@cyx-coco">曹雨欣</a><a href="https://github.com/Hackysaw" target="_blank" rel="noopener" class="mlink member" title="@Hackysaw">韩昊阳</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          <a class="clink doi" href="https://doi.org/10.1016/j.heliyon.2020.e05388" target="_blank" rel="noopener">DOI</a>
+          <a class="clink" href="https://github.com/D2RS-2026spring/MBHMA" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/134" target="_blank" rel="noopener">Issue #134</a>
+      </div>
+    </div>
+    <div class="card cat-data" data-cat="data">
+      <div class="card-top">
+        <div class="card-icon">📊</div>
+        <div class="info"><div class="title">基于随机森林的无人机生物物理参数估算工具</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">基于随机森林的无人机生物物理参数估算工具</div></div>
+      <div class="card-mem"><a href="https://github.com/very6jia1" target="_blank" rel="noopener" class="mlink leader" title="@very6jia1">★ 刘嘉怡</a><a href="https://github.com/XMZ183" target="_blank" rel="noopener" class="mlink member" title="@XMZ183">向美珍</a><a href="https://github.com/Bao-cell" target="_blank" rel="noopener" class="mlink member" title="@Bao-cell">包成才</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          
+          <a class="clink" href="https://github.com/very6jia1/RandomForestFapar-projrct" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/133" target="_blank" rel="noopener">Issue #133</a>
+      </div>
+    </div>
+    <div class="card cat-soil" data-cat="soil">
+      <div class="card-top">
+        <div class="card-icon">🔬</div>
+        <div class="info"><div class="title">基于《Transcriptional regulation of nitrogen-associated metabolism and grow</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现论文《Transcriptional regulation of nitrogen-associated metabolism and growth》的核心图表分析</div></div>
+      <div class="card-mem"><a href="https://github.com/okbk130" target="_blank" rel="noopener" class="mlink member" title="@okbk130">王家傲</a><a href="https://github.com/doujiayi-2025" target="_blank" rel="noopener" class="mlink member" title="@doujiayi-2025">窦佳艺</a><a href="https://github.com/pidan431" target="_blank" rel="noopener" class="mlink member" title="@pidan431">周奕楠</a><a href="https://github.com/chenyuhaobio" target="_blank" rel="noopener" class="mlink member" title="@chenyuhaobio">陈宇豪</a><a href="https://github.com/Bijiayu-yyds" target="_blank" rel="noopener" class="mlink leader" title="@Bijiayu-yyds">★ 毕嘉榆</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          
+          <a class="clink" href="https://github.com/Bijiayu-yyds/article-recover" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/132" target="_blank" rel="noopener">Issue #132</a>
+      </div>
+    </div>
+    <div class="card cat-data" data-cat="data">
+      <div class="card-top">
+        <div class="card-icon">🛰️</div>
+        <div class="info"><div class="title">利用机器学习预测重金属在土壤上的吸附能力及全球土壤吸附能力分布图</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现论文：基于机器学习预测土壤重金属吸附量并绘制全球分布图</div></div>
+      <div class="card-mem"><a href="https://github.com/Zhang-JunH" target="_blank" rel="noopener" class="mlink leader" title="@Zhang-JunH">★ 张骏辉</a><a href="https://github.com/FangYuan-Miao" target="_blank" rel="noopener" class="mlink member" title="@FangYuan-Miao">苗芳源</a><a href="https://github.com/taro-2026" target="_blank" rel="noopener" class="mlink member" title="@taro-2026">胡金忆</a><a href="https://github.com/liyanfeng123" target="_blank" rel="noopener" class="mlink member" title="@liyanfeng123">李艳峰</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          <a class="clink doi" href="https://doi.org/10.1021/acs.est.1c02479" target="_blank" rel="noopener">DOI</a>
+          <a class="clink" href="https://github.com/D2RS-2026spring/Project-reproduction-131" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/131" target="_blank" rel="noopener">Issue #131</a>
+      </div>
+    </div>
+    <div class="card cat-data" data-cat="data">
+      <div class="card-top">
+        <div class="card-icon">🥭</div>
+        <div class="info"><div class="title">伊比利亚半岛尼安德特人消失研究复现报告</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现伊比利亚半岛尼安德特人消失与生态系统生产力关系的研究</div></div>
+      <div class="card-mem"><a href="https://github.com/shuyan-yang326" target="_blank" rel="noopener" class="mlink leader" title="@shuyan-yang326">★ 杨舒妍</a><a href="https://github.com/meilin090" target="_blank" rel="noopener" class="mlink member" title="@meilin090">陈美林</a><a href="https://github.com/Jyyy12138" target="_blank" rel="noopener" class="mlink member" title="@Jyyy12138">王嘉仪</a><a href="https://github.com/Gao-Jinhua" target="_blank" rel="noopener" class="mlink member" title="@Gao-Jinhua">郜锦华</a><a href="https://github.com/Qin1310" target="_blank" rel="noopener" class="mlink member" title="@Qin1310">秦思怡</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          <a class="clink doi" href="https://doi.org/10.1038/s41559-022-01861-5" target="_blank" rel="noopener">DOI</a>
+          <a class="clink" href="https://github.com/D2RS-2026spring/neanderthal-ecosystem-productivity" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/128" target="_blank" rel="noopener">Issue #128</a>
+      </div>
+    </div>
+    <div class="card cat-data" data-cat="data">
+      <div class="card-top">
+        <div class="card-icon">👤</div>
+        <div class="info"><div class="title">识别人像照片的性别年龄</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">基于OpenCV预训练模型进行人脸、性别、年龄检测</div></div>
+      <div class="card-mem"><a href="https://github.com/Gladsxzhou" target="_blank" rel="noopener" class="mlink leader" title="@Gladsxzhou">★ 肖周乐</a><a href="https://github.com/hzs12" target="_blank" rel="noopener" class="mlink member" title="@hzs12">黄张赛</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          
+          <a class="clink" href="https://github.com/D2RS-2026spring/Gender-and-age-detection-using-deep-learning" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/127" target="_blank" rel="noopener">Issue #127</a>
+      </div>
+    </div>
+    <div class="card cat-env" data-cat="env">
+      <div class="card-top">
+        <div class="card-icon">🐜</div>
+        <div class="info"><div class="title">极端气候中主导周期的转移在全球变暖下的影响——文章复现</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现全球变暖下极端气候事件主导周期转移的核心结论与图表</div></div>
+      <div class="card-mem"><a href="https://github.com/zhoushige666-crypto" target="_blank" rel="noopener" class="mlink leader" title="@zhoushige666-crypto">★ 周仕格</a><a href="https://github.com/winn-coder" target="_blank" rel="noopener" class="mlink member" title="@winn-coder">陈霜</a><a href="https://github.com/oufangfang1209" target="_blank" rel="noopener" class="mlink member" title="@oufangfang1209">欧方芳</a><a href="https://github.com/LLLJY-ljy" target="_blank" rel="noopener" class="mlink member" title="@LLLJY-ljy">卢佳怡</a><a href="https://github.com/xinyuzhu-lang" target="_blank" rel="noopener" class="mlink member" title="@xinyuzhu-lang">朱欣雨</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          <a class="clink doi" href="https://doi.org/10.1038/s41467-025-65600-7" target="_blank" rel="noopener">DOI</a>
+          <a class="clink" href="https://github.com/D2RS-2026spring/Shifting-dominant-periods-in-extreme-climate-impacts-under-global-warming" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/125" target="_blank" rel="noopener">Issue #125</a>
+      </div>
+    </div>
+    <div class="card cat-micro" data-cat="micro">
+      <div class="card-top">
+        <div class="card-icon">🧫</div>
+        <div class="info"><div class="title">LL-Nature Communications 2024 论文复现结果</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现微生物群落合作生长与多稳态的论文核心图表</div></div>
+      <div class="card-mem"><a href="https://github.com/yolo0-0" target="_blank" rel="noopener" class="mlink leader" title="@yolo0-0">★ 刘浩东</a><a href="https://github.com/lyh-2025" target="_blank" rel="noopener" class="mlink member" title="@lyh-2025">栾业辉</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          <a class="clink doi" href="https://doi.org/10.1038/s41467-024-48521-9" target="_blank" rel="noopener">DOI</a>
+          <a class="clink" href="https://github.com/yolo0-0/microbial-interactions-main" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/124" target="_blank" rel="noopener">Issue #124</a>
+      </div>
+    </div>
+    <div class="card cat-micro" data-cat="micro">
+      <div class="card-top">
+        <div class="card-icon">🌿</div>
+        <div class="info"><div class="title">Global patterns of 16S rRNA diversity at a depth of millions of sequence</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现环境微生物群落多样性与组成差异的论文核心结论</div></div>
+      <div class="card-mem"><a href="https://github.com/cgcgtfy" target="_blank" rel="noopener" class="mlink leader" title="@cgcgtfy">★ 张逸帆</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          <a class="clink doi" href="https://doi.org/10.1073/pnas.1000080107" target="_blank" rel="noopener">DOI</a>
+          <a class="clink" href="https://github.com/D2RS-2026spring/Global-patterns-of-16S-rRNA-diversity-at-a-depth-of-millions-of-sequences-per-sample" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/122" target="_blank" rel="noopener">Issue #122</a>
+      </div>
+    </div>
+    <div class="card cat-plant" data-cat="plant">
+      <div class="card-top">
+        <div class="card-icon">🫘</div>
+        <div class="info"><div class="title">基于Reproduce-the-Resource-Utilization-of-Agricultural-Waste 可重复数据分析</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现农业废弃物资源化利用研究的实验流程与数据分析</div></div>
+      <div class="card-mem"><a href="https://github.com/Janney-huang" target="_blank" rel="noopener" class="mlink member" title="@Janney-huang">黄娇</a><a href="https://github.com/JiangYee393" target="_blank" rel="noopener" class="mlink member" title="@JiangYee393">江兰钐</a><a href="https://github.com/hanyu-Yang" target="_blank" rel="noopener" class="mlink member" title="@hanyu-Yang">杨涵玉</a><a href="https://github.com/caoyao-03" target="_blank" rel="noopener" class="mlink member" title="@caoyao-03">曹瑶</a><a href="https://github.com/Olivia-yao710" target="_blank" rel="noopener" class="mlink member" title="@Olivia-yao710">王兴瑶</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          
+          <a class="clink" href="https://github.com/d2rs-2026spring/Reproduce-the-Resource-Utilization-of-Agricultural-Waste" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/121" target="_blank" rel="noopener">Issue #121</a>
+      </div>
+    </div>
+    <div class="card cat-plant" data-cat="plant">
+      <div class="card-top">
+        <div class="card-icon">🍃</div>
+        <div class="info"><div class="title">柑橘养分利用课题情况复现</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">用StudioR复现柑橘养分利用课题组网站首页、研究方向、科研成果、联系我们页面</div></div>
+      <div class="card-mem"><a href="https://github.com/wangxuan24" target="_blank" rel="noopener" class="mlink leader" title="@wangxuan24">★ 王硕</a><a href="https://github.com/Jiesun-star" target="_blank" rel="noopener" class="mlink member" title="@Jiesun-star">孙宜宜</a><a href="https://github.com/zhiyuanli-beep" target="_blank" rel="noopener" class="mlink member" title="@zhiyuanli-beep">李致远</a><a href="https://github.com/BINGWANYANG" target="_blank" rel="noopener" class="mlink member" title="@BINGWANYANG">杨冰婉</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          
+          <a class="clink" href="https://github.com/D2RS-2026spring/citrus-nutrient-analysis-project" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/120" target="_blank" rel="noopener">Issue #120</a>
+      </div>
+    </div>
+    <div class="card cat-soil" data-cat="soil">
+      <div class="card-top">
+        <div class="card-icon">🏞️</div>
+        <div class="info"><div class="title">基于随机森林模型的土壤pH预测方法的可重复性评估</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现基于随机森林模型的土壤pH预测方法</div></div>
+      <div class="card-mem"><a href="https://github.com/20WPL" target="_blank" rel="noopener" class="mlink leader" title="@20WPL">★ 吴沛林</a><a href="https://github.com/2025WL" target="_blank" rel="noopener" class="mlink member" title="@2025WL">吴蕾</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          
+          <a class="clink" href="https://github.com/20WPL/Homework-2026" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/119" target="_blank" rel="noopener">Issue #119</a>
+      </div>
+    </div>
+    <div class="card cat-data" data-cat="data">
+      <div class="card-top">
+        <div class="card-icon">🚲</div>
+        <div class="info"><div class="title">三国甲烷排放时空分析与未来30年预测</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">基于EDGAR和世界银行数据，分析三国甲烷排放趋势并预测未来30年排放</div></div>
+      <div class="card-mem"><a href="https://github.com/6622339" target="_blank" rel="noopener" class="mlink leader" title="@6622339">★ 李淑慧</a><a href="https://github.com/yuyuyu93764" target="_blank" rel="noopener" class="mlink member" title="@yuyuyu93764">余瑞</a><a href="https://github.com/cuut123" target="_blank" rel="noopener" class="mlink member" title="@cuut123">覃紫慧</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          
+          <a class="clink" href="https://github.com/6622339/662" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/117" target="_blank" rel="noopener">Issue #117</a>
+      </div>
+    </div>
+    <div class="card cat-data" data-cat="data">
+      <div class="card-top">
+        <div class="card-icon">📋</div>
+        <div class="info"><div class="title">水质数据科学与机器学习探索小组</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现并优化基于9项水质理化指标预测饮用水可饮用性的机器学习全流程</div></div>
+      <div class="card-mem"><a href="https://github.com/welljie12138" target="_blank" rel="noopener" class="mlink leader" title="@welljie12138">★ 万雨捷</a><a href="https://github.com/den-160" target="_blank" rel="noopener" class="mlink member" title="@den-160">邓宇晴</a><a href="https://github.com/ARSEN-4321" target="_blank" rel="noopener" class="mlink member" title="@ARSEN-4321">李亚森</a><a href="https://github.com/Downey888" target="_blank" rel="noopener" class="mlink member" title="@Downey888">唐成翰</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          
+          <a class="clink" href="https://github.com/welljie12138/Water-Potability-Prediction" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/115" target="_blank" rel="noopener">Issue #115</a>
+      </div>
+    </div>
+    <div class="card cat-plant" data-cat="plant">
+      <div class="card-top">
+        <div class="card-icon">🧪</div>
+        <div class="info"><div class="title">复现论文：一种新型单一营养素水培溶液中的大豆营养</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现大豆水培论文的数据生成、R Markdown分析报告及可复现环境</div></div>
+      <div class="card-mem"><a href="https://github.com/SHUZHIQI" target="_blank" rel="noopener" class="mlink leader" title="@SHUZHIQI">★ 齐书志</a><a href="https://github.com/longxi112" target="_blank" rel="noopener" class="mlink member" title="@longxi112">李龙溪</a><a href="https://github.com/ningdanzhang" target="_blank" rel="noopener" class="mlink member" title="@ningdanzhang">张苧丹</a><a href="https://github.com/DUYongqi0116" target="_blank" rel="noopener" class="mlink member" title="@DUYongqi0116">杜永琪</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          <a class="clink doi" href="https://doi.org/10.3390/agronomy11030523" target="_blank" rel="noopener">DOI</a>
+          <a class="clink" href="https://github.com/D2RS-2026spring/Hydroponic-Soybean-Replication" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/114" target="_blank" rel="noopener">Issue #114</a>
+      </div>
+    </div>
+    <div class="card cat-micro" data-cat="micro">
+      <div class="card-top">
+        <div class="card-icon">🧬</div>
+        <div class="info"><div class="title">细菌共培养代谢分析复现</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">第四次可重复性项目作业，复现柱状图分析</div></div>
+      <div class="card-mem"><a href="https://github.com/gudashuai6" target="_blank" rel="noopener" class="mlink leader" title="@gudashuai6">★ 古振峰</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          
+          <a class="clink" href="https://github.com/gudashuai6/projects" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/112" target="_blank" rel="noopener">Issue #112</a>
+      </div>
+    </div>
+    <div class="card cat-data" data-cat="data">
+      <div class="card-top">
+        <div class="card-icon">🤖</div>
+        <div class="info"><div class="title">BioChem_OrganicMaterials_WangHZ</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">通过生物化学计算方法模拟有机小分子与受体蛋白的结合能力，分析分子性质与生物活性的相关性。</div></div>
+      <div class="card-mem"><a href="https://github.com/HulThe-shuai" target="_blank" rel="noopener" class="mlink leader" title="@HulThe-shuai">★ 王浩哲</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          
+          <a class="clink" href="https://github.com/D2RS-2026spring/BioChem_OrganicMaterials_WangHZ" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/111" target="_blank" rel="noopener">Issue #111</a>
+      </div>
+    </div>
+    <div class="card cat-plant" data-cat="plant">
+      <div class="card-top">
+        <div class="card-icon">🌱</div>
+        <div class="info"><div class="title">【可重复性研究】-Reduced phosphorus bioavailability in rice paddies intensified </div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现CO2增温降低稻田磷有效性的论文分析</div></div>
+      <div class="card-mem"><a href="https://github.com/jijiahui02" target="_blank" rel="noopener" class="mlink leader" title="@jijiahui02">★ 季佳辉</a><a href="https://github.com/yb9966" target="_blank" rel="noopener" class="mlink member" title="@yb9966">游彬</a><a href="https://github.com/dlliang2026" target="_blank" rel="noopener" class="mlink member" title="@dlliang2026">梁冬玲</a><a href="https://github.com/GuXiang0730" target="_blank" rel="noopener" class="mlink member" title="@GuXiang0730">顾湘</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          <a class="clink doi" href="https://doi.org/10.1038/s41561-026-01917-2" target="_blank" rel="noopener">DOI</a>
+          <a class="clink" href="https://github.com/D2RS-2026spring/proj" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/109" target="_blank" rel="noopener">Issue #109</a>
+      </div>
+    </div>
+    <div class="card cat-micro" data-cat="micro">
+      <div class="card-top">
+        <div class="card-icon">🦠</div>
+        <div class="info"><div class="title">node2vec算法复现研究报告</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现node2vec算法，面向合成菌群知识图谱的表征学习</div></div>
+      <div class="card-mem"><a href="https://github.com/CANGSU-mei" target="_blank" rel="noopener" class="mlink leader" title="@CANGSU-mei">★ 刘小梅</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          <a class="clink doi" href="https://doi.org/10.1145/2939672.2939754" target="_blank" rel="noopener">DOI</a>
+          <a class="clink" href="https://github.com/D2RS-2026spring/Node2Vec-SynCom-Reproduction-main" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/107" target="_blank" rel="noopener">Issue #107</a>
+      </div>
+    </div>
+    <div class="card cat-soil" data-cat="soil">
+      <div class="card-top">
+        <div class="card-icon">🌍</div>
+        <div class="info"><div class="title">中国土壤数据集复现项目</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现中国土壤属性数据集CSDLv2中SOC与TN的空间分布及相互关系</div></div>
+      <div class="card-mem"><a href="https://github.com/niuideal" target="_blank" rel="noopener" class="mlink leader" title="@niuideal">★ 牛理想</a><a href="https://github.com/lirumeng-mary" target="_blank" rel="noopener" class="mlink member" title="@lirumeng-mary">李如梦</a><a href="https://github.com/yooyoo2" target="_blank" rel="noopener" class="mlink member" title="@yooyoo2">刘珺</a><a href="https://github.com/20260305" target="_blank" rel="noopener" class="mlink member" title="@20260305">徐嘉璐</a><a href="https://github.com/xueli9g" target="_blank" rel="noopener" class="mlink member" title="@xueli9g">李雪</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          <a class="clink doi" href="https://doi.org/10.11888/terre.tpdc.301235" target="_blank" rel="noopener">DOI</a>
+          <a class="clink" href="https://github.com/niuideal/-" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/103" target="_blank" rel="noopener">Issue #103</a>
+      </div>
+    </div>
+    <div class="card cat-soil" data-cat="soil">
+      <div class="card-top">
+        <div class="card-icon">🏔️</div>
+        <div class="info"><div class="title">基于《Bacterial social interactions in synthetic Bacillus consortia enhance</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现合成芽孢杆菌菌群社会互作促进植物生长的研究</div></div>
+      <div class="card-mem"><a href="https://github.com/xiaozz-zl" target="_blank" rel="noopener" class="mlink member" title="@xiaozz-zl">韦荣耀</a><a href="https://github.com/yaya2026" target="_blank" rel="noopener" class="mlink member" title="@yaya2026">赵甜甜</a><a href="https://github.com/weiwe0829-creator" target="_blank" rel="noopener" class="mlink member" title="@weiwe0829-creator">马微</a><a href="https://github.com/Zhang-ym-ing-cell" target="_blank" rel="noopener" class="mlink member" title="@Zhang-ym-ing-cell">张一鸣</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          
+          <a class="clink" href="https://github.com/D2RS-2026spring/SynCom_Assembly_Analysis" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/102" target="_blank" rel="noopener">Issue #102</a>
+      </div>
+    </div>
+    <div class="card cat-micro" data-cat="micro">
+      <div class="card-top">
+        <div class="card-icon">🧫</div>
+        <div class="info"><div class="title">基于《Deterministic colonization arises early during the transition of soil</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现论文Figure 4微生物富集结果</div></div>
+      <div class="card-mem"><a href="https://github.com/geyuqing3-stack" target="_blank" rel="noopener" class="mlink leader" title="@geyuqing3-stack">★ 葛方苏</a><a href="https://github.com/ZHGlory" target="_blank" rel="noopener" class="mlink member" title="@ZHGlory">张荣耀</a><a href="https://github.com/ZZY-423" target="_blank" rel="noopener" class="mlink member" title="@ZZY-423">张振阳</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          <a class="clink doi" href="https://doi.org/10.1186/s40168-025-02090-1" target="_blank" rel="noopener">DOI</a>
+          <a class="clink" href="https://github.com/D2RS-2026spring/gfss-lunwenfuxian-project" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/101" target="_blank" rel="noopener">Issue #101</a>
+      </div>
+    </div>
+    <div class="card cat-env" data-cat="env">
+      <div class="card-top">
+        <div class="card-icon">🔬</div>
+        <div class="info"><div class="title">可重复性作业--静电耦合和水桥在生物分子于水-黏土界面吸附层级中的作用</div></div>
+      </div>
+      <div class="tags"><span class="tag py">Python</span></div>
+      <div class="card-body"><div class="desc">复现静电耦合和水桥在生物分子于水-黏土界面吸附层级中的作用</div></div>
+      <div class="card-mem"><a href="https://github.com/ghy065178-blip" target="_blank" rel="noopener" class="mlink leader" title="@ghy065178-blip">★ 龚慧岩</a><a href="https://github.com/Yangjiahao1234" target="_blank" rel="noopener" class="mlink member" title="@Yangjiahao1234">杨家豪</a><a href="https://github.com/ChenZhuo-hz" target="_blank" rel="noopener" class="mlink member" title="@ChenZhuo-hz">陈卓</a><a href="https://github.com/Liuxinya0801" target="_blank" rel="noopener" class="mlink member" title="@Liuxinya0801">刘鑫雅</a><a href="https://github.com/111222333xxxx" target="_blank" rel="noopener" class="mlink member" title="@111222333xxxx">徐世博</a><a href="https://github.com/1122333666jjj" target="_blank" rel="noopener" class="mlink member" title="@1122333666jjj">江祥鸿</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          <a class="clink doi" href="https://doi.org/10.1073/pnas.2316569121" target="_blank" rel="noopener">DOI</a>
+          <a class="clink" href="https://github.com/ChenZhuo-hz/paper-reproduction-md" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/100" target="_blank" rel="noopener">Issue #100</a>
+      </div>
+    </div>
+    <div class="card cat-soil" data-cat="soil">
+      <div class="card-top">
+        <div class="card-icon">❄️</div>
+        <div class="info"><div class="title">Molecular trade-offs in soil organic carbon composition at continental s</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现论文Molecular trade-offs in soil organic carbon composition at continental scale的数据处理与可视化</div></div>
+      <div class="card-mem"><a href="https://github.com/Jiang-yu-yang" target="_blank" rel="noopener" class="mlink leader" title="@Jiang-yu-yang">★ 姜宇洋</a><a href="https://github.com/Shiwen-Yue" target="_blank" rel="noopener" class="mlink member" title="@Shiwen-Yue">岳诗文</a><a href="https://github.com/LZT56" target="_blank" rel="noopener" class="mlink member" title="@LZT56">吕智彤</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          <a class="clink doi" href="https://doi.org/10.6073/pasta/2284825ecb8460f056ae5b0e7d355cc8" target="_blank" rel="noopener">DOI</a>
+          <a class="clink" href="https://github.com/D2RS-2026spring/soil-soc-repro" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/99" target="_blank" rel="noopener">Issue #99</a>
+      </div>
+    </div>
+    <div class="card cat-soil" data-cat="soil">
+      <div class="card-top">
+        <div class="card-icon">🌱</div>
+        <div class="info"><div class="title">基于功能视角的中国三峡库区经济林恢复对土壤物理质量影响评估结果复现</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现经济林恢复对三峡库区土壤物理质量影响评估论文的核心图表</div></div>
+      <div class="card-mem"><a href="https://github.com/zlznevergu" target="_blank" rel="noopener" class="mlink leader" title="@zlznevergu">★ 曾令振</a><a href="https://github.com/ly9495" target="_blank" rel="noopener" class="mlink member" title="@ly9495">刘家洛</a><a href="https://github.com/chenbingyu-HZAU" target="_blank" rel="noopener" class="mlink member" title="@chenbingyu-HZAU">陈炳宇</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          <a class="clink doi" href="https://doi.org/10.1016/j.catena.2025.109758" target="_blank" rel="noopener">DOI</a>
+          <a class="clink" href="https://github.com/ly9495/xiangmufuxian" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/98" target="_blank" rel="noopener">Issue #98</a>
+      </div>
+    </div>
+    <div class="card cat-plant" data-cat="plant">
+      <div class="card-top">
+        <div class="card-icon">🌿</div>
+        <div class="info"><div class="title">不同施氮量对水稻生长及产量影响可重复性研究</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现不同施氮量对水稻生长及产量影响的统计分析全流程</div></div>
+      <div class="card-mem"><a href="https://github.com/q234-coder" target="_blank" rel="noopener" class="mlink leader" title="@q234-coder">★ 陈思阳</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          
+          <a class="clink" href="https://github.com/D2RS-2026spring/rice-nitrogen-project" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/97" target="_blank" rel="noopener">Issue #97</a>
+      </div>
+    </div>
+    <div class="card cat-env" data-cat="env">
+      <div class="card-top">
+        <div class="card-icon">🌊</div>
+        <div class="info"><div class="title">灌溉农业的全球能源使用与碳排放文章数据复现</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现灌溉农业全球能源使用和碳排放论文的核心图表分析</div></div>
+      <div class="card-mem"><a href="https://github.com/Britney-128" target="_blank" rel="noopener" class="mlink leader" title="@Britney-128">★ 李曼娜</a><a href="https://github.com/Kongruyuan" target="_blank" rel="noopener" class="mlink member" title="@Kongruyuan">孔儒远</a><a href="https://github.com/laopyoutiao" target="_blank" rel="noopener" class="mlink member" title="@laopyoutiao">汤启斌</a><a href="https://github.com/lll4123" target="_blank" rel="noopener" class="mlink member" title="@lll4123">罗钰颖</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          <a class="clink doi" href="https://doi.org/10.1038/s41467-024-47383-5" target="_blank" rel="noopener">DOI</a>
+          <a class="clink" href="https://github.com/Britney-128/Energy-Use-in-Irrigated-Agriculture" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/95" target="_blank" rel="noopener">Issue #95</a>
+      </div>
+    </div>
+    <div class="card cat-micro" data-cat="micro">
+      <div class="card-top">
+        <div class="card-icon">🌿</div>
+        <div class="info"><div class="title">Root microbiota drive direct integration of phosphate stress and immunit</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现植物根系合成菌群与缺磷胁迫互作机制的论文分析流程</div></div>
+      <div class="card-mem"><a href="https://github.com/xihongshi2021" target="_blank" rel="noopener" class="mlink leader" title="@xihongshi2021">★ 方立堃</a><a href="https://github.com/xiangcaigongzhu999" target="_blank" rel="noopener" class="mlink member" title="@xiangcaigongzhu999">丁庆庆</a><a href="https://github.com/Mengyuxin224" target="_blank" rel="noopener" class="mlink member" title="@Mengyuxin224">孟雨欣</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          <a class="clink doi" href="https://doi.org/10.1038/nature21417" target="_blank" rel="noopener">DOI</a>
+          <a class="clink" href="https://github.com/D2RS-2026spring/Synthetic-Microbiome-Reproduction" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/89" target="_blank" rel="noopener">Issue #89</a>
+      </div>
+    </div>
+    <div class="card cat-soil" data-cat="soil">
+      <div class="card-top">
+        <div class="card-icon">🗺️</div>
+        <div class="info"><div class="title">土地利用变化对德国有机碳储量的百年遗留影响的可重复性研究</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现德国农业土壤有机碳储量百年变化研究</div></div>
+      <div class="card-mem"><a href="https://github.com/KeV1n03" target="_blank" rel="noopener" class="mlink leader" title="@KeV1n03">★ 胡凯文</a><a href="https://github.com/zzzzz0928" target="_blank" rel="noopener" class="mlink member" title="@zzzzz0928">周健平</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          <a class="clink doi" href="https://doi.org/10.1111/gcb.17444" target="_blank" rel="noopener">DOI</a>
+          <a class="clink" href="https://github.com/KeV1n03/legacy-SOC-project" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/84" target="_blank" rel="noopener">Issue #84</a>
+      </div>
+    </div>
+    <div class="card cat-micro" data-cat="micro">
+      <div class="card-top">
+        <div class="card-icon">🧬</div>
+        <div class="info"><div class="title">Combined effect of molybdenum and nitrogen fertilization on nitrogen met</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现课题组赵优优的钼论文柱状图分析</div></div>
+      <div class="card-mem"><a href="https://github.com/yanggang-0304" target="_blank" rel="noopener" class="mlink leader" title="@yanggang-0304">★ 杨刚</a><a href="https://github.com/yuqi-1209" target="_blank" rel="noopener" class="mlink member" title="@yuqi-1209">余琪</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          
+          <a class="clink" href="https://github.com/yanggang-0304/Data-R" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/83" target="_blank" rel="noopener">Issue #83</a>
+      </div>
+    </div>
+    <div class="card cat-soil" data-cat="soil">
+      <div class="card-top">
+        <div class="card-icon">📡</div>
+        <div class="info"><div class="title">个人作业 2025303110057</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现土壤干燥促进细菌细胞间接触与接合转移的核心结论</div></div>
+      <div class="card-mem"><a href="https://github.com/ZZY-423" target="_blank" rel="noopener" class="mlink leader" title="@ZZY-423">★ 张振阳</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          <a class="clink doi" href="https://doi.org/10.1073/pnas.1808274115" target="_blank" rel="noopener">DOI</a>
+          <a class="clink" href="https://github.com/ZZY-423/PNAS-2018-reproducibility-assignment" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/82" target="_blank" rel="noopener">Issue #82</a>
+      </div>
+    </div>
+    <div class="card cat-data" data-cat="data">
+      <div class="card-top">
+        <div class="card-icon">📊</div>
+        <div class="info"><div class="title">Mango-Mamba 芒果叶病害轻量级检测模型结果复现</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现Mango-Mamba芒果叶病害轻量级检测模型，验证其精度与效率。</div></div>
+      <div class="card-mem"><a href="https://github.com/hzau-wujing" target="_blank" rel="noopener" class="mlink leader" title="@hzau-wujing">★ 吴靖</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          <a class="clink doi" href="https://doi.org/10.1016/j.compeleceng.2026.111033" target="_blank" rel="noopener">DOI</a>
+          <a class="clink" href="https://github.com/D2RS-2026spring/Reproduction-of-Mango-Mamba-Project" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/81" target="_blank" rel="noopener">Issue #81</a>
+      </div>
+    </div>
+    <div class="card cat-data" data-cat="data">
+      <div class="card-top">
+        <div class="card-icon">🛰️</div>
+        <div class="info"><div class="title">基于人脸识别的项目</div></div>
+      </div>
+      <div class="tags"><span class="tag py">Python</span></div>
+      <div class="card-body"><div class="desc">基于OpenCV LBPH算法的人脸识别系统复现，实现实时人脸识别与置信度显示。</div></div>
+      <div class="card-mem"><a href="https://github.com/lll-liwen" target="_blank" rel="noopener" class="mlink leader" title="@lll-liwen">★ 吕博文</a><a href="https://github.com/Hankexinn" target="_blank" rel="noopener" class="mlink member" title="@Hankexinn">韩可欣</a><a href="https://github.com/shiwanting0204" target="_blank" rel="noopener" class="mlink member" title="@shiwanting0204">石婉婷</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          
+          <a class="clink" href="https://github.com/D2RS-2026spring/python-face-recognition" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/80" target="_blank" rel="noopener">Issue #80</a>
+      </div>
+    </div>
+    <div class="card cat-plant" data-cat="plant">
+      <div class="card-top">
+        <div class="card-icon">🌾</div>
+        <div class="info"><div class="title">基于《Precipitation rather than temperature primarily drives global termite</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现Wang等(2024)中图3、图4的荟萃分析结果</div></div>
+      <div class="card-mem"><a href="https://github.com/Yunhhhsheng" target="_blank" rel="noopener" class="mlink leader" title="@Yunhhhsheng">★ 李昀昇</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          
+          <a class="clink" href="https://github.com/Yunhhhsheng/-" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/77" target="_blank" rel="noopener">Issue #77</a>
+      </div>
+    </div>
+    <div class="card cat-env" data-cat="env">
+      <div class="card-top">
+        <div class="card-icon">⚗️</div>
+        <div class="info"><div class="title">基于《Effective treatment of Cu2+-containing acid mine drainage with  acidi</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现含铜酸性矿山废水处理论文的核心图表分析</div></div>
+      <div class="card-mem"><a href="https://github.com/Andy-95277259" target="_blank" rel="noopener" class="mlink leader" title="@Andy-95277259">★ 王迪月</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          <a class="clink doi" href="https://doi.org/10.1016/j.jenvman.2025.125875" target="_blank" rel="noopener">DOI</a>
+          <a class="clink" href="https://github.com/D2RS-2026spring/DATA" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/75" target="_blank" rel="noopener">Issue #75</a>
+      </div>
+    </div>
+    <div class="card cat-soil" data-cat="soil">
+      <div class="card-top">
+        <div class="card-icon">🔬</div>
+        <div class="info"><div class="title">细菌丰富度增强土壤有机质的热稳定性：分子多样性与热力学稳定性之间的长期权衡 论文可复现性评估</div></div>
+      </div>
+      <div class="tags"><span class="tag py">Python</span></div>
+      <div class="card-body"><div class="desc">复现细菌丰富度增强土壤有机质热稳定性的论文分析</div></div>
+      <div class="card-mem"><a href="https://github.com/zj0022" target="_blank" rel="noopener" class="mlink leader" title="@zj0022">★ 张晋</a><a href="https://github.com/Iris-ty193" target="_blank" rel="noopener" class="mlink member" title="@Iris-ty193">唐艳</a><a href="https://github.com/19839671980" target="_blank" rel="noopener" class="mlink member" title="@19839671980">徐蔚宝</a><a href="https://github.com/wumingzhou1216" target="_blank" rel="noopener" class="mlink member" title="@wumingzhou1216">吴铭洲</a><a href="https://github.com/shiyikai666" target="_blank" rel="noopener" class="mlink member" title="@shiyikai666">师祎锴</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          <a class="clink doi" href="https://doi.org/10.1038/s43016-025-01253-5" target="_blank" rel="noopener">DOI</a>
+          <a class="clink" href="https://github.com/zj0022/my-repro-project" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/71" target="_blank" rel="noopener">Issue #71</a>
+      </div>
+    </div>
+    <div class="card cat-soil" data-cat="soil">
+      <div class="card-top">
+        <div class="card-icon">🏞️</div>
+        <div class="info"><div class="title">可重复性研究作业</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现全球草地土壤净氮矿化论文的数据分析</div></div>
+      <div class="card-mem"><a href="https://github.com/30-niu" target="_blank" rel="noopener" class="mlink leader" title="@30-niu">★ 牛静霞</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          <a class="clink doi" href="https://doi.org/10.1038/s41467-019-12948-2" target="_blank" rel="noopener">DOI</a>
+          <a class="clink" href="https://github.com/D2RS-2026spring/github.io" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/67" target="_blank" rel="noopener">Issue #67</a>
+      </div>
+    </div>
+    <div class="card cat-plant" data-cat="plant">
+      <div class="card-top">
+        <div class="card-icon">🌰</div>
+        <div class="info"><div class="title">基于Sustaining vulnerable agroecosystems with compost: Lasting benefits to</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现堆肥对半干旱冬小麦土壤健康和碳储存影响的论文图表</div></div>
+      <div class="card-mem"><a href="https://github.com/cvvcI" target="_blank" rel="noopener" class="mlink member" title="@cvvcI">程伟东</a><a href="https://github.com/YI-1005" target="_blank" rel="noopener" class="mlink member" title="@YI-1005">魏伊洁</a><a href="https://github.com/JWenJing" target="_blank" rel="noopener" class="mlink member" title="@JWenJing">焦文静</a><a href="https://github.com/Wangchenyang321" target="_blank" rel="noopener" class="mlink member" title="@Wangchenyang321">王晨阳</a><a href="https://github.com/KINGWINM" target="_blank" rel="noopener" class="mlink member" title="@KINGWINM">王胜</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          
+          <a class="clink" href="https://github.com/D2RS-2026spring/compost_wheat_reproduce" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/66" target="_blank" rel="noopener">Issue #66</a>
+      </div>
+    </div>
+    <div class="card cat-soil" data-cat="soil">
+      <div class="card-top">
+        <div class="card-icon">🌍</div>
+        <div class="info"><div class="title">复现 Qu et al. (2016) 日降水分级方法：长江中游典型城市降水强度结构变化分析</div></div>
+      </div>
+      <div class="tags"><span class="tag py">Python</span></div>
+      <div class="card-body"><div class="desc">复现Qu et al. (2016)日降水分级与趋势分析方法，应用于长江中游典型城市</div></div>
+      <div class="card-mem"><a href="https://github.com/Zhu-123-er" target="_blank" rel="noopener" class="mlink leader" title="@Zhu-123-er">★ 祝佳琦</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          <a class="clink doi" href="https://doi.org/10.3390/w8050185" target="_blank" rel="noopener">DOI</a>
+          <a class="clink" href="https://github.com/Zhu-123-er/-Qu-et-al.-2016-" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/60" target="_blank" rel="noopener">Issue #60</a>
+      </div>
+    </div>
+    <div class="card cat-plant" data-cat="plant">
+      <div class="card-top">
+        <div class="card-icon">🍊</div>
+        <div class="info"><div class="title">磷酸盐肥料农学效率研究 - 可复现性评估报告</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span><span class="tag py">Python</span></div>
+      <div class="card-body"><div class="desc">复现磷酸盐肥料农学效率研究的数据分析与图表</div></div>
+      <div class="card-mem"><a href="https://github.com/c-duoduo" target="_blank" rel="noopener" class="mlink leader" title="@c-duoduo">★ 程朵朵</a><a href="https://github.com/Cuiys123" target="_blank" rel="noopener" class="mlink member" title="@Cuiys123">崔玉姝</a><a href="https://github.com/yftao0106-droid" target="_blank" rel="noopener" class="mlink member" title="@yftao0106-droid">陶一凡</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          <a class="clink doi" href="https://doi.org/10.36783/18069657rbcs20240099" target="_blank" rel="noopener">DOI</a>
+          <a class="clink" href="https://github.com/D2RS-2026spring/loftex" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/59" target="_blank" rel="noopener">Issue #59</a>
+      </div>
+    </div>
+    <div class="card cat-micro" data-cat="micro">
+      <div class="card-top">
+        <div class="card-icon">🦠</div>
+        <div class="info"><div class="title">RABiTPy项目复现</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现RABiTPy论文中细菌运动视频的自动化分析与统计图表</div></div>
+      <div class="card-mem"><a href="https://github.com/Ljy-cell429" target="_blank" rel="noopener" class="mlink leader" title="@Ljy-cell429">★ 龙嘉仪</a><a href="https://github.com/Mei0416" target="_blank" rel="noopener" class="mlink member" title="@Mei0416">梅若男</a><a href="https://github.com/qiaoling-X" target="_blank" rel="noopener" class="mlink member" title="@qiaoling-X">向巧灵</a><a href="https://github.com/yu-jiangjinag" target="_blank" rel="noopener" class="mlink member" title="@yu-jiangjinag">江俣</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          
+          <a class="clink" href="https://github.com/Ljy-cell429/RABiTPy-ZY" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/58" target="_blank" rel="noopener">Issue #58</a>
+      </div>
+    </div>
+    <div class="card cat-env" data-cat="env">
+      <div class="card-top">
+        <div class="card-icon">🧲</div>
+        <div class="info"><div class="title">磁性 SA/PVA/Fe3O4复合载体固定化耐受菌株对土壤镉 的吸附及其机理研究</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现磁性SA/PVA/Fe3O4复合载体固定化菌株对土壤镉的吸附研究</div></div>
+      <div class="card-mem"><a href="https://github.com/cyz20030901" target="_blank" rel="noopener" class="mlink leader" title="@cyz20030901">★ 陈艳姿</a><a href="https://github.com/LiBoFei1129" target="_blank" rel="noopener" class="mlink member" title="@LiBoFei1129">李愽菲</a><a href="https://github.com/tang7928" target="_blank" rel="noopener" class="mlink member" title="@tang7928">唐迎秋</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          
+          <a class="clink" href="https://github.com/LiBoFei1129/soil-cadmium-immobilized-bacteria" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/56" target="_blank" rel="noopener">Issue #56</a>
+      </div>
+    </div>
+    <div class="card cat-soil" data-cat="soil">
+      <div class="card-top">
+        <div class="card-icon">🏔️</div>
+        <div class="info"><div class="title">氮添加对土壤微生物碳利用效率影响研究实验复现</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现氮添加对微生物碳利用效率影响的空间分布图</div></div>
+      <div class="card-mem"><a href="https://github.com/chen11810" target="_blank" rel="noopener" class="mlink leader" title="@chen11810">★ 付琛</a><a href="https://github.com/ymr10" target="_blank" rel="noopener" class="mlink member" title="@ymr10">贠梦茹</a><a href="https://github.com/omo-rlaith" target="_blank" rel="noopener" class="mlink member" title="@omo-rlaith">欧美萍</a><a href="https://github.com/Fish-star-liu" target="_blank" rel="noopener" class="mlink member" title="@Fish-star-liu">刘星雨</a><a href="https://github.com/haoqi159" target="_blank" rel="noopener" class="mlink member" title="@haoqi159">李昊琪</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          <a class="clink doi" href="https://doi.org/10.5281/zenodo.15535868" target="_blank" rel="noopener">DOI</a>
+          <a class="clink" href="https://github.com/D2RS-2026spring/new-reproduce-CUE-R" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/55" target="_blank" rel="noopener">Issue #55</a>
+      </div>
+    </div>
+    <div class="card cat-soil" data-cat="soil">
+      <div class="card-top">
+        <div class="card-icon">❄️</div>
+        <div class="info"><div class="title">土壤特性和沉积物淤积调节恢复湿地甲烷通量的可重复性评估</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现土壤特性和沉积物淤积调节恢复湿地甲烷通量的论文</div></div>
+      <div class="card-mem"><a href="https://github.com/YangMiaoSi" target="_blank" rel="noopener" class="mlink leader" title="@YangMiaoSi">★ 杨淼思</a><a href="https://github.com/boyfriend-svg" target="_blank" rel="noopener" class="mlink member" title="@boyfriend-svg">高栋</a><a href="https://github.com/Wang-source-boop" target="_blank" rel="noopener" class="mlink member" title="@Wang-source-boop">王松</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          <a class="clink doi" href="https://doi.org/10.1111/gcb.14124" target="_blank" rel="noopener">DOI</a>
+          <a class="clink" href="https://github.com/YangMiaoSi/wetland-reproduction" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/54" target="_blank" rel="noopener">Issue #54</a>
+      </div>
+    </div>
+    <div class="card cat-soil" data-cat="soil">
+      <div class="card-top">
+        <div class="card-icon">🌱</div>
+        <div class="info"><div class="title">水分损耗减少主导 CO₂提升的水分利用效率，而非光合作用增强论文复现</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现论文中Figure1-Figure4及差分方法示例的图表</div></div>
+      <div class="card-mem"><a href="https://github.com/BILLDOU" target="_blank" rel="noopener" class="mlink leader" title="@BILLDOU">★ 唐伟</a><a href="https://github.com/kskbl-CXY" target="_blank" rel="noopener" class="mlink member" title="@kskbl-CXY">童天柱</a><a href="https://github.com/Niu0306419" target="_blank" rel="noopener" class="mlink member" title="@Niu0306419">牛双红</a><a href="https://github.com/lym7755" target="_blank" rel="noopener" class="mlink member" title="@lym7755">李有漫</a><a href="https://github.com/Lvshu118" target="_blank" rel="noopener" class="mlink member" title="@Lvshu118">吕淑</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          <a class="clink doi" href="https://doi.org/10.1038/s41559-025-02761-0" target="_blank" rel="noopener">DOI</a>
+          <a class="clink" href="https://github.com/D2RS-2026spring/CO2-enhanced-water-use-efficiency" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/52" target="_blank" rel="noopener">Issue #52</a>
+      </div>
+    </div>
+    <div class="card cat-micro" data-cat="micro">
+      <div class="card-top">
+        <div class="card-icon">🧫</div>
+        <div class="info"><div class="title">基于秀丽隐杆线虫的高通量毒性筛选：现有技术平台、核心优势与未来方向的数据复现</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现线虫高通量毒性筛选论文的核心图表分析</div></div>
+      <div class="card-mem"><a href="https://github.com/jiaoliu425" target="_blank" rel="noopener" class="mlink leader" title="@jiaoliu425">★ 刘娇</a><a href="https://github.com/xluug" target="_blank" rel="noopener" class="mlink member" title="@xluug">张颖格</a><a href="https://github.com/yijiashun08" target="_blank" rel="noopener" class="mlink member" title="@yijiashun08">易佳顺</a><a href="https://github.com/zxy189" target="_blank" rel="noopener" class="mlink member" title="@zxy189">周暄烊</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          <a class="clink doi" href="https://doi.org/10.1021/acs.est.5c12562" target="_blank" rel="noopener">DOI</a>
+          <a class="clink" href="https://github.com/D2RS-2026spring/nematode-toxicology-team" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/50" target="_blank" rel="noopener">Issue #50</a>
+      </div>
+    </div>
+    <div class="card cat-soil" data-cat="soil">
+      <div class="card-top">
+        <div class="card-icon">🗺️</div>
+        <div class="info"><div class="title">温度-深度时间序列反演饱和带土壤水分垂直通量试验的复现</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现WRR-2023论文，利用温度-深度时间序列反演饱和带土壤水分垂直通量</div></div>
+      <div class="card-mem"><a href="https://github.com/flovar" target="_blank" rel="noopener" class="mlink leader" title="@flovar">★ 施振隆</a><a href="https://github.com/WYR1016" target="_blank" rel="noopener" class="mlink member" title="@WYR1016">王羿人</a><a href="https://github.com/tzy311" target="_blank" rel="noopener" class="mlink member" title="@tzy311">潘钰烁</a><a href="https://github.com/Ccwwjia-032" target="_blank" rel="noopener" class="mlink member" title="@Ccwwjia-032">贾雯偲</a><a href="https://github.com/Leo-hub123" target="_blank" rel="noopener" class="mlink member" title="@Leo-hub123">刘壮壮</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          <a class="clink doi" href="https://doi.org/10.1029/2022WR033677" target="_blank" rel="noopener">DOI</a>
+          <a class="clink" href="https://github.com/D2RS-2026spring/project" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/48" target="_blank" rel="noopener">Issue #48</a>
+      </div>
+    </div>
+    <div class="card cat-data" data-cat="data">
+      <div class="card-top">
+        <div class="card-icon">🥭</div>
+        <div class="info"><div class="title">基于机器学习的农业肥料推荐系统</div></div>
+      </div>
+      <div class="tags"><span class="tag py">Python</span></div>
+      <div class="card-body"><div class="desc">基于机器学习的农业肥料推荐系统，可复现训练与预测流程。</div></div>
+      <div class="card-mem"><a href="https://github.com/liming030523" target="_blank" rel="noopener" class="mlink leader" title="@liming030523">★ 李明</a><a href="https://github.com/Lihn20030201" target="_blank" rel="noopener" class="mlink member" title="@Lihn20030201">李浩宁</a><a href="https://github.com/kzdpgy" target="_blank" rel="noopener" class="mlink member" title="@kzdpgy">李晨昊</a><a href="https://github.com/lvye-maker" target="_blank" rel="noopener" class="mlink member" title="@lvye-maker">叶蓓蕾</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          
+          <a class="clink" href="https://github.com/D2RS-2026spring/Fertilizer_Prediction" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/47" target="_blank" rel="noopener">Issue #47</a>
+      </div>
+    </div>
+    <div class="card cat-plant" data-cat="plant">
+      <div class="card-top">
+        <div class="card-icon">🫘</div>
+        <div class="info"><div class="title">CropGBWater项目可复现性评估——以 2020 年全球主粮四作物蓝绿水消耗复现为目标</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现CropGBWater项目，评估其数据、代码、环境和结果的可复现性</div></div>
+      <div class="card-mem"><a href="https://github.com/LingerYU" target="_blank" rel="noopener" class="mlink leader" title="@LingerYU">★ 余玲儿</a><a href="https://github.com/159368qwe" target="_blank" rel="noopener" class="mlink member" title="@159368qwe">余明哲</a><a href="https://github.com/SCD1106" target="_blank" rel="noopener" class="mlink member" title="@SCD1106">宋晨迪</a><a href="https://github.com/hewen717478" target="_blank" rel="noopener" class="mlink member" title="@hewen717478">何文</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          <a class="clink doi" href="https://doi.org/10.1038/s43016-025-01231-x" target="_blank" rel="noopener">DOI</a>
+          <a class="clink" href="https://github.com/D2RS-2026spring/CropGBWater-reproducibility" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/45" target="_blank" rel="noopener">Issue #45</a>
+      </div>
+    </div>
+    <div class="card cat-plant" data-cat="plant">
+      <div class="card-top">
+        <div class="card-icon">🍃</div>
+        <div class="info"><div class="title">关于济州岛柑橘园数字孪生的个性化农业潜力复现</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现济州岛柑橘园数字孪生个性化农业论文的图表分析</div></div>
+      <div class="card-mem"><a href="https://github.com/qinghuaZhang-prog" target="_blank" rel="noopener" class="mlink member" title="@qinghuaZhang-prog">张清华</a><a href="https://github.com/zhangyuxiang04" target="_blank" rel="noopener" class="mlink member" title="@zhangyuxiang04">张宇翔</a><a href="https://github.com/dilikelei01" target="_blank" rel="noopener" class="mlink member" title="@dilikelei01">王力辉</a><a href="https://github.com/XuZQ-come" target="_blank" rel="noopener" class="mlink leader" title="@XuZQ-come">★ 徐智强</a><a href="https://github.com/yunokaaa" target="_blank" rel="noopener" class="mlink member" title="@yunokaaa">邱悦欣</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          <a class="clink doi" href="https://doi.org/10.1038/s41467-024-45725-x" target="_blank" rel="noopener">DOI</a>
+          <a class="clink" href="https://github.com/D2RS-2026spring/RSTUDIO" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/44" target="_blank" rel="noopener">Issue #44</a>
+      </div>
+    </div>
+    <div class="card cat-soil" data-cat="soil">
+      <div class="card-top">
+        <div class="card-icon">📡</div>
+        <div class="info"><div class="title">WRC15_Rhizo仓库根际养分与微生物群落关系图复现</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现长期氮磷添加对湿地土壤与植物根际微生物多样性影响的核心图表</div></div>
+      <div class="card-mem"><a href="https://github.com/luWheeler" target="_blank" rel="noopener" class="mlink leader" title="@luWheeler">★ 卢华</a><a href="https://github.com/AO-wj" target="_blank" rel="noopener" class="mlink member" title="@AO-wj">敖文洁</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          <a class="clink doi" href="https://doi.org/10.1128/mSphere.00035-20" target="_blank" rel="noopener">DOI</a>
+          <a class="clink" href="https://github.com/luWheeler/WRC15-" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/43" target="_blank" rel="noopener">Issue #43</a>
+      </div>
+    </div>
+    <div class="card cat-soil" data-cat="soil">
+      <div class="card-top">
+        <div class="card-icon">🔬</div>
+        <div class="info"><div class="title">人为气候变化可能会降低全球固氮生物多样性</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">利用R复现文献中的Figure2a、2c、3cd等图表</div></div>
+      <div class="card-mem"><a href="https://github.com/Chenht111" target="_blank" rel="noopener" class="mlink leader" title="@Chenht111">★ 陈昊天</a><a href="https://github.com/ChenYu-7317" target="_blank" rel="noopener" class="mlink member" title="@ChenYu-7317">陈雨</a><a href="https://github.com/Ray111-Arch" target="_blank" rel="noopener" class="mlink member" title="@Ray111-Arch">黄君蕾</a><a href="https://github.com/SHELLY203" target="_blank" rel="noopener" class="mlink member" title="@SHELLY203">汤灿</a><a href="https://github.com/Liujunruo" target="_blank" rel="noopener" class="mlink member" title="@Liujunruo">刘君若</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          <a class="clink doi" href="https://doi.org/10.1038/s41467-025-62843-2" target="_blank" rel="noopener">DOI</a>
+          <a class="clink" href="https://github.com/D2RS-2026spring/work" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/41" target="_blank" rel="noopener">Issue #41</a>
+      </div>
+    </div>
+    <div class="card cat-data" data-cat="data">
+      <div class="card-top">
+        <div class="card-icon">👤</div>
+        <div class="info"><div class="title">Multiple stressors alter greenhouse gas concentrations in streams</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现河流温室气体研究，评估多重胁迫对CO2和CH4的影响</div></div>
+      <div class="card-mem"><a href="https://github.com/Xing0630" target="_blank" rel="noopener" class="mlink leader" title="@Xing0630">★ 刘行</a><a href="https://github.com/Swb123-star" target="_blank" rel="noopener" class="mlink member" title="@Swb123-star">宋文博</a><a href="https://github.com/RalphBaejeongWong" target="_blank" rel="noopener" class="mlink member" title="@RalphBaejeongWong">王培正</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          <a class="clink doi" href="https://doi.org/10.1111/gcb.17301" target="_blank" rel="noopener">DOI</a>
+          <a class="clink" href="https://github.com/Xing0630/FinallyWork" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/39" target="_blank" rel="noopener">Issue #39</a>
+      </div>
+    </div>
+    <div class="card cat-plant" data-cat="plant">
+      <div class="card-top">
+        <div class="card-icon">🧪</div>
+        <div class="info"><div class="title">全球水稻多类分割项目可复现性分析报告</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现RiceSEG数据集的水稻多类语义分割算法</div></div>
+      <div class="card-mem"><a href="https://github.com/broucemonkey-stack" target="_blank" rel="noopener" class="mlink member" title="@broucemonkey-stack">刘夏</a><a href="https://github.com/DYRRRRUI" target="_blank" rel="noopener" class="mlink member" title="@DYRRRRUI">丁奕睿</a><a href="https://github.com/YYT0511" target="_blank" rel="noopener" class="mlink member" title="@YYT0511">杨玉桐</a><a href="https://github.com/CXWYWG" target="_blank" rel="noopener" class="mlink member" title="@CXWYWG">陈曦</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          <a class="clink doi" href="https://doi.org/10.1016/j.softx.2025.101105" target="_blank" rel="noopener">DOI</a>
+          <a class="clink" href="https://github.com/D2RS-2026spring/RiceSEG-Reproduction" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/38" target="_blank" rel="noopener">Issue #38</a>
+      </div>
+    </div>
+    <div class="card cat-micro" data-cat="micro">
+      <div class="card-top">
+        <div class="card-icon">🌿</div>
+        <div class="info"><div class="title">关于微生物群落中的协同生长是多稳态形成的驱动力的论文复现</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现微生物群落中种内合作生长驱动多稳态的论文结果</div></div>
+      <div class="card-mem"><a href="https://github.com/HY-hyyyy" target="_blank" rel="noopener" class="mlink leader" title="@HY-hyyyy">★ 黄跃</a><a href="https://github.com/guoyouyan391-maker" target="_blank" rel="noopener" class="mlink member" title="@guoyouyan391-maker">郭有艳</a><a href="https://github.com/JZHEN03625" target="_blank" rel="noopener" class="mlink member" title="@JZHEN03625">姜真</a><a href="https://github.com/unique520521" target="_blank" rel="noopener" class="mlink member" title="@unique520521">马文静</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          <a class="clink doi" href="https://doi.org/10.1038/s41467-024-48521-9" target="_blank" rel="noopener">DOI</a>
+          <a class="clink" href="https://github.com/HY-hyyyy/Microbiology-Team" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/36" target="_blank" rel="noopener">Issue #36</a>
+      </div>
+    </div>
+    <div class="card cat-plant" data-cat="plant">
+      <div class="card-top">
+        <div class="card-icon">🌱</div>
+        <div class="info"><div class="title">农业面源污染K-Means聚类与多元回归分析 - 可重复研究项目</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现农业面源污染K-Means聚类与多元回归分析论文</div></div>
+      <div class="card-mem"><a href="https://github.com/JiangYida666" target="_blank" rel="noopener" class="mlink leader" title="@JiangYida666">★ 蒋奕达</a><a href="https://github.com/mazhihui-star" target="_blank" rel="noopener" class="mlink member" title="@mazhihui-star">马志慧</a><a href="https://github.com/mamingwei2026" target="_blank" rel="noopener" class="mlink member" title="@mamingwei2026">马明玮</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          <a class="clink doi" href="https://doi.org/10.3390/su18010013" target="_blank" rel="noopener">DOI</a>
+          <a class="clink" href="https://github.com/D2RS-2026spring/Agricultural_NPS_ML_Reproducibility" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/35" target="_blank" rel="noopener">Issue #35</a>
+      </div>
+    </div>
+    <div class="card cat-plant" data-cat="plant">
+      <div class="card-top">
+        <div class="card-icon">🌿</div>
+        <div class="info"><div class="title">全球耕地氮损失复现-Nature food-Optimized agricultural management reduces global c</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现全球耕地氮损失论文的Figure1-3图表</div></div>
+      <div class="card-mem"><a href="https://github.com/1712203708-a11y" target="_blank" rel="noopener" class="mlink leader" title="@1712203708-a11y">★ 高欣昱</a><a href="https://github.com/l110095" target="_blank" rel="noopener" class="mlink member" title="@l110095">李安琪</a><a href="https://github.com/LLLLLinin" target="_blank" rel="noopener" class="mlink member" title="@LLLLLinin">林蓉</a><a href="https://github.com/Q110112" target="_blank" rel="noopener" class="mlink member" title="@Q110112">马文倩</a><a href="https://github.com/liuhui0411" target="_blank" rel="noopener" class="mlink member" title="@liuhui0411">刘慧</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          <a class="clink doi" href="https://doi.org/10.1038/s43016-024-01076-w" target="_blank" rel="noopener">DOI</a>
+          <a class="clink" href="https://github.com/D2RS-2026spring/cropland-nitrogen-reproduction" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/33" target="_blank" rel="noopener">Issue #33</a>
+      </div>
+    </div>
+    <div class="card cat-data" data-cat="data">
+      <div class="card-top">
+        <div class="card-icon">🚲</div>
+        <div class="info"><div class="title">分散式氨肥生产研究论文复现</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现分散式氨肥生产成本计算与可视化</div></div>
+      <div class="card-mem"><a href="https://github.com/solitude879" target="_blank" rel="noopener" class="mlink leader" title="@solitude879">★ 刘慧</a><a href="https://github.com/EIO-lyr" target="_blank" rel="noopener" class="mlink member" title="@EIO-lyr">李亚茹</a><a href="https://github.com/WANGSpecial" target="_blank" rel="noopener" class="mlink member" title="@WANGSpecial">王焱栋</a><a href="https://github.com/geiut" target="_blank" rel="noopener" class="mlink member" title="@geiut">高彬</a><a href="https://github.com/nilongaixuexi66" target="_blank" rel="noopener" class="mlink member" title="@nilongaixuexi66">倪龙</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          <a class="clink doi" href="https://doi.org/10.1038/s43016-024-00979-y" target="_blank" rel="noopener">DOI</a>
+          <a class="clink" href="https://github.com/D2RS-2026spring/ammonia-fertilizer-production-team-project" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/32" target="_blank" rel="noopener">Issue #32</a>
+      </div>
+    </div>
+    <div class="card cat-data" data-cat="data">
+      <div class="card-top">
+        <div class="card-icon">📋</div>
+        <div class="info"><div class="title">Crop-Recommendation-System-Using-Machine-Learning项目的可复性评估与复现</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现作物推荐系统的机器学习模型训练与评估</div></div>
+      <div class="card-mem"><a href="https://github.com/JieHan369" target="_blank" rel="noopener" class="mlink leader" title="@JieHan369">★ 韩杰</a><a href="https://github.com/FYY0130" target="_blank" rel="noopener" class="mlink member" title="@FYY0130">傅垣毓</a><a href="https://github.com/SuperXi-9" target="_blank" rel="noopener" class="mlink member" title="@SuperXi-9">周蕴熙</a><a href="https://github.com/WZH-303110125" target="_blank" rel="noopener" class="mlink member" title="@WZH-303110125">王子恒</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          
+          <a class="clink" href="https://github.com/D2RS-2026spring/Crop-Recommendation-System-Using-Machine-Learning" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/30" target="_blank" rel="noopener">Issue #30</a>
+      </div>
+    </div>
+    <div class="card cat-soil" data-cat="soil">
+      <div class="card-top">
+        <div class="card-icon">🏞️</div>
+        <div class="info"><div class="title">SoilGrids250m 项目可重复性评估</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现SoilGrids250m全球土壤属性250m栅格数据集</div></div>
+      <div class="card-mem"><a href="https://github.com/WJJ200212" target="_blank" rel="noopener" class="mlink leader" title="@WJJ200212">★ 王俊杰</a><a href="https://github.com/Zukoin" target="_blank" rel="noopener" class="mlink member" title="@Zukoin">潘攀</a><a href="https://github.com/shengxian9277" target="_blank" rel="noopener" class="mlink member" title="@shengxian9277">盛贤</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          <a class="clink doi" href="https://doi.org/10.1371/journal.pone.0169748" target="_blank" rel="noopener">DOI</a>
+          <a class="clink" href="https://github.com/WJJ200212/soilgrids250m-reproduce" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/28" target="_blank" rel="noopener">Issue #28</a>
+      </div>
+    </div>
+    <div class="card cat-data" data-cat="data">
+      <div class="card-top">
+        <div class="card-icon">🤖</div>
+        <div class="info"><div class="title">基于像素集编码器与时间自注意力的卫星影像时间序列分类</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现PSE-TAE遥感影像时空分类模型，完成训练、推理与可视化。</div></div>
+      <div class="card-mem"><a href="https://github.com/mustiheng" target="_blank" rel="noopener" class="mlink leader" title="@mustiheng">★ 王少艺</a><a href="https://github.com/Dhjsmart" target="_blank" rel="noopener" class="mlink member" title="@Dhjsmart">丁红俊</a><a href="https://github.com/Yu-yuyuy" target="_blank" rel="noopener" class="mlink member" title="@Yu-yuyuy">余娟</a><a href="https://github.com/CANGSU-mei" target="_blank" rel="noopener" class="mlink member" title="@CANGSU-mei">刘小梅</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          <a class="clink doi" href="https://doi.org/10.1109/CVPR42600.2020.01233" target="_blank" rel="noopener">DOI</a>
+          <a class="clink" href="https://github.com/D2RS-2026spring/SatelliteImageTimeSeriesClassi-cation-withPixel-SetEncodersandTemporalSelf-Attention" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/27" target="_blank" rel="noopener">Issue #27</a>
+      </div>
+    </div>
+    <div class="card cat-data" data-cat="data">
+      <div class="card-top">
+        <div class="card-icon">📊</div>
+        <div class="info"><div class="title">基于无人机多光谱与点云数据的植被生物物理参数估算</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">基于无人机多光谱与点云数据估算植被叶面积指数与截获光合有效辐射比例</div></div>
+      <div class="card-mem"><a href="https://github.com/Xczx1000" target="_blank" rel="noopener" class="mlink leader" title="@Xczx1000">★ 仝大伟</a><a href="https://github.com/APFSDS-HE" target="_blank" rel="noopener" class="mlink member" title="@APFSDS-HE">于振潼</a><a href="https://github.com/ddjspx" target="_blank" rel="noopener" class="mlink member" title="@ddjspx">周力</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          
+          <a class="clink" href="https://github.com/Xczx1000/DeepFapar" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/26" target="_blank" rel="noopener">Issue #26</a>
+      </div>
+    </div>
+    <div class="card cat-data" data-cat="data">
+      <div class="card-top">
+        <div class="card-icon">🛰️</div>
+        <div class="info"><div class="title">基于机器学习的环境监测与定量分析的可重复性实验</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现论文Figure 3的散点密度图，展示模型预测与观测值的拟合及数据密度</div></div>
+      <div class="card-mem"><a href="https://github.com/dinglsnow" target="_blank" rel="noopener" class="mlink leader" title="@dinglsnow">★ 丁俐杉</a><a href="https://github.com/nicek4267-max" target="_blank" rel="noopener" class="mlink member" title="@nicek4267-max">于辛铠</a><a href="https://github.com/cyxxx101" target="_blank" rel="noopener" class="mlink member" title="@cyxxx101">成一潇</a><a href="https://github.com/star0421" target="_blank" rel="noopener" class="mlink member" title="@star0421">霍晶晶</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          <a class="clink doi" href="https://doi.org/10.3390/rs13132525" target="_blank" rel="noopener">DOI</a>
+          <a class="clink" href="https://github.com/D2RS-2026spring/datars-assignment-4" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/25" target="_blank" rel="noopener">Issue #25</a>
+      </div>
+    </div>
+    <div class="card cat-soil" data-cat="soil">
+      <div class="card-top">
+        <div class="card-icon">🌍</div>
+        <div class="info"><div class="title">面向黑土地保护利用的三维土壤黏粒制图与作物根区潜在限制评价</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">面向黑土地保护利用的三维土壤黏粒制图与作物根区潜在限制评价</div></div>
+      <div class="card-mem"><a href="https://github.com/fza20030825-star" target="_blank" rel="noopener" class="mlink leader" title="@fza20030825-star">★ 冯子昂</a><a href="https://github.com/Lc898" target="_blank" rel="noopener" class="mlink member" title="@Lc898">李畅</a><a href="https://github.com/Luxiaolu330" target="_blank" rel="noopener" class="mlink member" title="@Luxiaolu330">向路</a></div>
+      <div class="transfer-warn">⚠ 仓库尚未移交到 D2RS-2026spring 组织</div>
+      <div class="card-foot">
+        <div class="clinks">
+          
+          <a class="clink" href="https://github.com/fza20030825-star/DSM_SoilClay3D" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/24" target="_blank" rel="noopener">Issue #24</a>
+      </div>
+    </div>
+    <div class="card cat-data" data-cat="data">
+      <div class="card-top">
+        <div class="card-icon">🥭</div>
+        <div class="info"><div class="title">cross-scale-ecology-team-project</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现多尺度下物种入侵悖论的Meta分析研究</div></div>
+      <div class="card-mem"><a href="https://github.com/hzauShixin" target="_blank" rel="noopener" class="mlink leader" title="@hzauShixin">★ 师鑫</a><a href="https://github.com/haochen-co" target="_blank" rel="noopener" class="mlink member" title="@haochen-co">陈浩</a><a href="https://github.com/shi-mlml" target="_blank" rel="noopener" class="mlink member" title="@shi-mlml">梅良</a><a href="https://github.com/Doloressss770" target="_blank" rel="noopener" class="mlink member" title="@Doloressss770">陈希</a><a href="https://github.com/logicyyh" target="_blank" rel="noopener" class="mlink member" title="@logicyyh">杨瑀珩</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          <a class="clink doi" href="https://doi.org/10.1002/ecy.2552" target="_blank" rel="noopener">DOI</a>
+          <a class="clink" href="https://github.com/D2RS-2026spring/cross-scale-ecology-team-project" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/20" target="_blank" rel="noopener">Issue #20</a>
+      </div>
+    </div>
+    <div class="card cat-plant" data-cat="plant">
+      <div class="card-top">
+        <div class="card-icon">🌾</div>
+        <div class="info"><div class="title">[可重复研究] 凋落物分解主场效应</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现凋落物分解主场效应中叶际微生物关键作用的论文图表</div></div>
+      <div class="card-mem"><a href="https://github.com/Mayshn" target="_blank" rel="noopener" class="mlink leader" title="@Mayshn">★ 王新梅</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          
+          <a class="clink" href="https://github.com/D2RS-2026spring/litter-decomposition-hfa" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/18" target="_blank" rel="noopener">Issue #18</a>
+      </div>
+    </div>
+    <div class="card cat-soil" data-cat="soil">
+      <div class="card-top">
+        <div class="card-icon">🏔️</div>
+        <div class="info"><div class="title">多年冻土中矿物-酶相互作用 复现</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现多年冻土中矿物-酶相互作用驱动土壤有机碳积累与稳定的核心分析</div></div>
+      <div class="card-mem"><a href="https://github.com/zhuxinglin8" target="_blank" rel="noopener" class="mlink leader" title="@zhuxinglin8">★ 朱兴林</a><a href="https://github.com/Ban-bit" target="_blank" rel="noopener" class="mlink member" title="@Ban-bit">曾维城</a><a href="https://github.com/zhengdispecial" target="_blank" rel="noopener" class="mlink member" title="@zhengdispecial">郑迪</a><a href="https://github.com/zhangpuxian" target="_blank" rel="noopener" class="mlink member" title="@zhangpuxian">张普贤</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          <a class="clink doi" href="https://doi.org/10.1021/acs.est.5c08036" target="_blank" rel="noopener">DOI</a>
+          <a class="clink" href="https://github.com/D2RS-2026spring/D2RS-2026spring" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/17" target="_blank" rel="noopener">Issue #17</a>
+      </div>
+    </div>
+    <div class="card cat-plant" data-cat="plant">
+      <div class="card-top">
+        <div class="card-icon">🌰</div>
+        <div class="info"><div class="title">基于点注释内场图像的大豆种子定位与计数</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现基于点注释内场图像的大豆种子定位与计数方法</div></div>
+      <div class="card-mem"><a href="https://github.com/dongshuai9331" target="_blank" rel="noopener" class="mlink leader" title="@dongshuai9331">★ 董帅</a><a href="https://github.com/renpeng-rp916" target="_blank" rel="noopener" class="mlink member" title="@renpeng-rp916">任鹏</a><a href="https://github.com/zry0309" target="_blank" rel="noopener" class="mlink member" title="@zry0309">张若宇</a><a href="https://github.com/cx20263333333" target="_blank" rel="noopener" class="mlink member" title="@cx20263333333">陈旭</a><a href="https://github.com/Qinova02" target="_blank" rel="noopener" class="mlink member" title="@Qinova02">彭钦昊</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          <a class="clink doi" href="https://doi.org/10.34133/plantphenomics.0026" target="_blank" rel="noopener">DOI</a>
+          <a class="clink" href="https://github.com/D2RS-2026spring/612" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/14" target="_blank" rel="noopener">Issue #14</a>
+      </div>
+    </div>
+    <div class="card cat-env" data-cat="env">
+      <div class="card-top">
+        <div class="card-icon">🌊</div>
+        <div class="info"><div class="title">基于Anthropogenic climate change may reduce global diazotroph diversity文献的</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">利用R对文献中的图片进行复现</div></div>
+      <div class="card-mem"><a href="https://github.com/oyang666" target="_blank" rel="noopener" class="mlink leader" title="@oyang666">★ 欧阳环</a><a href="https://github.com/CYY386" target="_blank" rel="noopener" class="mlink member" title="@CYY386">蔡洋洋</a><a href="https://github.com/luoqiuqiu123" target="_blank" rel="noopener" class="mlink member" title="@luoqiuqiu123">罗秋艳</a><a href="https://github.com/tujunyi124" target="_blank" rel="noopener" class="mlink member" title="@tujunyi124">涂君毅</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          
+          <a class="clink" href="https://github.com/D2RS-2026spring/data_review_project" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/13" target="_blank" rel="noopener">Issue #13</a>
+      </div>
+    </div>
+    <div class="card cat-soil" data-cat="soil">
+      <div class="card-top">
+        <div class="card-icon">❄️</div>
+        <div class="info"><div class="title">【土壤微生物311组】可重复研究项目评估 - 高寒矿区土壤微生物肥料研究</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现生物有机肥对土壤微生物群落影响的论文分析</div></div>
+      <div class="card-mem"><a href="https://github.com/CishuiMoon" target="_blank" rel="noopener" class="mlink leader" title="@CishuiMoon">★ 吴雨静</a><a href="https://github.com/HIMENO873" target="_blank" rel="noopener" class="mlink member" title="@HIMENO873">刘丝弦</a><a href="https://github.com/cjd-alt" target="_blank" rel="noopener" class="mlink member" title="@cjd-alt">陈锦德</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          <a class="clink doi" href="https://doi.org/10.1128/spectrum.00840-25" target="_blank" rel="noopener">DOI</a>
+          <a class="clink" href="https://github.com/D2RS-2026spring/N-fertilizer-microbes" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/10" target="_blank" rel="noopener">Issue #10</a>
+      </div>
+    </div>
+    <div class="card cat-soil" data-cat="soil">
+      <div class="card-top">
+        <div class="card-icon">🌱</div>
+        <div class="info"><div class="title">滦河流域径流变化主控因子模型复现</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现滦河流域径流变化主控因子分析，结合SWAT与机器学习模型</div></div>
+      <div class="card-mem"><a href="https://github.com/619890876-lgtm" target="_blank" rel="noopener" class="mlink leader" title="@619890876-lgtm">★ 杨徵泉</a><a href="https://github.com/hxm0123" target="_blank" rel="noopener" class="mlink member" title="@hxm0123">宦秀敏</a><a href="https://github.com/zpq2003" target="_blank" rel="noopener" class="mlink member" title="@zpq2003">张佩琦</a><a href="https://github.com/Neflibata0627" target="_blank" rel="noopener" class="mlink member" title="@Neflibata0627">苏盼</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          
+          <a class="clink" href="https://github.com/619890876-lgtm/619890876-lgtm.github.io" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/9" target="_blank" rel="noopener">Issue #9</a>
+      </div>
+    </div>
+    <div class="card cat-env" data-cat="env">
+      <div class="card-top">
+        <div class="card-icon">🐜</div>
+        <div class="info"><div class="title">空气质量数据分析</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现Kaggle空气质量数据集的完整分析流程，包含数据读取、可视化和Quarto报告</div></div>
+      <div class="card-mem"><a href="https://github.com/MHFDH" target="_blank" rel="noopener" class="mlink leader" title="@MHFDH">★ 蒙红帆</a><a href="https://github.com/GS-Liang" target="_blank" rel="noopener" class="mlink member" title="@GS-Liang">陈凯亮</a><a href="https://github.com/yeelike" target="_blank" rel="noopener" class="mlink member" title="@yeelike">黄梦瑶</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          
+          <a class="clink" href="https://github.com/MHFDH/my_reproduce_project" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/8" target="_blank" rel="noopener">Issue #8</a>
+      </div>
+    </div>
+    <div class="card cat-data" data-cat="data">
+      <div class="card-top">
+        <div class="card-icon">👤</div>
+        <div class="info"><div class="title">【Self-Supervised Pretraining of Transformers for Satellite Image Time Se</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现遥感时序双向掩码机制论文的核心图表分析</div></div>
+      <div class="card-mem"><a href="https://github.com/yisar" target="_blank" rel="noopener" class="mlink leader" title="@yisar">★ 赵昌浩</a><a href="https://github.com/yunyuntiantian" target="_blank" rel="noopener" class="mlink member" title="@yunyuntiantian">陈兴灿</a><a href="https://github.com/lsh1221" target="_blank" rel="noopener" class="mlink member" title="@lsh1221">李世豪</a><a href="https://github.com/li20010229-eng" target="_blank" rel="noopener" class="mlink member" title="@li20010229-eng">李迁</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          <a class="clink doi" href="https://doi.org/10.1109/ACCESS.2020.3041234" target="_blank" rel="noopener">DOI</a>
+          <a class="clink" href="https://github.com/D2RS-2026spring/rsts-encoder" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/7" target="_blank" rel="noopener">Issue #7</a>
+      </div>
+    </div>
+    <div class="card cat-soil" data-cat="soil">
+      <div class="card-top">
+        <div class="card-icon">🗺️</div>
+        <div class="info"><div class="title">基于 OpenLandMap 数据的土壤属性预测</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">基于OpenLandMap数据复现土壤有机碳空间分布图</div></div>
+      <div class="card-mem"><a href="https://github.com/herb1124" target="_blank" rel="noopener" class="mlink leader" title="@herb1124">★ 钟朝玥</a><a href="https://github.com/wudan-06" target="_blank" rel="noopener" class="mlink member" title="@wudan-06">邬丹</a><a href="https://github.com/erwin214" target="_blank" rel="noopener" class="mlink member" title="@erwin214">宋家伟</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          
+          <a class="clink" href="https://github.com/herb1124/soil-mapping-reproduction1" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/6" target="_blank" rel="noopener">Issue #6</a>
+      </div>
+    </div>
+    <div class="card cat-soil" data-cat="soil">
+      <div class="card-top">
+        <div class="card-icon">📡</div>
+        <div class="info"><div class="title">RadEro v1.0.8 示例复现报告</div></div>
+      </div>
+      <div class="tags"><span class="tag r">R</span></div>
+      <div class="card-body"><div class="desc">复现RadEro模型，使用137Cs分析估算土壤再分布速率</div></div>
+      <div class="card-mem"><a href="https://github.com/Fuguiera11y" target="_blank" rel="noopener" class="mlink leader" title="@Fuguiera11y">★ 王东浩</a><a href="https://github.com/zy076" target="_blank" rel="noopener" class="mlink member" title="@zy076">邹毅</a><a href="https://github.com/Liuqian615" target="_blank" rel="noopener" class="mlink member" title="@Liuqian615">刘谦</a><a href="https://github.com/kajolliangeliki857-cpu" target="_blank" rel="noopener" class="mlink member" title="@kajolliangeliki857-cpu">李飒</a><a href="https://github.com/Zhao2002jun" target="_blank" rel="noopener" class="mlink member" title="@Zhao2002jun">赵俊然</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          <a class="clink doi" href="https://doi.org/10.1016/j.envsoft.2025.106551" target="_blank" rel="noopener">DOI</a>
+          <a class="clink" href="https://github.com/D2RS-2026spring/Radero-Main-Project" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/3" target="_blank" rel="noopener">Issue #3</a>
+      </div>
+    </div>
+    <div class="card cat-data" data-cat="data">
+      <div class="card-top">
+        <div class="card-icon">🚲</div>
+        <div class="info"><div class="title">基于MediaPipe的关键点检测复现</div></div>
+      </div>
+      <div class="tags"><span class="tag py">Python</span></div>
+      <div class="card-body"><div class="desc">基于MediaPipe的人体手指关节点动作检测复现</div></div>
+      <div class="card-mem"><a href="https://github.com/cito37" target="_blank" rel="noopener" class="mlink leader" title="@cito37">★ 欧阳权</a><a href="https://github.com/Hu-liye" target="_blank" rel="noopener" class="mlink member" title="@Hu-liye">胡乐怡</a><a href="https://github.com/Rrhly" target="_blank" rel="noopener" class="mlink member" title="@Rrhly">李嘉睿</a><a href="https://github.com/niun8108-boop" target="_blank" rel="noopener" class="mlink member" title="@niun8108-boop">常东颖</a><a href="https://github.com/shenwenjun111" target="_blank" rel="noopener" class="mlink member" title="@shenwenjun111">沈文君</a></div>
+      
+      <div class="card-foot">
+        <div class="clinks">
+          <a class="clink doi" href="https://doi.org/10.48550/arXiv.1906.08172" target="_blank" rel="noopener">DOI</a>
+          <a class="clink" href="https://github.com/D2RS-2026spring/-MediaPipe-" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            仓库
+          </a>
+        </div>
+        <a class="clink issue" href="https://github.com/D2RS-2026spring/projects/issues/2" target="_blank" rel="noopener">Issue #2</a>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+document.getElementById('fb').addEventListener('click',e=>{
+  const b=e.target.closest('.fbtn');if(!b)return;
+  document.querySelectorAll('.fbtn').forEach(x=>x.classList.remove('on'));
+  b.classList.add('on');
+  const f=b.dataset.f;
+  document.querySelectorAll('.card').forEach(c=>{
+    c.style.display=(f==='all'||c.dataset.cat===f)?'':'none';
+  });
+});
+</script>
+<footer>
+  <p>D2RS 2026 Spring — 数据驱动的可重复性研究 &copy; 2026</p>
+  <p style="margin-top:5px"><a href="https://github.com/D2RS-2026spring/projects" target="_blank">GitHub 项目主页</a> &nbsp;|&nbsp; <a href="https://github.com/D2RS-2026spring" target="_blank">课程组织</a></p>
+  <p style="margin-top:5px;color:#aaa">页面更新于 2026-09-07 05:12 CST</p>
+</footer>
+</body>
+</html>
